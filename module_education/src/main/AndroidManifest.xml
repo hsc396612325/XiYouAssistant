@@ -2,9 +2,6 @@
     package="com.xiyoumoblie.module.education" >
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
     </application>
 
 </manifest>

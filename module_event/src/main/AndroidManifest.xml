@@ -2,9 +2,7 @@
     package="com.xiyoumobile.module.event">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
 
-        </activity>
     </application>
 
 </manifest>

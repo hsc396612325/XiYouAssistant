@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ModuleMain</string>
+
+
+        <string name="home_education">教务</string>
+        <string name="home_library">图书</string>
+        <string name="home_event">活动</string>
+        <string name="home_mine">我的</string>
+
 </resources>

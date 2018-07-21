@@ -1,9 +1,12 @@
-package com.xiyoumoblie.module.education;
+package debug;
 
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 
 import com.xiyoumoblie.lib.common.base.BaseActivity;
+import com.xiyoumoblie.module.education.EducationFragment;
+import com.xiyoumoblie.module.education.R;
 
 
 /**
@@ -21,6 +24,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.search_edit_frame, new EducationFragment()).commit();
     }
 
 

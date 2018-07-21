@@ -1,11 +1,9 @@
-package com.xiyoumobile.xiyouassistant.login;
+package com.xiyoumobile.module.login;
 
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
-
-import com.xiyoumobile.xiyouassistant.R;
 
 public class LoginActivity extends AppCompatActivity {
 

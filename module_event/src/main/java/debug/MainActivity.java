@@ -1,8 +1,11 @@
-package com.xiyoumobile.module.library;
+package debug;
 
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 
+import com.xiyoumobile.module.event.EventFragment;
+import com.xiyoumobile.module.event.R;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 
 
@@ -21,6 +24,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.search_edit_frame, new EventFragment()).commit();
     }
 
 

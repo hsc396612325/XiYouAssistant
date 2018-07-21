@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Common</string>
 
     <string name="current_internet_invalid">当前网络未连接</string>
     <string name="internet_base_url_null">baseUrl不能为空</string>
@@ -13,5 +12,11 @@
     <string name="load_error_resume">加载出错，点击重试</string>
     <string name="more">更多</string>
     <string name="no_data">暂无数据</string>
+
+    <string name="home_education">教务</string>
+    <string name="home_library">图书</string>
+    <string name="home_event">活动</string>
+    <string name="home_mine">我的</string>
+
 
 </resources>
