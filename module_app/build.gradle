@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+
+
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.guiying.module"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.multidex
+    implementation project(':lib_common')
+    if (!isModule.toBoolean()) {
+        implementation project(':module_main')
+        implementation project(':module_education')
+        implementation project(':module_library')
+        implementation project(':module_event')
+        implementation project(':module_mine')
+        implementation project(':module_login')
+    }
+}
