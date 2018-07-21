@@ -36,7 +36,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         mColorClicked = getResources().getColor(R.color.colorClicked);
         mColorUnClicked = getResources().getColor(R.color.colorUnClicked);
         mManager = getSupportFragmentManager();
