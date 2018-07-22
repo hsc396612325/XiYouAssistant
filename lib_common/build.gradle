@@ -54,6 +54,8 @@ dependencies {
     api deps.permission
     api deps.glide
 
+    api deps.MPAndroidChart
+
     //router
     api deps.arouter_api
 

@@ -31,7 +31,7 @@ public class BaseActivity extends AutoLayoutActivity {
 
     /**
      * 设置 toolbar，使用方式：
-     * mToolBar = (Toolbar) findViewById(R.id.tool_bar);\
+     * mToolBar = (Toolbar) findViewById(R.id.tool_bar);
      * setupToolBar(mToolBar, true);
      *
      * @param toolbar   toolbar

@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         app:theme="@style/AppTheme.Base">
 
+        <!--android 自适应控件 -->
         <meta-data android:name="design_width" android:value="720"/>
         <meta-data android:name="design_height" android:value="1280"/>
 
