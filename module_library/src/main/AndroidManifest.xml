@@ -2,9 +2,6 @@
     package="com.xiyoumobile.module.library" >
 
     <application android:theme="@style/AppTheme">
-        <activity android:name="debug.MainActivity">
-
-        </activity>
     </application>
 
 </manifest>

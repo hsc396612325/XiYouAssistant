@@ -5,6 +5,9 @@
     <color name="colorPrimaryDark">#5dade2</color>
     <color name="colorAccent">#FF5252</color>
 
+    <!--分割线颜色-->
+    <color name="colorLine">#C2C2C2</color>
+
     <!--APP公用的一些颜色-->
     <color name="common_bg">#fff7f7f7</color>
     <color name="common_text">@android:color/primary_text_light</color>

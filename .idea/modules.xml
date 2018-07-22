@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XiYouAssistant.iml" filepath="$PROJECT_DIR$/XiYouAssistant.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_app/app.iml" filepath="$PROJECT_DIR$/module_app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_app/module_app.iml" filepath="$PROJECT_DIR$/module_app/module_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_education/module_education.iml" filepath="$PROJECT_DIR$/module_education/module_education.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_event/module_event.iml" filepath="$PROJECT_DIR$/module_event/module_event.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_library/module_library.iml" filepath="$PROJECT_DIR$/module_library/module_library.iml" />

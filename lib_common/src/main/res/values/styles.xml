@@ -12,9 +12,24 @@
     <style name="AppTheme" parent="Base.AppTheme" />
 
     <!--无ActionBar的AppTheme-->
+    <style name="AppTheme.NoActionBar.Main">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <!--无ActionBar的AppTheme-->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!--<item name="colorPrimary">#ffffff</item>-->
+        <!--<item name="colorPrimaryDark">#ffffff</item>-->
+        <!--<item name="colorAccent">#ffffff</item>-->
     </style>
 
     <!--启动页样式及窗口背景-->

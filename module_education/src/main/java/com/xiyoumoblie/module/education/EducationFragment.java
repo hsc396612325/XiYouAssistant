@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.xiyoumoblie.lib.common.base.BaseFragment;
 
-@Route(path = "/education/list")
+@Route(path = "/education/main")
 public class EducationFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_education, container, false);
+        View view = inflater.inflate(R.layout.fragment_educationn, container, false);
 
         return view;
     }

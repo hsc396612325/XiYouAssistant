@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.xiyoumoblie.lib.common.base.BaseFragment;
 
-@Route(path = "/event/list")
+@Route(path = "/event/main")
 public class EventFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -2,157 +2,93 @@ package com.xiyoumoblie.lib.common.base;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.Keep;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.xiyoumoblie.lib.common.R;
 import com.xiyoumoblie.lib.common.utils.Utils;
-
+import com.zhy.autolayout.AutoLayoutActivity;
 
 /**
- * <p>Activity基类 </p>
- *
- * @author 2016/12/2 17:33
- * @version V1.0.0
- * @name BaseActivity
+ * Activity基类
  */
-@Keep
-public abstract class BaseActivity extends AppCompatActivity {
-
-
-    /**
-     * 封装的findViewByID方法
-     */
-    @SuppressWarnings("unchecked")
-    protected <T extends View> T $(@IdRes int id) {
-        return (T) super.findViewById(id);
-    }
-
+public class BaseActivity extends AutoLayoutActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ViewManager.getInstance().addActivity(this);
     }
 
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ViewManager.getInstance().finishActivity(this);
-    }
-
+    /**
+     * 处理actionbar返回点击事件
+     */
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
 
-
     /**
-     * Setup the toolbar.
+     * 设置 toolbar，使用方式：
+     * mToolBar = (Toolbar) findViewById(R.id.tool_bar);\
+     * setupToolBar(mToolBar, true);
      *
      * @param toolbar   toolbar
-     * @param hideTitle 是否隐藏Title
+     * @param backable 是否需要回退按钮
      */
-    protected void setupToolBar(Toolbar toolbar, boolean hideTitle) {
+    protected void setupToolBar(Toolbar toolbar, boolean backable) {
+        //看源码可以发现setSupportActionBar实际上会将toolBar转换为一个ToolBarActionBar，
+        // 这个类继承了ActionBar，最终也是存储在类型为ActionBar的对象中的
         setSupportActionBar(toolbar);
+        //所以这里虽然用ActionBar接收，实际上是上面传入的toolBar的封装
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_back);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-            if (hideTitle) {
-                //隐藏Title
-                actionBar.setDisplayShowTitleEnabled(false);
+            if (backable) {
+                actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowHomeEnabled(true);
             }
+            actionBar.setDisplayShowTitleEnabled(false);
+
         }
     }
 
-
-    /**
-     * 添加fragment
-     *
-     * @param fragment
-     * @param frameId
-     */
-    protected void addFragment(BaseFragment fragment, @IdRes int frameId) {
+    //封装fragment的操作 fragment需要继承BaseFragment
+    protected void addFragment(@NonNull BaseFragment fragment, @IdRes int frameId) {
         Utils.checkNotNull(fragment);
         getSupportFragmentManager().beginTransaction()
                 .add(frameId, fragment, fragment.getClass().getSimpleName())
-                .addToBackStack(fragment.getClass().getSimpleName())
                 .commitAllowingStateLoss();
-
     }
 
-
-    /**
-     * 替换fragment
-     * @param fragment
-     * @param frameId
-     */
-    protected void replaceFragment(BaseFragment fragment, @IdRes int frameId) {
+    protected void replaceFragment(@NonNull BaseFragment fragment, @IdRes int frameId) {
         Utils.checkNotNull(fragment);
         getSupportFragmentManager().beginTransaction()
                 .replace(frameId, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(fragment.getClass().getSimpleName())
                 .commitAllowingStateLoss();
-
     }
 
-
-    /**
-     * 隐藏fragment
-     * @param fragment
-     */
-    protected void hideFragment(BaseFragment fragment) {
+    protected void hideFragment(@NonNull BaseFragment fragment) {
         Utils.checkNotNull(fragment);
         getSupportFragmentManager().beginTransaction()
                 .hide(fragment)
                 .commitAllowingStateLoss();
-
     }
 
-
-    /**
-     * 显示fragment
-     * @param fragment
-     */
-    protected void showFragment(BaseFragment fragment) {
+    protected void showFragment(@NonNull BaseFragment fragment) {
         Utils.checkNotNull(fragment);
         getSupportFragmentManager().beginTransaction()
                 .show(fragment)
                 .commitAllowingStateLoss();
-
     }
 
-
-    /**
-     * 移除fragment
-     * @param fragment
-     */
-    protected void removeFragment(BaseFragment fragment) {
+    protected void removeFragment(@NonNull BaseFragment fragment) {
         Utils.checkNotNull(fragment);
         getSupportFragmentManager().beginTransaction()
                 .remove(fragment)
                 .commitAllowingStateLoss();
-
     }
-
-
-    /**
-     * 弹出栈顶部的Fragment
-     */
-    protected void popFragment() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
-            getSupportFragmentManager().popBackStack();
-        } else {
-            finish();
-        }
-    }
-
 
 }

@@ -2,7 +2,8 @@
     package="com.xiyoumobile.module.login" >
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+            android:theme="@style/FullscreenTheme">
 
         </activity>
     </application>

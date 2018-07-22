@@ -1,14 +1,16 @@
 package com.xiyoumobile.module.login;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
+import android.widget.RelativeLayout;
 
-public class LoginActivity extends AppCompatActivity {
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.xiyoumoblie.lib.common.base.BaseActivity;
 
-    private Button mBtLoginId;
-    private Button mBtLoginWechat;
+@Route(path = "/login/main")
+public class LoginActivity extends BaseActivity {
+
+    private RelativeLayout mBtLoginId;
+    private RelativeLayout mBtLoginWechat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         mBtLoginId = findViewById(R.id.bt_login_id);
         mBtLoginWechat = findViewById(R.id.bt_login_wechat);
 
-        Drawable user = getResources().getDrawable(R.drawable.user);
-        user.setBounds(30, 5, 80, 55);
-        mBtLoginId.setCompoundDrawables(user, null, null, null);
-
-        Drawable wechat = getResources().getDrawable(R.drawable.wechat);
-        wechat.setBounds(30, 5, 80, 55);
-        mBtLoginWechat.setCompoundDrawables(wechat, null, null, null);
-
     }
 }
+

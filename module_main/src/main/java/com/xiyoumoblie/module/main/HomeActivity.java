@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
-import com.xiyoumoblie.module.main.R;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
@@ -30,20 +28,34 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     int mColorClicked = 0;
     int mColorUnClicked = 0;
+    private Drawable mIconEducation;
+    private Drawable mIconLibrary;
+    private Drawable mIconEvent;
+    private Drawable mIconMine;
+    private Drawable mIconEducationS;
+    private Drawable mIconLibraryS;
+    private Drawable mIconEventS;
+    private Drawable mIconMineS;
+
+    private Toolbar mToolbar;
+    private TextView mTvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-//        mColorClicked = getResources().getColor(R.color.colorClicked);
-//        mColorUnClicked = getResources().getColor(R.color.colorUnClicked);
+        setContentView(R.layout.activity_home_main);
+        mColorClicked = getResources().getColor(R.color.colorPrimary);
+        mColorUnClicked = getResources().getColor(R.color.colorGrey);
         mManager = getSupportFragmentManager();
         initViews();
-
-
    }
 
     private void initViews() {
+        mToolbar = findViewById(R.id.home_tool_bar);
+        mTvTitle = findViewById(R.id.tool_bar_title);
+        mTvTitle.setText("教务");
+        setupToolBar(mToolbar, false);
+
         mTvEducation = findViewById(R.id.tv_jiaowu);
         mTvLibrary = findViewById(R.id.tv_tushu);
         mTvEvent = findViewById(R.id.tv_huodong);
@@ -54,17 +66,33 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         mTvEvent.setOnClickListener(this);
         mTvMine.setOnClickListener(this);
 
-        Drawable tvTopIcon = getResources().getDrawable(R.drawable.ic_launcher_background);
-        tvTopIcon.setBounds(0, 0, 50, 50);
+        int size = 70;
+        mIconEducation = getResources().getDrawable(R.drawable.education_normal);
+        mIconEducation.setBounds(0, 0, size, size);
+        mIconLibrary = getResources().getDrawable(R.drawable.library_normal);
+        mIconLibrary.setBounds(0, 0, size, size);
+        mIconEvent = getResources().getDrawable(R.drawable.event_normal);
+        mIconEvent.setBounds(0, 0, size, size);
+        mIconMine = getResources().getDrawable(R.drawable.mine_normal);
+        mIconMine.setBounds(0, 0, size, size);
 
-        mTvEducation.setCompoundDrawables(null, tvTopIcon, null, null);
-        mTvLibrary.setCompoundDrawables(null, tvTopIcon, null, null);
-        mTvEvent.setCompoundDrawables(null, tvTopIcon, null, null);
-        mTvMine.setCompoundDrawables(null, tvTopIcon, null, null);
+        mIconEducationS = getResources().getDrawable(R.drawable.education_select);
+        mIconEducationS.setBounds(0, 0, size, size);
+        mIconLibraryS = getResources().getDrawable(R.drawable.library_select);
+        mIconLibraryS.setBounds(0, 0, size, size);
+        mIconEventS = getResources().getDrawable(R.drawable.event_select);
+        mIconEventS.setBounds(0, 0, size, size);
+        mIconMineS = getResources().getDrawable(R.drawable.mine_select);
+        mIconMineS.setBounds(0, 0, size, size);
+
+        mTvEducation.setCompoundDrawables(null, mIconEducationS, null, null);
+        mTvLibrary.setCompoundDrawables(null, mIconLibrary, null, null);
+        mTvEvent.setCompoundDrawables(null, mIconEvent, null, null);
+        mTvMine.setCompoundDrawables(null, mIconMine, null, null);
 
         FragmentTransaction mTransaction = mManager.beginTransaction();
-       // mFgEducation = new EducationFragment();
-        //mTransaction.add(R.id.home_container, mFgEducation);
+        mFgEducation = (Fragment) ARouter.getInstance().build("/education/main").navigation();
+        mTransaction.add(R.id.home_container, mFgEducation);
         mTransaction.commit();
         changeColor(0);
 
@@ -79,9 +107,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             hideFragment(transaction, mFgLibrary);
             hideFragment(transaction, mFgEvent);
             hideFragment(transaction, mFgMine);
+            mTvTitle.setText("教务");
+            setupToolBar(mToolbar, false);
+            mTvEducation.setCompoundDrawables(null, mIconEducationS, null, null);
+            mTvLibrary.setCompoundDrawables(null, mIconLibrary, null, null);
+            mTvEvent.setCompoundDrawables(null, mIconEvent, null, null);
+            mTvMine.setCompoundDrawables(null, mIconMine, null, null);
             if (mFgEducation == null) {
-                mFgEducation = (Fragment) ARouter.getInstance().build("/education/list").navigation();
-                Log.d("jttjtt", "onClick: " + mFgEducation);
+                mFgEducation = (Fragment) ARouter.getInstance().build("/education/main").navigation();
                 transaction.add(R.id.home_container, mFgEducation);
             } else {
                 transaction.show(mFgEducation);
@@ -91,8 +124,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             hideFragment(transaction, mFgEducation);
             hideFragment(transaction, mFgEvent);
             hideFragment(transaction, mFgMine);
+            mTvTitle.setText("图书");
+            setupToolBar(mToolbar, false);
+            mTvEducation.setCompoundDrawables(null, mIconEducation, null, null);
+            mTvLibrary.setCompoundDrawables(null, mIconLibraryS, null, null);
+            mTvEvent.setCompoundDrawables(null, mIconEvent, null, null);
+            mTvMine.setCompoundDrawables(null, mIconMine, null, null);
             if (mFgLibrary == null) {
-                 mFgLibrary = (Fragment) ARouter.getInstance().build("/event/list").navigation();
+                 mFgLibrary = (Fragment) ARouter.getInstance().build("/event/main").navigation();
                 transaction.add(R.id.home_container, mFgLibrary);
             } else {
                 transaction.show(mFgLibrary);
@@ -103,8 +142,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             hideFragment(transaction, mFgEducation);
             hideFragment(transaction, mFgLibrary);
             hideFragment(transaction, mFgMine);
+            mTvTitle.setText("活动");
+            setupToolBar(mToolbar, false);
+            mTvEducation.setCompoundDrawables(null, mIconEducation, null, null);
+            mTvLibrary.setCompoundDrawables(null, mIconLibrary, null, null);
+            mTvEvent.setCompoundDrawables(null, mIconEventS, null, null);
+            mTvMine.setCompoundDrawables(null, mIconMine, null, null);
             if (mFgEvent == null) {
-                mFgEvent = (Fragment) ARouter.getInstance().build("/library/list").navigation();
+                mFgEvent = (Fragment) ARouter.getInstance().build("/library/main").navigation();
                 transaction.add(R.id.home_container, mFgEvent);
             } else {
                 transaction.show(mFgEvent);
@@ -114,8 +159,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             hideFragment(transaction, mFgEducation);
             hideFragment(transaction, mFgLibrary);
             hideFragment(transaction, mFgEvent);
+            mTvTitle.setText("我的");
+            setupToolBar(mToolbar, false);
+            mTvEducation.setCompoundDrawables(null, mIconEducation, null, null);
+            mTvLibrary.setCompoundDrawables(null, mIconLibrary, null, null);
+            mTvEvent.setCompoundDrawables(null, mIconEvent, null, null);
+            mTvMine.setCompoundDrawables(null, mIconMineS, null, null);
             if (mFgMine == null) {
-                mFgMine =  (Fragment) ARouter.getInstance().build("/mine/list").navigation();
+                mFgMine =  (Fragment) ARouter.getInstance().build("/mine/main").navigation();
                 transaction.add(R.id.home_container, mFgMine);
             } else {
                 transaction.show(mFgMine);
