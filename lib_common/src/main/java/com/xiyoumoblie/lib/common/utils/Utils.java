@@ -8,7 +8,12 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 /**
- * Utils初始化相关
+ * 工具类
+ * 内容：
+ * Application Context的提供
+ * 获取View所属Activity
+ * 对象判空方法
+ * SharedPreferences封装
  */
 public class Utils {
 

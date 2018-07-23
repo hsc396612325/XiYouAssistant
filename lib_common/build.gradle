@@ -60,6 +60,7 @@ dependencies {
     //router
     api deps.arouter_api
 
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     compile 'com.zhy:autolayout:1.4.5'
 
 }

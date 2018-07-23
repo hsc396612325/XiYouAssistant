@@ -1,43 +1,45 @@
 package com.xiyoumoblie.lib.common.net;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.xiyoumoblie.lib.common.net.NetConstant.SERVER_ADDRESS;
 
+/**
+ * Retrofit的封装
+ */
 public class RetrofitFactory {
 
+    //单例对象
     public static RetrofitFactory INSTANCE = new RetrofitFactory();
 
     private Retrofit mRetrofit;
+    //添加默认配置的拦截器
     private Interceptor mInterceptor;
 
     private RetrofitFactory() {
-        mInterceptor = new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request request = chain.request()
-                        .newBuilder()
-                        .addHeader("Host", "127.0.0.1:8080")
-                        .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0")
-                        .addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
-                        .addHeader("Accept-Language", "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2")
-                        .addHeader("Accept-Encoding", "gzip, deflate")
-                        .addHeader("Connection", "keep-alive")
-                        .addHeader("Upgrade-Insecure-Requests", "1")
-                        .build();
-                return chain.proceed(request);
-            }
+        //自定义通用配置拦截器
+        mInterceptor = chain -> {
+            Request request = chain.request()
+                    .newBuilder()
+                    .addHeader("Host", "127.0.0.1:8080")
+                    .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0")
+                    .addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+                    .addHeader("Accept-Language", "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2")
+                    .addHeader("Accept-Encoding", "gzip, deflate")
+                    .addHeader("Connection", "keep-alive")
+                    .addHeader("Upgrade-Insecure-Requests", "1")
+                    .build();
+            return chain.proceed(request);
         };
 
+        //初始化Retrofit对象
         mRetrofit = new Retrofit.Builder()
                 .baseUrl(SERVER_ADDRESS)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -46,6 +48,10 @@ public class RetrofitFactory {
                 .build();
     }
 
+    /**
+     * 定义OkHttpClient对象，主要是添加拦截器和设置超时时间
+     * @return OkHttpClient对象
+     */
     private OkHttpClient initClient() {
         return new OkHttpClient.Builder()
                 .addInterceptor(mInterceptor)
@@ -56,6 +62,12 @@ public class RetrofitFactory {
                 .build();
     }
 
+    /**
+     * 对外暴露的create()，作用同retrofit的create()
+     * @param service 请求Api的类
+     * @param <T> Api类型
+     * @return 请求对象
+     */
      public <T> T create(Class<T> service) {
         return mRetrofit.create(service);
     }
