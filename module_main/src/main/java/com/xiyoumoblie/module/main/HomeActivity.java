@@ -9,9 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 
+@Route(path = "/main/main")
 public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     private TextView mTvEducation;

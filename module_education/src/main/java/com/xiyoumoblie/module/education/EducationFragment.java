@@ -3,14 +3,13 @@ package com.xiyoumoblie.module.education;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.text.method.Touch;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.xiyoumoblie.lib.common.base.BaseFragment;
 import com.zhy.autolayout.AutoRelativeLayout;
 
@@ -39,8 +38,9 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.rl_checking_in_inquire) {
-            Intent intent = new Intent(getActivity(), ChecjingInInquireActivity.class);
-            getActivity().startActivity(intent);
+            Intent intent = new Intent(getActivity(), CheckingInInquireActivity.class);
+
+            ARouter.getInstance().build("/education/attendance").navigation();
         } else if (id == R.id.rl_CET_grade_inquire) {
             Toast.makeText(getActivity(), "查询四六级成绩", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.rl_final_grade_inquire) {

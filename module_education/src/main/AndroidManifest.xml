@@ -2,6 +2,7 @@
     package="com.xiyoumoblie.module.education" >
 
     <application android:theme="@style/AppTheme">
+        <activity android:name=".CheckingInInquireActivity"></activity>
     </application>
 
 </manifest>

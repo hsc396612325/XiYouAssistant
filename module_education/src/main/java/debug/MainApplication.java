@@ -1,6 +1,7 @@
 package debug;
 
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.xiyoumoblie.lib.common.base.BaseApplication;
 
 /**
@@ -15,6 +16,7 @@ public class MainApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        
     }
 
 

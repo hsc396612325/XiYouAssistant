@@ -24,7 +24,7 @@
             android:name="design_height"
             android:value="1334" />
 
-        <activity android:name=".ChecjingInInquireActivity"></activity>
+        <activity android:name=".CheckingInInquireActivity"></activity>
     </application>
 
 </manifest>

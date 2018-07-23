@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableString;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -16,8 +17,8 @@ import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
-
-public class ChecjingInInquireActivity extends AppCompatActivity {
+@Route(path = "/education/attendance")
+public class CheckingInInquireActivity extends AppCompatActivity {
 
     PieChart mPieChart;
     @Override
