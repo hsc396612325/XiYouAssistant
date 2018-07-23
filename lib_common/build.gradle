@@ -45,6 +45,7 @@ dependencies {
     api deps.rxjava2
     api deps.retrofit.runtime
     api deps.retrofit.gson
+    api deps.retrofit.rxjava2
     api deps.persistent_cookie
 
     // other

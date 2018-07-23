@@ -3,6 +3,7 @@ package com.xiyoumoblie.lib.common.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.view.View;
 
@@ -12,6 +13,7 @@ import android.view.View;
 public class Utils {
 
     private static Context context;
+    private static final String FILENAME = "xiyouassistant";
 
     private Utils() {}
 
@@ -61,6 +63,18 @@ public class Utils {
         if (obj == null) {
             throw new NullPointerException();
         }
+    }
+
+    public static void putStringFromPreferences(String key, String value) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILENAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
+
+    public static String getStringFromPreferences(String key, String defValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILENAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(key, defValue);
     }
 
 }

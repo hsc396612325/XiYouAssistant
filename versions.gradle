@@ -56,7 +56,7 @@ def retrofit = [:]
 retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofi"
 retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
-retrofit.rxjava ="com.squareup.retrofit2:adapter-rxjava:$versions.rxjava"
+retrofit.rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
 deps.retrofit = retrofit
 
 
