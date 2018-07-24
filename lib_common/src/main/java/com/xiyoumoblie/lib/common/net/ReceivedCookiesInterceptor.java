@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 import okhttp3.Interceptor;
+import okhttp3.Request;
 import okhttp3.Response;
 
 /**
@@ -31,6 +32,7 @@ public class ReceivedCookiesInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         //取出原始response
         Response originalResponse = chain.proceed(chain.request());
+        Request request = chain.request();
         if (!originalResponse.headers("Set-Cookie").isEmpty()) {
             //获取头字段中的cookie
             final StringBuilder cookieBuffer = new StringBuilder();

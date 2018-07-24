@@ -32,7 +32,7 @@ public class AddCookiesInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         final Request.Builder builder = chain.request().newBuilder();
         String cookie = Utils.getStringFromPreferences("cookie", "");
-        if (TextUtils.isEmpty(cookie)) {
+        if (!TextUtils.isEmpty(cookie)) {
             Log.d(TAG, "intercept: " + "add cookie:" + cookie);
             builder.addHeader("Cookie", cookie);
         }

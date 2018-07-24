@@ -125,6 +125,7 @@
                 android:text="验证码："/>
 
             <EditText
+                android:id="@+id/et_acc"
                 android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/im_acc"
@@ -135,6 +136,7 @@
                 android:inputType="text" />
 
             <EditText
+                android:id="@+id/et_pwd"
                 android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/im_pwd"
@@ -173,7 +175,8 @@
                 android:layout_marginTop="75px"
                 android:textSize="18px"
                 android:textColor="#919191"
-                android:text="看不清，换一张"/>
+                android:text="看不清，换一张"
+                android:onClick="onClickChangeCode"/>
 
             <Button
                 android:layout_width="300px"
@@ -184,7 +187,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignTop="@id/im_code"
                 android:layout_marginTop="123px"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF"
+                android:onClick="onClickLogin"/>
 
         </RelativeLayout>
 
