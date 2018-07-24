@@ -4,9 +4,10 @@
     <color name="colorPrimary">#3498db</color>
     <color name="colorPrimaryDark">#D32F2F</color>
     <color name="colorAccent">#FF5252</color>
-CFCFCF
+
     <!--分割线颜色-->
     <color name="colorLine">#CFCFCF</color>
+
 
     <!--APP公用的一些颜色-->
     <color name="common_bg">#fff7f7f7</color>

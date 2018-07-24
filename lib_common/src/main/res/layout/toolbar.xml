@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?><!--可以直接使用的toolbar-->
-<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_tool_bar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.AppBarOverlay">
+    android:layout_height="88px"
+    android:background="?attr/colorPrimary">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tool_bar_title"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Toolbar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:textSize="20sp"
+        android:text="标题"/>
 
-</android.support.design.widget.AppBarLayout>
+</android.support.v7.widget.Toolbar>

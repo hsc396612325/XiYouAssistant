@@ -1,11 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiyoumobile.module.login" >
+    package="com.xiyoumobile.module.login">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
-            android:theme="@style/FullscreenTheme">
-
-        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity android:name=".EduBindActivity"></activity>
+        <activity android:name=".SmartRoomBindActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EduBindActivity"
+    android:background="#F5F5F5">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/tool_bar_title"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="绑定教务系统"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="600px"
+        android:layout_height="700px"
+        android:layout_marginTop="253px"
+        app:cardElevation="20px"
+        android:layout_alignTop="@id/home_tool_bar"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bind_frame_bg">
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/frame_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="94px"
+                android:layout_marginLeft="75px"
+                android:text="教务系统登录"
+                android:textColor="#3498DB"
+                android:textSize="36px" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="450px"
+                android:layout_height="1px"
+                android:layout_alignTop="@id/frame_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56px"
+                android:background="@drawable/bind_et_bg"/>
+
+            <ImageView
+                android:id="@+id/im_acc"
+                android:layout_width="26px"
+                android:layout_height="26px"
+                android:layout_alignTop="@id/line"
+                android:layout_alignStart="@+id/line"
+                android:layout_marginTop="76px"
+                android:layout_marginLeft="9px"
+                android:scaleType="fitXY"
+                android:src="@drawable/bind_icon_acc" />
+
+            <ImageView
+                android:id="@+id/im_pwd"
+                android:layout_width="26px"
+                android:layout_height="26px"
+                android:layout_marginLeft="9px"
+                android:layout_alignTop="@id/line"
+                android:layout_alignStart="@+id/line"
+                android:layout_marginTop="147px"
+                android:scaleType="fitXY"
+                android:src="@drawable/bind_icon_pwd" />
+
+            <ImageView
+                android:id="@+id/im_code"
+                android:layout_width="26px"
+                android:layout_height="26px"
+                android:layout_marginLeft="9px"
+                android:layout_marginTop="218px"
+                android:layout_alignTop="@id/line"
+                android:layout_alignStart="@+id/line"
+                android:scaleType="fitXY"
+                android:src="@drawable/bind_icon_code" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line"
+                android:layout_alignLeft="@id/im_acc"
+                android:layout_marginTop="72px"
+                android:layout_marginLeft="56px"
+                android:text="用户名："
+                android:textColor="@color/colorPrimary"
+                android:textSize="30px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line"
+                android:layout_alignLeft="@id/im_pwd"
+                android:layout_marginTop="140px"
+                android:layout_marginLeft="56px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="密\u3000码："/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line"
+                android:layout_alignLeft="@id/im_code"
+                android:layout_marginTop="208px"
+                android:layout_marginLeft="56px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="验证码："/>
+
+            <EditText
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/im_acc"
+                android:layout_alignLeft="@id/im_acc"
+                android:layout_marginLeft="189px"
+                android:textSize="28px"
+                android:background="@drawable/bind_et_bg"
+                android:inputType="text" />
+
+            <EditText
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/im_pwd"
+                android:layout_alignLeft="@id/im_pwd"
+                android:background="@drawable/bind_et_bg"
+                android:textSize="28px"
+                android:layout_marginLeft="189px"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="118px"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/im_code"
+                android:layout_alignLeft="@id/im_code"
+                android:layout_marginLeft="189px"
+                android:textSize="28px"
+                android:background="@drawable/bind_et_bg"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/im_check_code"
+                android:layout_width="120px"
+                android:layout_height="60px"
+                android:layout_alignBottom="@id/im_code"
+                android:layout_alignStart="@id/et_code"
+                android:layout_marginLeft="130px"
+                android:src="@color/colorLine"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_change_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/im_check_code"
+                android:layout_alignTop="@id/im_check_code"
+                android:layout_marginTop="75px"
+                android:textSize="18px"
+                android:textColor="#919191"
+                android:text="看不清，换一张"/>
+
+            <Button
+                android:layout_width="300px"
+                android:layout_height="70px"
+                android:background="@drawable/login_id_bt_bg"
+                android:text="授权登录"
+                android:textSize="30px"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@id/im_code"
+                android:layout_marginTop="123px"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

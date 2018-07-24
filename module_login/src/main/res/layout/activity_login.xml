@@ -12,7 +12,7 @@
         android:layout_marginTop="195px"
         android:scaleType="fitXY"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/bade" />
+        android:src="@drawable/login_icon_badge" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:id="@+id/bt_login_id"
         android:layout_marginTop="215px"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/login_id"
+        android:background="@drawable/login_id_bt_bg"
         android:layout_width="600px"
         android:layout_height="100px"
         android:clickable="true"
@@ -49,7 +49,7 @@
             android:layout_centerVertical="true"
             android:layout_width="42px"
             android:layout_height="48px"
-            android:src="@drawable/user"
+            android:src="@drawable/login_icon_user"
             android:scaleType="fitXY" />
 
         <TextView
@@ -67,7 +67,7 @@
         android:id="@+id/bt_login_wechat"
         android:layout_marginTop="50px"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/login_wechat"
+        android:background="@drawable/login_wechat_bt_bg"
         android:layout_width="600px"
         android:layout_height="100px"
         android:clickable="true"
@@ -79,7 +79,7 @@
             android:layout_centerVertical="true"
             android:layout_width="42px"
             android:layout_height="48px"
-            android:src="@drawable/wechat"
+            android:src="@drawable/login_icon_wechat"
             android:scaleType="fitXY"/>
 
         <TextView
