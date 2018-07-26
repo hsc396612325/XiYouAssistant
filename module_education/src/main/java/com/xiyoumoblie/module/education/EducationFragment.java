@@ -38,11 +38,9 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.rl_checking_in_inquire) {
-            Intent intent = new Intent(getActivity(), AttendanceInquireActivity.class);
-
             ARouter.getInstance().build("/education/attendance").navigation();
         } else if (id == R.id.rl_CET_grade_inquire) {
-            Toast.makeText(getActivity(), "查询四六级成绩", Toast.LENGTH_SHORT).show();
+            ARouter.getInstance().build("/education/CETGrade").navigation();
         } else if (id == R.id.rl_final_grade_inquire) {
             Toast.makeText(getActivity(), "查询期末成绩", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.rl_computers_grade_inquire) {

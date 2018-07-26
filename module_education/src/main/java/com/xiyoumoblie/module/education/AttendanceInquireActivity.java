@@ -33,6 +33,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
+import com.xiyoumoblie.lib.common.ui.MyTextView;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import java.text.SimpleDateFormat;
@@ -55,7 +56,7 @@ public class AttendanceInquireActivity extends BaseActivity {
     private static final String TAG = "AttendanceInquireActivit";
 
     private Toolbar mToolbar;
-    private TextView mTvTitle;
+    private MyTextView mTvTitle;
     List<LessonInfoBean> mLessonInfos;
     List<LessonInfoBean> mLessonList = new ArrayList<>();
 
@@ -70,7 +71,7 @@ public class AttendanceInquireActivity extends BaseActivity {
 
     private void initView() {
         mToolbar = findViewById(R.id.attendance_tool_bar);
-        mTvTitle = findViewById(R.id.tool_bar_title);
+        mTvTitle = (MyTextView)findViewById(R.id.tool_bar_title);
         mTvTitle.setText("考勤查询");
         setupToolBar(mToolbar, true);
 

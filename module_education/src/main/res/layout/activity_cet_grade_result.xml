@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey_text"
+    tools:context="com.xiyoumoblie.module.education.CETGradeActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cet_grade_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="?attr/colorPrimary">
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="标题"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="720px"
+        android:layout_below="@+id/iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-58px">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="680px"
+            android:layout_height="700px"
+            android:layout_below="@+id/iv"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="17.5dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="480px"
+                    android:layout_height="580px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/education_cet_grade_rl_bg"
+                    android:orientation="vertical">
+
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="97px"
+                        android:text="国家CET-4考试成绩"
+                        android:textColor="@color/colorPrimary" />
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23px"
+                        >
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105px"
+                            android:text="听力:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="130px"
+                            android:text="190"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23px"
+                        >
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105px"
+                            android:text="阅读:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="130px"
+                            android:text="200"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23px"
+                        >
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105px"
+                            android:text="作文:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="130px"
+                            android:text="200"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23px"
+                        >
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105px"
+                            android:text="总分:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="130px"
+                            android:text="590"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23px"
+                        >
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105px"
+                            android:text="口语:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="130px"
+                            android:text=" A"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="300px"
+                        android:layout_height="1px"
+                        android:layout_gravity="center"
+                        android:background="@color/color_grey_line" />
+
+
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7px"
+                        android:text="若总分低于220或考试有违纪行为，查分结果显示为0分"
+                        android:textSize="15px"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="480px"
+        android:layout_height="170px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="273px"
+        android:src="@drawable/ic_education_appeal_clamp" />
+
+
+</RelativeLayout>

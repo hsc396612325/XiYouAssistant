@@ -15,7 +15,7 @@
             android:layout_height="320px"
            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/today_schedule_background">
+            android:background="@drawable/education_fragment_today_rl_bg">
 
             <View
                 android:id="@+id/center_view"
@@ -169,7 +169,7 @@
         android:id="@+id/rl_checking_in_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
 
@@ -203,7 +203,7 @@
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:layout_marginTop="40px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
         <View
@@ -235,7 +235,7 @@
         android:id="@+id/rl_final_grade_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
         <View
@@ -267,7 +267,7 @@
         android:id="@+id/rl_computers_grade_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
         <View
@@ -306,7 +306,7 @@
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:layout_marginTop="40px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
         <View
@@ -338,7 +338,7 @@
         android:id="@+id/rl_class_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:background="@drawable/education_shape_column"
+        android:background="@drawable/education_fragment_column"
         android:clickable="true"
         android:focusable="true">
         <View

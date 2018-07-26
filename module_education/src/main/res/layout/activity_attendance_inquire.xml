@@ -11,7 +11,7 @@
         android:layout_height="88px"
         android:background="?attr/colorPrimary">
 
-        <TextView
+        <com.xiyoumoblie.lib.common.ui.MyTextView
             android:id="@+id/tool_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_height="36px"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30px"
-            android:background="@drawable/ic_education_clock" />
+            android:background="@drawable/ic_education_attendance_clock" />
 
 
         <android.support.v7.widget.CardView
@@ -46,15 +46,14 @@
 
             <Button
                 android:id="@+id/bt_from_time"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/education_shape_button"
+                android:background="@drawable/education_attendance_bt_bg"
                 android:textColor="@color/button_text_color" />
 
         </android.support.v7.widget.CardView>
 
-        <TextView
+        <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -74,7 +73,7 @@
                 android:id="@+id/bt_to_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/education_shape_button"
+                android:background="@drawable/education_attendance_bt_bg"
                 android:textColor="@color/button_text_color" />
 
         </android.support.v7.widget.CardView>
@@ -92,14 +91,14 @@
             android:layout_height="44px"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="28px"
-            android:background="@drawable/ic_education_list" />
+            android:background="@drawable/ic_education_attendance_list" />
 
         <android.support.v7.widget.CardView
             android:layout_width="600px"
             android:layout_height="80px"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="54px"
-            android:background="@drawable/education_shape_button"
+            android:background="@drawable/education_attendance_bt_bg"
             app:cardCornerRadius="17.5dp"
             app:cardElevation="10px"
             app:cardPreventCornerOverlap="true">
@@ -108,7 +107,7 @@
                 android:id="@+id/bt_course"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/education_shape_button"
+                android:background="@drawable/education_attendance_bt_bg"
                 android:textColor="@color/button_text_color"
                 android:textSize="60px" />
 

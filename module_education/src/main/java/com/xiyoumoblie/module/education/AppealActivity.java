@@ -3,6 +3,7 @@ package com.xiyoumoblie.module.education;
 import android.os.Bundle;
 
 import com.xiyoumoblie.lib.common.base.BaseActivity;
+import com.xiyoumoblie.lib.common.ui.MyTextView;
 
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -14,16 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.xiyoumoblie.lib.common.base.BaseActivity;
-import com.xiyoumoblie.lib.common.base.BaseMvpActivity;
 
 public class AppealActivity extends BaseActivity {
 
     private Toolbar mToolbar;
-    private TextView mTvTitle;
+    private MyTextView mTvTitle;
 
-    private TextView mTvCourse;
-    private TextView mTVDate;
+    private  MyTextView mTvCourse;
+    private  MyTextView mTVDate;
     private EditText mEtAppeal;
     private CardView mCardViewButton;
 
@@ -49,8 +48,8 @@ public class AppealActivity extends BaseActivity {
         mTvTitle.setText("考勤申诉");
         setupToolBar(mToolbar, true);
 
-        mTvCourse = (TextView) findViewById(R.id.tv_course);
-        mTVDate = (TextView) findViewById(R.id.tv_date);
+        mTvCourse = ( MyTextView) findViewById(R.id.tv_course);
+        mTVDate = ( MyTextView) findViewById(R.id.tv_date);
         mEtAppeal = (EditText) findViewById(R.id.et_appeal);
         mCardViewButton = (CardView) findViewById(R.id.cardView2);
 

@@ -13,7 +13,7 @@
         android:layout_height="88px"
         android:background="?attr/colorPrimary">
 
-        <TextView
+        <com.xiyoumoblie.lib.common.ui.MyTextView
             android:id="@+id/tool_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_height="800px"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="158px"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="17.5dp"
         app:cardElevation="5dp">
@@ -39,33 +39,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:id="@+id/tv_course"
                 android:layout_width="400px"
                 android:layout_height="60px"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="77px"
-                android:background="@drawable/education_shape_button"
+                android:background="@drawable/education_attendance_bt_bg"
                 android:gravity="center"
                 android:text="C语言程序设计"
                 android:textColor="@color/button_text_color"
                 android:textSize="28px" />
 
 
-            <TextView
+            <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:id="@+id/tv_date"
                 android:layout_width="400px"
                 android:layout_height="60px"
                 android:layout_below="@+id/tv_course"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="55px"
-                android:background="@drawable/education_shape_button"
+                android:background="@drawable/education_attendance_bt_bg"
                 android:gravity="center"
                 android:text="7-12 1-2节"
                 android:textColor="@color/button_text_color"
                 android:textSize="28px" />
 
-            <TextView
+            <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:layout_below="@+id/tv"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25px"
-                android:background="@drawable/education_shape_edit">
+                android:background="@drawable/education_appeal_et_bg">
 
                 <EditText
                     android:id="@+id/et_appeal"
@@ -118,7 +118,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <TextView
+        <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

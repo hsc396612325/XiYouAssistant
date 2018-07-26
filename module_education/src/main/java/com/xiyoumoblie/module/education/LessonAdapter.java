@@ -5,15 +5,12 @@ import android.content.Context;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.text.method.Touch;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -52,7 +49,7 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
     @Override
     public LessonViewHolder onCreateViewHolder (ViewGroup parent, int viewType) {
         this.context = parent.getContext();
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_attendance_inquire_item_recycler, parent, false);
         LessonViewHolder viewHolder = new LessonViewHolder(view);
         return viewHolder;
     }

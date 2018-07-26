@@ -59,7 +59,7 @@
         android:layout_height="38px"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="20px"
-        android:background="@drawable/education_shape_button_report"
+        android:background="@drawable/education_attendance_bt_bg_report"
         android:text="申诉"
         android:textColor="@color/button_report_text"
         android:textSize="24px" />
