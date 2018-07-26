@@ -51,6 +51,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     annotationProcessor deps.arouter_compiler
     implementation project(':lib_common')
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
 }

@@ -26,6 +26,7 @@
     <color name="color_map_grid_selected">#F9686D</color>
 
     <color name="white">#ffffffff</color>
+    <color name="white_column">#FEFFFE</color>
     <color name="white_10">#1affffff</color>
     <color name="white_20">#33ffffff</color>
     <color name="white_30">#4dffffff</color>
@@ -68,6 +69,6 @@
     <color name="gray_e0">#e0e0e0</color>
 
     <color name="colorGrey">#cbcbcb</color>
-
-
+    <color name="color_grey_text">#F2F2F2</color>
+    <color name="button_text_color">#5dade2</color>
 </resources>

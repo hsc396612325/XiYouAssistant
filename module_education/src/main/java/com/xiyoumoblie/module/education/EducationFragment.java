@@ -18,7 +18,7 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_educationn, container, false);
+        View view = inflater.inflate(R.layout.fragment_education, container, false);
 
         initView(view);
         return view;
@@ -38,7 +38,7 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.rl_checking_in_inquire) {
-            Intent intent = new Intent(getActivity(), CheckingInInquireActivity.class);
+            Intent intent = new Intent(getActivity(), AttendanceInquireActivity.class);
 
             ARouter.getInstance().build("/education/attendance").navigation();
         } else if (id == R.id.rl_CET_grade_inquire) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="late_color">#f57d00</color>
+    <color name="abcent_color">#ff322e</color>
+    <color name="normal_color">#66cc27</color>
+    <color name="break_color">#ffd900</color>
+    <color name="button_text_color">#5dade2</color>
+    <color name="button_report">#ee3e32</color>
+    <color name="button_report_text">#ffffff</color>
+</resources>

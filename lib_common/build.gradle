@@ -50,6 +50,7 @@ dependencies {
     // RxJava and retrofit
     api deps.rx_android
     api deps.rxjava2
+    api deps.rx_android
     api deps.retrofit.runtime
     api deps.retrofit.gson
     api deps.retrofit.rxjava2
@@ -66,8 +67,5 @@ dependencies {
 
     //router
     api deps.arouter_api
-
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    compile 'com.zhy:autolayout:1.4.5'
-
+    api 'com.zhy:autolayout:1.4.5'
 }

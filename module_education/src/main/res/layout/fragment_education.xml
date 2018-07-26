@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@color/white"
     android:orientation="vertical">
 
 
@@ -11,7 +11,7 @@
         android:layout_height="390px">
 
         <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="700px"
+            android:layout_width="660px"
             android:layout_height="320px"
            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="27px"
+                android:layout_marginTop="25px"
                 android:text="今日课表"
                 android:textColor="@color/white"
                 android:textSize="48px" />
@@ -38,7 +38,7 @@
                 android:layout_height="2px"
                 android:layout_marginLeft="70px"
                 android:layout_marginRight="70px"
-                android:layout_marginTop="92px"
+                android:layout_marginTop="90px"
                 android:background="@color/white" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -47,8 +47,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view"
                 android:layout_toLeftOf="@+id/center_view"
-                android:layout_marginTop="25px"
-                android:text="1-2 FZ203 "
+                android:layout_marginTop="23px"
+                android:layout_marginRight="6px"
+                android:text="1-2 FZ203"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -58,8 +59,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/class_schedule_12_classroom_tv"
                 android:layout_toLeftOf="@+id/center_view"
-                android:layout_marginTop="25px"
-                android:text="3-4 FZ203 "
+                android:layout_marginTop="23px"
+                android:layout_marginRight="6px"
+                android:text="3-4 FZ203"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -68,9 +70,10 @@
                 android:layout_width="130px"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
                 android:layout_toLeftOf="@+id/center_view"
-                android:text="5-6 FZ203 "
+                android:layout_marginRight="6px"
+                android:text="5-6 FZ203"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -80,8 +83,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/class_schedule_56_classroom_tv"
                 android:layout_toLeftOf="@+id/class_schedule_78_curriculum_tv"
-                android:layout_marginTop="25px"
-                android:text="7-8  无 "
+                android:layout_marginTop="23px"
+                android:layout_marginRight="6px"
+                android:text="7-8  无"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -90,9 +94,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/view"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
+                android:layout_marginLeft="6px"
                 android:layout_toRightOf="@+id/center_view"
-                android:text=" C语言程序设计"
+                android:text="C语言程序设计"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -101,9 +106,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/class_schedule_12_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
+                android:layout_marginLeft="6px"
                 android:layout_toRightOf="@+id/center_view"
-                android:text=" 操作系统"
+                android:text="操作系统"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -112,9 +118,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
+                android:layout_marginLeft="6px"
                 android:layout_toRightOf="@+id/center_view"
-                android:text=" 高等数学"
+                android:text="高等数学"
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -123,9 +130,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/class_schedule_78_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
+                android:layout_marginLeft="6px"
                 android:layout_toRightOf="@+id/center_view"
-                android:text=" "
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="28px" />
 
@@ -134,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view"
                 android:layout_toLeftOf="@+id/class_schedule_12_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
                 android:text="上午："
                 android:textColor="@color/white"
                 android:textSize="28px" />
@@ -143,7 +151,7 @@
                 android:layout_width="100px"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="25px"
+                android:layout_marginTop="23px"
                 android:layout_toLeftOf="@+id/class_schedule_56_classroom_tv"
                 android:text="下午:"
                 android:textColor="@color/white"
@@ -161,7 +169,9 @@
         android:id="@+id/rl_checking_in_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="wrap_content"
@@ -193,7 +203,9 @@
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:layout_marginTop="40px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
@@ -223,7 +235,9 @@
         android:id="@+id/rl_final_grade_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
@@ -253,7 +267,9 @@
         android:id="@+id/rl_computers_grade_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
@@ -290,7 +306,9 @@
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:layout_marginTop="40px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
@@ -320,7 +338,9 @@
         android:id="@+id/rl_class_inquire"
         android:layout_width="match_parent"
         android:layout_height="100px"
-        android:orientation="vertical">
+        android:background="@drawable/education_shape_column"
+        android:clickable="true"
+        android:focusable="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
