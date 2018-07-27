@@ -27,10 +27,8 @@
 
         <activity android:name=".AttendanceInquireActivity" />
         <activity android:name=".AppealActivity" />
-        <activity
-            android:name=".CETGradeActivity"
-            android:label="@string/title_activity_cetgeade"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".CETGradeActivity" />
+        <activity android:name=".ComputersGradeActivity" />
     </application>
 
 </manifest>

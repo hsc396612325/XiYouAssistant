@@ -44,7 +44,7 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
         } else if (id == R.id.rl_final_grade_inquire) {
             Toast.makeText(getActivity(), "查询期末成绩", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.rl_computers_grade_inquire) {
-            Toast.makeText(getActivity(), "查询计算机等级考试成绩", Toast.LENGTH_SHORT).show();
+            ARouter.getInstance().build("/education/ComputersGrade").navigation();
         } else if (id == R.id.rl_timetable_inquire) {
             Toast.makeText(getActivity(), "查询课表", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.rl_timetable_inquire) {

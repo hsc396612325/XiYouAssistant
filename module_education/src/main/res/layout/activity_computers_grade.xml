@@ -9,7 +9,7 @@
 
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/cet_grade_tool_bar"
+        android:id="@+id/computers_grade_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="88px"
         android:background="?attr/colorPrimary">
@@ -56,125 +56,47 @@
                     android:orientation="vertical">
 
                     <com.xiyoumoblie.lib.common.ui.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_type2"
+                        android:layout_width="300px"
+                        android:layout_height="100px"
                         android:layout_gravity="center"
                         android:layout_marginTop="97px"
-                        android:text="国家CET-4考试成绩"
-                        android:textColor="@color/colorPrimary" />
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lineSpacingExtra="25px"
+                        android:lines="2"
+                        android:maxEms="9"
+                        android:text="16一级计算机基础及MS Office应用"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="30px" />
 
                     <View
                         android:layout_width="300px"
                         android:layout_height="1px"
                         android:layout_gravity="center"
+                        android:layout_marginTop="70px"
                         android:background="@color/color_grey_line" />
 
                     <LinearLayout
                         android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="23px">
+                        android:layout_height="72px">
 
                         <com.xiyoumoblie.lib.common.ui.MyTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginLeft="105px"
-                            android:text="听力:"
-                            android:textColor="@color/colorPrimary" />
+                            android:gravity="center"
+                            android:text="考试状态:"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="28px" />
 
                         <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:id="@+id/tv_audition"
+                            android:id="@+id/tv_grade"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="130px"
-                            android:text="190"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="300px"
-                        android:layout_height="1px"
-                        android:layout_gravity="center"
-                        android:background="@color/color_grey_line" />
-
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="23px">
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="105px"
-                            android:text="阅读:"
-                            android:textColor="@color/colorPrimary" />
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:id="@+id/tv_read"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="130px"
-                            android:text="200"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="300px"
-                        android:layout_height="1px"
-                        android:layout_gravity="center"
-                        android:background="@color/color_grey_line" />
-
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="23px">
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="105px"
-                            android:text="作文:"
-                            android:textColor="@color/colorPrimary" />
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:id="@+id/tv_composition"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="130px"
-                            android:text="200"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="300px"
-                        android:layout_height="1px"
-                        android:layout_gravity="center"
-                        android:background="@color/color_grey_line" />
-
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="23px">
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="105px"
-                            android:text="总分:"
-                            android:textColor="@color/colorPrimary" />
-
-                        <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:id="@+id/tv_total"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="130px"
-                            android:text="590"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10px"
+                            android:gravity="center"
+                            android:text="通过"
                             android:textColor="@color/black" />
                     </LinearLayout>
 
@@ -186,24 +108,26 @@
 
                     <LinearLayout
                         android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="23px">
+                        android:layout_height="70px">
 
                         <com.xiyoumoblie.lib.common.ui.MyTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginLeft="105px"
-                            android:text="口语:"
-                            android:textColor="@color/colorPrimary" />
+                            android:gravity="center"
+                            android:text="证书编号:"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="28px" />
 
                         <com.xiyoumoblie.lib.common.ui.MyTextView
-                            android:id="@+id/tv_tongue"
+                            android:id="@+id/tv_credential"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="130px"
-                            android:text=" A"
-                            android:textColor="@color/black" />
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10px"
+                            android:gravity="center"
+                            android:text="1234567812345678"
+                            android:textColor="@color/black"
+                            android:textSize="18px" />
                     </LinearLayout>
 
                     <View
@@ -211,15 +135,6 @@
                         android:layout_height="1px"
                         android:layout_gravity="center"
                         android:background="@color/color_grey_line" />
-
-
-                    <com.xiyoumoblie.lib.common.ui.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="7px"
-                        android:text="若总分低于220或考试有违纪行为，查分结果显示为0分"
-                        android:textSize="15px" />
                 </LinearLayout>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -256,11 +171,89 @@
                     android:background="@drawable/education_cet_grade_rl_bg">
 
                     <ImageView
-                        android:id="@+id/iv_name"
+                        android:id="@+id/iv_date"
                         android:layout_width="40px"
                         android:layout_height="40px"
                         android:layout_marginLeft="45px"
-                        android:layout_marginTop="102px"
+                        android:layout_marginTop="52px"
+                        android:src="@drawable/ic_education_computers_grade_date" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="300px"
+                        android:layout_height="40px"
+                        android:layout_alignLeft="@id/iv_date"
+                        android:layout_marginLeft="50px"
+                        android:layout_marginTop="52px"
+                        android:clickable="true"
+                        android:background="@drawable/education_cet_grade_et_bg">
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="240px"
+                            android:layout_height="40px"
+                            android:clickable="false"
+                            android:text="2018年09月"
+                            android:textSize="30px" />
+
+                        <ImageView
+                            android:layout_width="20px"
+                            android:layout_height="20px"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="28px"
+                            android:layout_marginRight="21px"
+                            android:src="@drawable/ic_education_computers_grade_select" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_type"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_below="@id/iv_date"
+                        android:layout_marginLeft="45px"
+                        android:layout_marginTop="39px"
+                        android:src="@drawable/ic_education_computers_grade_type" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_type"
+                        android:layout_width="300px"
+                        android:layout_height="40px"
+                        android:layout_alignLeft="@id/iv_type"
+                        android:layout_below="@id/iv_date"
+                        android:layout_marginLeft="50px"
+                        android:layout_marginTop="39px"
+                        android:clickable="true"
+                        android:background="@drawable/education_cet_grade_et_bg">
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="240px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="2px"
+
+                            android:singleLine="true"
+                            android:text="选择考试科目"
+                            android:textSize="19px"
+                            />
+
+                        <ImageView
+                            android:layout_width="20px"
+                            android:layout_height="20px"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="28px"
+                            android:layout_marginRight="21px"
+                            android:src="@drawable/ic_education_computers_grade_select" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_name"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_below="@id/iv_type"
+                        android:layout_marginLeft="45px"
+                        android:layout_marginTop="39px"
                         android:src="@drawable/ic_education_appeal_name" />
 
                     <EditText
@@ -268,8 +261,9 @@
                         android:layout_width="300px"
                         android:layout_height="40px"
                         android:layout_alignLeft="@id/iv_name"
+                        android:layout_below="@id/iv_type"
                         android:layout_marginLeft="50px"
-                        android:layout_marginTop="102px"
+                        android:layout_marginTop="39px"
                         android:background="@drawable/education_cet_grade_et_bg"
                         android:hint="请输入考生姓名"
                         android:inputType="text"
@@ -297,13 +291,38 @@
                         android:inputType="text"
                         android:textSize="30px" />
 
+                    <LinearLayout
+                        android:layout_width="260px"
+                        android:layout_height="60px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/et_num"
+                        android:layout_marginTop="45px"
+                        android:background="@drawable/education_computers_grade_et_bg"
+                        >
+                        <EditText
+                            android:id="@+id/et_code"
+                            android:layout_width="140px"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:textSize="30px" />
+
+                        <ImageView
+                            android:id="@+id/iv_code"
+                            android:layout_width="119px"
+                            android:layout_height="58px"
+                            android:layout_gravity="center"
+                            android:background="@color/bg_gray"
+                            />
+                    </LinearLayout>
+
                     <Button
                         android:id="@+id/bt_confirm"
                         android:layout_width="200px"
                         android:layout_height="70px"
-                        android:layout_below="@+id/et_num"
+                        android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="184px"
+                        android:layout_marginBottom="38px"
                         android:background="@drawable/education_cet_grade_bt_bg"
                         android:text="确认"
                         android:textColor="@color/white"
