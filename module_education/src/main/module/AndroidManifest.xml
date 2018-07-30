@@ -25,10 +25,12 @@
             android:name="design_height"
             android:value="1334" />
 
-        <activity android:name=".AttendanceInquireActivity" />
-        <activity android:name=".AppealActivity" />
-        <activity android:name=".CETGradeActivity" />
-        <activity android:name=".ComputersGradeActivity" />
+        <activity android:name=".activity.AttendanceInquireActivity" />
+        <activity android:name=".activity.AppealActivity" />
+        <activity android:name=".activity.CETGradeActivity" />
+        <activity android:name=".activity.ComputersGradeActivity" />
+        <activity android:name=".activity.TimetableActivity" />
+        <activity android:name=".activity.TimetableCourseActivity"></activity>
     </application>
 
 </manifest>

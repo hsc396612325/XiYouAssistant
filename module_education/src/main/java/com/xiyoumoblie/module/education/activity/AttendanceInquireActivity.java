@@ -1,9 +1,8 @@
-package com.xiyoumoblie.module.education;
+package com.xiyoumoblie.module.education.activity;
 
 import android.app.Dialog;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
@@ -34,6 +32,9 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
+import com.xiyoumoblie.module.education.adapter.LessonAdapter;
+import com.xiyoumoblie.module.education.bean.LessonInfoBean;
+import com.xiyoumoblie.module.education.R;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import java.text.SimpleDateFormat;

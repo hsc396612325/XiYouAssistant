@@ -2,10 +2,11 @@
     package="com.xiyoumoblie.module.education" >
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".AttendanceInquireActivity"></activity>
-        <activity android:name=".AppealActivity" />
-        <activity android:name=".CETGradeActivity" />
-        <activity android:name=".ComputersGradeActivity" />
+        <activity android:name=".activity.AttendanceInquireActivity"/>
+        <activity android:name=".activity.AppealActivity" />
+        <activity android:name=".activity.CETGradeActivity" />
+        <activity android:name=".activity.ComputersGradeActivity" />
+        <activity android:name=".activity.TimetableActivity"/>
     </application>
 
 </manifest>

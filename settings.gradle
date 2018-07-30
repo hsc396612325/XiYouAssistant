@@ -1,1 +1,1 @@
-include ':module_app', ':module_main', ':lib_common', ':module_education', ':module_library', ':module_event', ':module_mine', ':module_login'
+include ':module_app', ':module_main', ':lib_common', ':module_education', ':module_library', ':module_event', ':module_mine', ':module_login', ':mylibrary'

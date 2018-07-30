@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="18dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@anim/touch_raise"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ll"
+            android:layout_width="120px"
+            android:layout_height="260px"
+            android:background="#34b5e2"
+            android:orientation="vertical">
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text="大学英语2"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text="\@"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_classroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text="FZ309"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </FrameLayout>
+</android.support.v7.widget.CardView>

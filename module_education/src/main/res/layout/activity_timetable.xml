@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context="com.xiyoumoblie.module.education.activity.TimetableActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/timetable_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="?attr/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tool_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="第一周"
+                android:textColor="#ffffff"
+                android:textSize="28px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tool_bar_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="14px"
+                android:text="大一  第2学期"
+                android:textColor="#ffffff"
+                android:textSize="22px" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_gravity="right"
+            android:layout_marginRight="22px"
+            android:src="@drawable/ic_education_timetable_add"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                >
+            <LinearLayout
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#863498db"
+                android:orientation="vertical">
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+
+                    android:layout_width="30px"
+                    android:layout_height="90px"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.4"
+                    android:text=" "
+                    android:textColor="@color/white"
+                    android:textSize="28px" />
+
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="62.5px"
+                    android:layout_marginTop="75px"
+                    android:text="1" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    style="@style/TimetableClassTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="90px" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_alignParentTop="true"
+            android:background="#863498db"
+            android:orientation="horizontal">
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_month"
+                android:layout_width="30px"
+                android:layout_height="90px"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginLeft="13px"
+                android:layout_marginRight="13px"
+                android:text="七月"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="44px"
+                android:layout_marginRight="35px"
+                android:lineSpacingMultiplier="1.4"
+                android:text="周一23日"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                style="@style/TimetableDateTextStyle"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:text="周二24日" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                style="@style/TimetableDateTextStyle"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:text="周三24日" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                style="@style/TimetableDateTextStyle"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:text="周四24日" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                style="@style/TimetableDateTextStyle"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:text="周五24日" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

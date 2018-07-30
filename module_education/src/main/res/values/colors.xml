@@ -7,4 +7,9 @@
     <color name="button_text_color">#5dade2</color>
     <color name="button_report">#ee3e32</color>
     <color name="button_report_text">#ffffff</color>
+
+    <color name="timetable_1">#34b5e2</color>
+    <color name="timetable_2">#ffdaf4</color>
+    <color name="timetable_3">#faaa20</color>
+    <color name="timetable_4">#85e9be</color>
 </resources>

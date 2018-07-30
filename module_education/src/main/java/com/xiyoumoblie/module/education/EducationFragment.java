@@ -46,7 +46,7 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
         } else if (id == R.id.rl_computers_grade_inquire) {
             ARouter.getInstance().build("/education/ComputersGrade").navigation();
         } else if (id == R.id.rl_timetable_inquire) {
-            Toast.makeText(getActivity(), "查询课表", Toast.LENGTH_SHORT).show();
+            ARouter.getInstance().build("/education/timetable").navigation();
         } else if (id == R.id.rl_timetable_inquire) {
             Toast.makeText(getActivity(), "查询无课教室", Toast.LENGTH_SHORT).show();
         }

@@ -1,4 +1,4 @@
-package com.xiyoumoblie.module.education;
+package com.xiyoumoblie.module.education.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
+import com.xiyoumoblie.module.education.R;
 
 @Route(path = "/education/CETGrade")
 public class CETGradeActivity extends BaseActivity{
@@ -53,15 +54,15 @@ public class CETGradeActivity extends BaseActivity{
         mFrameLayout = (FrameLayout)findViewById(R.id.fl);
         float curTranslationX = mFrameLayout.getTranslationX();
         float curTranslationY = mFrameLayout.getTranslationY();
-        ObjectAnimator animator = ObjectAnimator.ofFloat(mFrameLayout, "translationX", curTranslationX, -1200);
-        ObjectAnimator animator2 = ObjectAnimator.ofFloat(mFrameLayout, "translationY", curTranslationY, 1000);
-        animator.setDuration(1500);
-        animator.setInterpolator( new AccelerateInterpolator());
-        animator2.setDuration(1500);
-        animator2.setInterpolator( new AccelerateInterpolator());
-        AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(animator,animator2);
 
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(
+                ObjectAnimator.ofFloat(mFrameLayout, "translationX", curTranslationX, -1200),
+                ObjectAnimator.ofFloat(mFrameLayout, "translationY", curTranslationY, 1000),
+                ObjectAnimator.ofFloat(mFrameLayout, "alpha", 1f, 0.5f)
+        );
+
+        animatorSet.setDuration(2000);
         mBtConfirm = (Button)findViewById(R.id.bt_confirm);
         mBtConfirm.setOnClickListener(new View.OnClickListener() {
             @Override

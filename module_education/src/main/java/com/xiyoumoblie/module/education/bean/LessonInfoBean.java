@@ -1,4 +1,4 @@
-package com.xiyoumoblie.module.education;
+package com.xiyoumoblie.module.education.bean;
 
 import java.io.Serializable;
 

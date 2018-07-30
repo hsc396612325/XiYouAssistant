@@ -1,4 +1,4 @@
-package com.xiyoumoblie.module.education;
+package com.xiyoumoblie.module.education.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.xiyoumoblie.module.education.bean.LessonInfoBean;
+import com.xiyoumoblie.module.education.R;
+import com.xiyoumoblie.module.education.activity.AppealActivity;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_grey_text"
-    tools:context="com.xiyoumoblie.module.education.CETGradeActivity">
+    tools:context="com.xiyoumoblie.module.education.activity.CETGradeActivity">
 
 
     <android.support.v7.widget.Toolbar
