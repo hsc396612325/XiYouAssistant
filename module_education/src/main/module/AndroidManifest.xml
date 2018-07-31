@@ -30,7 +30,8 @@
         <activity android:name=".activity.CETGradeActivity" />
         <activity android:name=".activity.ComputersGradeActivity" />
         <activity android:name=".activity.TimetableActivity" />
-        <activity android:name=".activity.TimetableCourseActivity"></activity>
+        <activity android:name=".activity.TimetableCourseActivity" />
+        <activity android:name=".activity.TimetableAddActivity"></activity>
     </application>
 
 </manifest>

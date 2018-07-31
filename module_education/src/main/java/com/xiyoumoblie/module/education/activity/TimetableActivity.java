@@ -1,12 +1,31 @@
 package com.xiyoumoblie.module.education.activity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -30,6 +49,9 @@ public class TimetableActivity extends BaseActivity {
     private List<TimetableBean> mTimetableBeanList;
 
     private ImageView mIvAdd;
+    private ImageView mIvAdd2;
+
+    private View mView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +77,20 @@ public class TimetableActivity extends BaseActivity {
         recyclerView.setNestedScrollingEnabled(false);
 
         mIvAdd = findViewById(R.id.iv_add);
-        
+        mIvAdd2 = findViewById(R.id.iv_add2);
+        mView = (View) findViewById(R.id.alpha);
+        mIvAdd.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                showParkDialog(mToolbar);
+                mIvAdd.setVisibility(View.GONE);
+                mIvAdd2.setVisibility(View.VISIBLE);
+                mView.setVisibility(View.VISIBLE);
+            }
+        });
+
+
     }
 
     private List<TimetableBean> getList() {
@@ -92,7 +127,7 @@ public class TimetableActivity extends BaseActivity {
                 if (str.equals(timetableBean.getCourse())) {
                     int weed = timetableBean.getWeekNum() - 1;
                     int date = timetableBean.getDateNO() - 1;
-                    int colour = (i%4)+1;
+                    int colour = (i % 4) + 1;
 
                     courses[weed][date] = colour;
                     timetableBean.setColour(colour);
@@ -119,5 +154,46 @@ public class TimetableActivity extends BaseActivity {
         }
         return timetableBeanlist;
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void showParkDialog(View parent) {
+
+
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View contentView = layoutInflater.inflate(R.layout.activity_timetable_window, null);
+
+        final PopupWindow mPopupWindow = new PopupWindow(contentView, ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+
+
+        ColorDrawable cd = new ColorDrawable(0x000000);
+        mPopupWindow.setBackgroundDrawable(cd);
+        mPopupWindow.setOutsideTouchable(true);
+        mPopupWindow.setFocusable(true);
+        mPopupWindow.showAsDropDown(parent);
+
+
+        mPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+
+            @Override
+            public void onDismiss() {
+                WindowManager.LayoutParams lp = getWindow().getAttributes();
+                mView.setVisibility(View.GONE);
+                mIvAdd.setVisibility(View.VISIBLE);
+                mIvAdd2.setVisibility(View.GONE);
+                getWindow().setAttributes(lp);
+            }
+        });
+
+        Button button = contentView.findViewById(R.id.bt_add);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(TimetableActivity.this,TimetableAddActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 
 }
