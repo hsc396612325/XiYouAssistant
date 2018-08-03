@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LyOpenTimeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/tool_bar_title"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="开馆时间"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:paddingRight="100px">
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="长安书库"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:text="周一至周五：08:00～12:00  13:30～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:text="周六至周日：14:00～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="雁塔书库"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="30px"
+                android:text="周一至周五：08:00～12:00  13:30～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:text="周六至周日：13:00～18:00  19:00～22:00"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="长按阅览室"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:textColor="#000000"
+                android:text="报刊阅览室"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="30px"
+                android:text="周一至周五：08:00～12:00  13:30～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:text="周六至周日：09:00～12:00  13:30～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:textColor="#000000"
+                android:text="工具书览室 教师阅览室 国防阅览室"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="30px"
+                android:text="周一至周五：08:00～12:00  14:30～17:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:textColor="#000000"
+                android:text="电子阅览室"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="30px"
+                android:text="周一至周五：08:00～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:text="周六至周日：14:00～21:30"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54px"
+                android:textSize="30px"
+                android:textColor="@color/colorPrimary"
+                android:text="长安还书"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="30px"
+                android:text="周一至周五：08:0～18:00"/>
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:layout_marginTop="28px"
+                android:layout_marginBottom="28px"
+                android:text="周六至周日：14:00～17:30"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

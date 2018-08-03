@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="25px"
+    android:layout_marginRight="25px"
+    android:layout_marginTop="45px"
+    android:layout_marginBottom="8px"
+    app:cardElevation="20px"
+    app:cardCornerRadius="30px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/l_book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="20px"
+            android:layout_marginTop="53px"
+            android:layout_marginLeft="66px"
+            android:layout_marginRight="66px"
+            android:text="《Android开发艺术探索》"
+            android:textSize="36px"/>
+
+
+        <ImageView
+            android:id="@+id/im_status"
+            android:layout_width="40px"
+            android:layout_height="35px"
+            android:layout_alignBottom="@id/l_book_name"
+            android:layout_marginBottom="-127px"
+            android:layout_marginRight="12px"
+            android:layout_toStartOf="@+id/tv_status"
+            android:src="@drawable/ly_icon_history_1"
+            android:layout_toLeftOf="@+id/tv_status" />
+
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/l_book_name"
+            android:layout_marginBottom="-126px"
+            android:textSize="28px"
+            android:text="借阅状态：本馆续借"/>
+
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_status"
+            android:layout_marginTop="69px"
+            android:layout_alignStart="@id/tv_status"
+            android:text="还书日期：2018-9-10"
+            android:textSize="28px"
+            android:layout_alignLeft="@id/tv_status" />
+
+
+        <ImageView
+            android:id="@+id/im_data"
+            android:layout_width="38px"
+            android:layout_height="38px"
+            android:layout_toStartOf="@id/tv_data"
+            android:layout_marginRight="14px"
+            android:layout_alignBottom="@id/im_status"
+            android:layout_marginBottom="-71px"
+            android:src="@drawable/ly_icon_history_2"
+            android:layout_toLeftOf="@id/tv_data" />
+
+        <View
+            android:layout_width="20px"
+            android:layout_height="70px"
+            android:layout_alignTop="@id/im_data"
+            android:layout_marginTop="38px"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

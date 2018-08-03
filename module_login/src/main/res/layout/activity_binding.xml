@@ -164,7 +164,8 @@
                 android:layout_alignBottom="@id/im_code"
                 android:layout_alignStart="@id/et_code"
                 android:layout_marginLeft="130px"
-                android:src="@color/colorLine"/>
+                android:src="@color/colorLine"
+                android:onClick="onClickChangeCode"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:id="@+id/tv_change_code"

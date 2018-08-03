@@ -36,6 +36,7 @@ public class SmartRoomBindActivity extends BaseMvpActivity<SmartRoomPresenter> i
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_binding);
         initView();
+        mPresenter.getCode();
     }
 
     private void initView() {

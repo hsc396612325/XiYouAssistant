@@ -1,23 +1,13 @@
 package debug;
 
-
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
-import com.xiyoumobile.module.library.LibraryFragment;
+import com.xiyoumobile.module.library.ui.fragment.LyMainFragment;
 import com.xiyoumobile.module.library.R;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 
-
-/**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/7/1 13:13
- * @version V1.2.0
- * @name MainActivity
- */
 public class MainActivity extends BaseActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +15,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.search_edit_frame, new LibraryFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.search_edit_frame, new LyMainFragment()).commit();
     }
-
-
 
 }

@@ -8,6 +8,7 @@
     <!--分割线颜色-->
     <color name="colorLine">#CFCFCF</color>
 
+    <color name="colorYellow">#efe3b0</color>
 
     <!--APP公用的一些颜色-->
     <color name="common_bg">#fff7f7f7</color>

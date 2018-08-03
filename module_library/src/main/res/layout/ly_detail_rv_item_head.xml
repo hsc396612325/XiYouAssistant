@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="65px"
+    android:paddingRight="65px"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42px">
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="280px"
+            android:background="@color/colorPrimary"/>
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px"
+            android:layout_marginLeft="48px"
+            android:text="《Android开发艺术探索》"
+            android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="40px"
+        android:textSize="36px"
+        android:text="基本资料"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28px"
+        android:layout_marginTop="39px"
+        android:text="索书号：465"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23px"
+        android:textSize="28px"
+        android:text="标准号：4454651"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23px"
+        android:textSize="28px"
+        android:text="出版社：xxxxx"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="41px"
+        android:textSize="35px"
+        android:text="本书简介"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41px"
+        android:textSize="28px"
+        android:lineSpacingExtra="23px"
+        android:text="\t\t\t\t这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书。"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="51px"
+        android:textSize="35px"
+        android:text="馆藏部门"/>
+
+</LinearLayout>

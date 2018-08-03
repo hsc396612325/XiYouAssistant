@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="59px"
+    android:layout_marginLeft="28px"
+    android:layout_marginRight="28px"
+    android:paddingLeft="45px"
+    android:paddingRight="45px"
+    android:background="@drawable/ly_rv_item_bg">
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/l_book_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="20px"
+        android:text="《Android开发艺术探索》"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:textSize="36px"
+        android:layout_marginTop="60px"/>
+
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/l_renew_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/l_book_name"
+        android:layout_marginBottom="-94px"
+        android:layout_centerHorizontal="true"
+        android:textSize="24px"
+        android:text="任玉刚   著"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/l_renew_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/l_renew_status"
+        android:layout_marginTop="44px"
+        android:textSize="24px"
+        android:layout_centerHorizontal="true"
+        android:text="人民邮电出版社"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/l_renew_aa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/l_renew_data"
+        android:layout_marginTop="42px"
+        android:textSize="24px"
+        android:layout_centerHorizontal="true"
+        android:text="索引号：978-456-56"/>
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/l_renew_sss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/l_renew_aa"
+        android:layout_marginTop="40px"
+        android:textSize="20px"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25px"
+        android:text="在架可借：2本"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

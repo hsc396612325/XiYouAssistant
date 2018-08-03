@@ -133,7 +133,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             mTvEvent.setCompoundDrawables(null, mIconEvent, null, null);
             mTvMine.setCompoundDrawables(null, mIconMine, null, null);
             if (mFgLibrary == null) {
-                 mFgLibrary = (Fragment) ARouter.getInstance().build("/event/main").navigation();
+                 mFgLibrary = (Fragment) ARouter.getInstance().build("/library/main").navigation();
                 transaction.add(R.id.home_container, mFgLibrary);
             } else {
                 transaction.show(mFgLibrary);
@@ -151,7 +151,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             mTvEvent.setCompoundDrawables(null, mIconEventS, null, null);
             mTvMine.setCompoundDrawables(null, mIconMine, null, null);
             if (mFgEvent == null) {
-                mFgEvent = (Fragment) ARouter.getInstance().build("/library/main").navigation();
+                mFgEvent = (Fragment) ARouter.getInstance().build("/event/main").navigation();
                 transaction.add(R.id.home_container, mFgEvent);
             } else {
                 transaction.show(mFgEvent);

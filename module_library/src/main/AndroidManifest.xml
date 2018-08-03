@@ -2,6 +2,14 @@
     package="com.xiyoumobile.module.library" >
 
     <application android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.activity.LySearchActivity" />
+        <activity android:name=".ui.activity.LyAchieveActivity"/>
+        <activity android:name=".ui.activity.LyListActivity" />
+        <activity android:name=".ui.activity.LyDistributionActivity" />
+        <activity android:name=".ui.activity.LyDetailActivity" />
+        <activity android:name=".ui.activity.LyOpenTimeActivity"/>
+
     </application>
 
 </manifest>
