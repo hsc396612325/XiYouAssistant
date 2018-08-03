@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginTop="59px"
-    android:layout_marginLeft="28px"
-    android:layout_marginRight="28px"
-    android:paddingBottom="75px"
-    android:paddingLeft="72px"
-    android:paddingRight="72px"
+    android:layout_marginTop="29dp"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
+    android:paddingBottom="37dp"
+    android:paddingLeft="36dp"
+    android:paddingRight="36dp"
     android:background="@drawable/ly_rv_item_bg">
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -18,22 +18,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:lineSpacingExtra="20px"
-        android:layout_marginTop="60px"
+        android:lineSpacingExtra="10dp"
+        android:layout_marginTop="28dp"
         android:text="《Android开发艺术探索》"
-        android:textSize="36px"/>
+        android:textSize="18dp"/>
 
 
     <ImageView
         android:id="@+id/im_status"
-        android:layout_width="33px"
-        android:layout_height="33px"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
         android:layout_alignBottom="@id/l_book_name"
         android:layout_marginBottom="-123px"
-        android:layout_marginRight="22px"
+        android:layout_marginRight="8dp"
         android:layout_toStartOf="@+id/tv_status"
         android:src="@drawable/ly_icon_borrow_1"
-        android:layout_toLeftOf="@+id/tv_status" />
+        android:layout_toLeftOf="@+id/tv_status"
+        android:layout_marginEnd="8dp" />
 
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -43,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/l_book_name"
         android:layout_marginBottom="-123px"
-        android:textSize="24px"
+        android:textSize="12dp"
         android:text="借阅状态：本馆续借"/>
 
 
@@ -52,27 +53,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/tv_status"
-        android:layout_marginTop="52px"
+        android:layout_marginTop="26dp"
         android:layout_alignStart="@id/tv_status"
         android:text="还书日期：2018-9-10"
-        android:textSize="24px" />
+        android:textSize="12dp"
+        android:layout_alignLeft="@id/tv_status" />
 
 
     <ImageView
         android:id="@+id/im_data"
-        android:layout_width="38px"
-        android:layout_height="38px"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
         android:layout_toStartOf="@id/tv_data"
-        android:layout_marginRight="18px"
+        android:layout_marginRight="9dp"
         android:layout_alignBottom="@id/im_status"
-        android:layout_marginBottom="-55px"
-        android:src="@drawable/ly_icon_borrow_2"/>
+        android:layout_marginBottom="-50px"
+        android:src="@drawable/ly_icon_borrow_2"
+        android:layout_marginEnd="9dp"
+        android:layout_toLeftOf="@id/tv_data" />
 
     <View
-        android:layout_width="20px"
-        android:layout_height="50px"
+        android:layout_width="10dp"
+        android:layout_height="25dp"
         android:layout_alignTop="@id/im_data"
-        android:layout_marginTop="35px"/>
+        android:layout_marginTop="17dp"/>
 
 
 </RelativeLayout>

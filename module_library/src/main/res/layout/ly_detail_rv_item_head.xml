@@ -3,27 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="65px"
-    android:paddingRight="65px"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42px">
+        android:layout_marginTop="21dp">
 
         <ImageView
-            android:layout_width="200px"
-            android:layout_height="280px"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
             android:background="@color/colorPrimary"/>
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6px"
-            android:layout_marginLeft="48px"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="24dp"
             android:text="《Android开发艺术探索》"
-            android:textSize="32px"/>
+            android:lineSpacingExtra="10dp"
+            android:textSize="16dp"
+            android:layout_marginStart="24dp" />
 
     </LinearLayout>
 
@@ -31,53 +33,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="40px"
-        android:textSize="36px"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
         android:text="基本资料"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="28px"
-        android:layout_marginTop="39px"
+        android:textSize="14dp"
+        android:layout_marginTop="19dp"
         android:text="索书号：465"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23px"
-        android:textSize="28px"
+        android:layout_marginTop="11dp"
+        android:textSize="14dp"
         android:text="标准号：4454651"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23px"
-        android:textSize="28px"
+        android:layout_marginTop="11dp"
+        android:textSize="14dp"
         android:text="出版社：xxxxx"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="41px"
-        android:textSize="35px"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
         android:text="本书简介"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41px"
-        android:textSize="28px"
-        android:lineSpacingExtra="23px"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        android:lineSpacingExtra="11dp"
         android:text="\t\t\t\t这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书，这是一本好书。"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="51px"
-        android:textSize="35px"
+        android:layout_marginTop="25dp"
+        android:textSize="17dp"
         android:text="馆藏部门"/>
 
 </LinearLayout>

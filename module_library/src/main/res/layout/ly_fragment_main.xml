@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,27 +16,30 @@
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28px"
+            android:textSize="14dp"
             android:textColor="#000000"
-            android:layout_marginTop="57px"
-            android:layout_marginLeft="42px"
-            android:text="目标：30本"/>
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="21dp"
+            android:text="目标：30本"
+            android:layout_marginStart="21dp" />
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28px"
+            android:textSize="14dp"
             android:textColor="#000000"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="354px"
-            android:layout_marginRight="42px"
-            android:layout_marginBottom="22px"
-            android:text="7月29日 星期日"/>
+            android:layout_marginTop="174dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="11dp"
+            android:text="7月29日 星期日"
+            android:layout_marginEnd="21dp"
+            android:layout_alignParentRight="true" />
 
         <com.xiyoumobile.module.library.ui.custom.LyWaveView
             android:id="@+id/wave_progress"
-            android:layout_width="300px"
-            android:layout_height="300px"
+            android:layout_width="148dp"
+            android:layout_height="148dp"
             app:front_wave_color="#b1d1ff"
             app:circle_color="#80bee8"
             app:back_wave_color="#8ec0f9"
@@ -48,17 +51,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="您已累计借书："
-            android:textSize="24px"
+            android:textSize="12dp"
             android:textColor="#000"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="114px"/>
+            android:layout_marginTop="57dp"/>
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:id="@+id/l_tv_brought"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20本"
-            android:textSize="60px"
+            android:textSize="30dp"
             android:textColor="#000"
             android:layout_centerInParent="true"/>
 
@@ -66,10 +69,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="青铜读者"
-            android:textSize="30px"
+            android:textSize="15dp"
             android:textColor="#164881"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="270px"/>
+            android:layout_marginTop="135dp"/>
 
     </RelativeLayout>
 
@@ -78,32 +81,35 @@
         android:layout_height="1px"
         android:background="@color/colorLine"/>
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60px"
+        android:layout_height="30dp"
         android:gravity="center_vertical"
         android:background="@color/white">
 
         <ImageView
-            android:layout_width="37px"
-            android:layout_height="37px"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             app:layout_auto_basewidth="height"
             android:scaleType="fitXY"
             android:src="@drawable/ly_icon_main_1"
-            android:layout_marginLeft="39px"/>
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp" />
 
         <ViewFlipper
             android:id="@+id/l_view_flipper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="54px"
-            android:layout_marginLeft="20px"
+            android:layout_marginRight="27dp"
+            android:layout_marginLeft="10dp"
             android:autoStart="true"
             android:flipInterval="2000"
             android:inAnimation="@anim/ly_flipper_anim_in"
-            android:outAnimation="@anim/ly_flipper_anim_out"/>
+            android:outAnimation="@anim/ly_flipper_anim_out"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="27dp" />
 
-    </com.zhy.autolayout.AutoLinearLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -122,67 +128,85 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <com.zhy.autolayout.AutoRelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
         android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/l_center_img"
-            android:layout_width="62px"
-            android:layout_height="62px"
-            android:layout_marginTop="24px"
-            android:layout_marginBottom="17px"
-            android:src="@drawable/ly_icon_main_3"
-            android:layout_centerHorizontal="true"/>
-
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:id="@+id/l_center_tv"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/l_center_img"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="80px"
-            android:layout_marginBottom="14px"
-            android:text="我的借阅"/>
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal">
 
-        <ImageView
-            android:id="@+id/search_img"
-            android:layout_width="62px"
-            android:layout_height="62px"
-            android:src="@drawable/ly_icon_main_2"
-            android:layout_alignTop="@id/l_center_img"
-            android:layout_marginLeft="110px"/>
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ly_icon_main_2" />
 
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:id="@+id/search_tv"
-            android:layout_width="wrap_content"
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="书刊检索" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_borrow"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/l_center_img"
-            android:layout_marginTop="80px"
-            android:layout_marginLeft="97px"
-            android:text="书刊检索"/>
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal">
 
-        <ImageView
-            android:id="@+id/renew_img"
-            android:layout_width="62px"
-            android:layout_height="62px"
-            android:src="@drawable/ly_icon_main_4"
-            android:layout_alignTop="@id/l_center_img"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="128px"/>
+            <ImageView
+                android:id="@+id/l_center_img"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ly_icon_main_3"/>
 
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:id="@+id/renew_tv"
-            android:layout_width="wrap_content"
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/l_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="我的借阅"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_renew"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/l_center_img"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="80px"
-            android:layout_marginRight="105px"
-            android:text="续借申请"/>
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal">
 
-    </com.zhy.autolayout.AutoRelativeLayout>
+            <ImageView
+                android:id="@+id/renew_img"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ly_icon_main_4" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/renew_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="续借申请" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -193,23 +217,24 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_marginTop="40px"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorLine"/>
     
-    <com.zhy.autolayout.AutoLinearLayout
+    <LinearLayout
         android:id="@+id/l_ll_history"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/white"
         android:gravity="center_vertical">
         
         <ImageView
-            android:layout_width="35px"
-            android:layout_height="35px"
-            android:layout_marginLeft="40px"
-            android:src="@drawable/ly_icon_main_5"/>
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ly_icon_main_5"
+            android:layout_marginStart="20dp" />
         
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="0dp"
@@ -217,35 +242,38 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="借阅历史"
-            android:textSize="30px"
-            android:layout_marginLeft="22px"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp" />
 
         <ImageView
-            android:layout_width="20px"
-            android:layout_height="20px"
-            android:layout_marginRight="46px"
-            android:src="@drawable/ly_icon_main_into"/>
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/ly_icon_main_into"
+            android:layout_marginEnd="23dp" />
         
-    </com.zhy.autolayout.AutoLinearLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/colorLine"/>
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <LinearLayout
         android:id="@+id/l_ll_open_time"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/white"
         android:gravity="center_vertical">
 
         <ImageView
-            android:layout_width="35px"
-            android:layout_height="35px"
-            android:layout_marginLeft="40px"
-            android:src="@drawable/ly_icon_main_6"/>
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ly_icon_main_6"
+            android:layout_marginStart="20dp" />
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="0dp"
@@ -253,35 +281,38 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="开馆时间"
-            android:textSize="30px"
-            android:layout_marginLeft="22px"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp" />
 
         <ImageView
-            android:layout_width="20px"
-            android:layout_height="20px"
-            android:layout_marginRight="46px"
-            android:src="@drawable/ly_icon_main_into"/>
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/ly_icon_main_into"
+            android:layout_marginEnd="23dp" />
 
-    </com.zhy.autolayout.AutoLinearLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/colorLine"/>
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <LinearLayout
         android:id="@+id/l_ll_distribution"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/white"
         android:gravity="center_vertical">
 
         <ImageView
-            android:layout_width="35px"
-            android:layout_height="35px"
-            android:layout_marginLeft="40px"
-            android:src="@drawable/ly_icon_main_7"/>
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ly_icon_main_7"
+            android:layout_marginStart="20dp" />
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
             android:layout_width="0dp"
@@ -289,16 +320,18 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:text="馆藏分布"
-            android:textSize="30px"
-            android:layout_marginLeft="22px"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp" />
 
         <ImageView
-            android:layout_width="20px"
-            android:layout_height="20px"
-            android:layout_marginRight="46px"
-            android:src="@drawable/ly_icon_main_into"/>
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/ly_icon_main_into"
+            android:layout_marginEnd="23dp" />
 
-    </com.zhy.autolayout.AutoLinearLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -308,23 +341,23 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginTop="40px"
+        android:layout_marginTop="20dp"
         android:background="@color/colorLine"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
         android:id="@+id/l_tv_logout"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="50dp"
         android:textColor="#000"
         android:gravity="center"
         android:background="@color/white"
         android:text="退出登录"
-        android:textSize="36px"/>
+        android:textSize="18dp"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="40px"
+        android:layout_marginBottom="20dp"
         android:background="@color/colorLine"/>
 
 
@@ -332,4 +365,4 @@
 
     </ScrollView>
 
-</com.zhy.autolayout.AutoLinearLayout>
+</LinearLayout>

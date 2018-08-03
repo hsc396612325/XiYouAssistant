@@ -11,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/home_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="44dp"
         android:background="?attr/colorPrimary">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:text=""/>
 
     </android.support.v7.widget.Toolbar>
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="36px"
+        android:textSize="18dp"
         android:text="您目前还没有借书记录"/>
 
 </LinearLayout>

@@ -11,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/home_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="44dp"
         android:background="?attr/colorPrimary">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:text="开馆时间"/>
 
     </android.support.v7.widget.Toolbar>
@@ -34,13 +34,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:paddingRight="100px">
+            android:paddingRight="50dp"
+            android:paddingEnd="50dp"
+            tools:ignore="RtlSymmetry">
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="43px"
-                android:textSize="30px"
+                android:layout_marginTop="21dp"
+                android:textSize="15dp"
                 android:textColor="@color/colorPrimary"
                 android:text="长安书库"/>
 
@@ -48,21 +50,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
+                android:layout_marginTop="14dp"
                 android:text="周一至周五：08:00～12:00  13:30～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
+                android:layout_marginTop="14dp"
                 android:text="周六至周日：14:00～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="54px"
-                android:textSize="30px"
+                android:layout_marginTop="27dp"
+                android:textSize="15dp"
                 android:textColor="@color/colorPrimary"
                 android:text="雁塔书库"/>
 
@@ -70,28 +72,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:text="周一至周五：08:00～12:00  13:30～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
+                android:layout_marginTop="14dp"
                 android:text="周六至周日：13:00～18:00  19:00～22:00"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="54px"
-                android:textSize="30px"
+                android:layout_marginTop="27dp"
+                android:textSize="15dp"
                 android:textColor="@color/colorPrimary"
                 android:text="长按阅览室"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:textColor="#000000"
                 android:text="报刊阅览室"/>
 
@@ -99,20 +101,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:text="周一至周五：08:00～12:00  13:30～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
+                android:layout_marginTop="14dp"
                 android:text="周六至周日：09:00～12:00  13:30～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:textColor="#000000"
                 android:text="工具书览室 教师阅览室 国防阅览室"/>
 
@@ -120,13 +122,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:text="周一至周五：08:00～12:00  14:30～17:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:textColor="#000000"
                 android:text="电子阅览室"/>
 
@@ -134,21 +136,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:text="周一至周五：08:00～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
+                android:layout_marginTop="14dp"
                 android:text="周六至周日：14:00～21:30"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="54px"
-                android:textSize="30px"
+                android:layout_marginTop="27dp"
+                android:textSize="15dp"
                 android:textColor="@color/colorPrimary"
                 android:text="长安还书"/>
 
@@ -156,19 +158,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="30px"
+                android:layout_marginTop="15dp"
                 android:text="周一至周五：08:0～18:00"/>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#808080"
-                android:layout_marginTop="28px"
-                android:layout_marginBottom="28px"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
                 android:text="周六至周日：14:00～17:30"/>
 
         </LinearLayout>
-
 
     </ScrollView>
 

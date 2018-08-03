@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/home_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="44dp"
         android:background="?attr/colorPrimary">
 
         <TextView
@@ -19,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:text="馆藏分布"/>
 
     </android.support.v7.widget.Toolbar>
@@ -37,23 +38,24 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="53px"
+                android:layout_marginTop="26dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="44px"
-                    android:layout_height="39px"
+                    android:layout_width="22dp"
+                    android:layout_height="19dp"
                     android:src="@drawable/ly_icon_distribution_1"/>
 
                 <com.xiyoumoblie.lib.common.ui.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20px"
-                    android:lineSpacingExtra="34px"
+                    android:layout_marginLeft="10dp"
+                    android:lineSpacingExtra="17dp"
                     android:text="长安校区图书馆馆藏分布示意简图"
                     android:textColor="#3699db"
-                    android:textSize="36px" />
+                    android:textSize="18dp"
+                    android:layout_marginStart="10dp" />
 
 
             </LinearLayout>
@@ -62,21 +64,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="35px">
+                android:layout_marginTop="17dp">
 
                 <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:textSize="36px"
-                    android:layout_width="36px"
+                    android:textSize="18dp"
+                    android:layout_width="18dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:textColor="#3699db"
                     android:text=" 1\n\n层" />
 
                 <ImageView
-                    android:layout_width="534px"
-                    android:layout_height="360px"
-                    android:layout_marginLeft="28px"
-                    android:src="@drawable/ly_im_distribution_f1"/>
+                    android:layout_width="267dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/ly_im_distribution_f1"
+                    android:layout_marginStart="14dp" />
 
             </LinearLayout>
 
@@ -84,11 +87,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="30px">
+                android:layout_marginTop="15dp">
 
                 <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:textSize="36px"
-                    android:layout_width="36px"
+                    android:textSize="18dp"
+                    android:layout_width="18dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
@@ -96,10 +99,11 @@
                     android:text="2\n\n层" />
 
                 <ImageView
-                    android:layout_width="534px"
-                    android:layout_height="360px"
-                    android:layout_marginLeft="28px"
-                    android:src="@drawable/ly_im_distribution_f2"/>
+                    android:layout_width="267dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/ly_im_distribution_f2"
+                    android:layout_marginStart="14dp" />
 
             </LinearLayout>
 
@@ -107,11 +111,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="30px">
+                android:layout_marginTop="15dp">
 
                 <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:textSize="36px"
-                    android:layout_width="36px"
+                    android:textSize="18dp"
+                    android:layout_width="18dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
@@ -119,10 +123,11 @@
                     android:text="3\n\n层" />
 
                 <ImageView
-                    android:layout_width="534px"
-                    android:layout_height="360px"
-                    android:layout_marginLeft="28px"
-                    android:src="@drawable/ly_im_distribution_f3"/>
+                    android:layout_width="267dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/ly_im_distribution_f3"
+                    android:layout_marginStart="14dp" />
 
             </LinearLayout>
 
@@ -130,11 +135,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="30px">
+                android:layout_marginTop="15dp">
 
                 <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:textSize="36px"
-                    android:layout_width="36px"
+                    android:textSize="18dp"
+                    android:layout_width="18dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
@@ -142,58 +147,68 @@
                     android:text="4\n\n层" />
 
                 <ImageView
-                    android:layout_width="534px"
-                    android:layout_height="360px"
-                    android:layout_marginLeft="28px"
-                    android:src="@drawable/ly_im_distribution_f4"/>
+                    android:layout_width="267dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/ly_im_distribution_f4"
+                    android:layout_marginStart="14dp" />
 
             </LinearLayout>
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="60px"
-                android:layout_marginTop="75px"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="37dp"
                 android:textColor="#3599db"
-                android:textSize="36px"
-                android:text="雁塔校区图书馆馆藏分布简介："/>
+                android:textSize="18dp"
+                android:text="雁塔校区图书馆馆藏分布简介："
+                android:paddingStart="30dp"
+                tools:ignore="RtlSymmetry" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="59px"
-                android:layout_marginTop="93px"
+                android:paddingLeft="29dp"
+                android:layout_marginTop="46dp"
                 android:textColor="#000000"
-                android:textSize="28px"
-                android:text="社科英语书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆一层北侧"/>
+                android:textSize="14dp"
+                android:text="社科英语书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆一层北侧"
+                android:paddingStart="29dp"
+                tools:ignore="RtlSymmetry" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="59px"
-                android:layout_marginTop="23px"
+                android:paddingLeft="29dp"
+                android:layout_marginTop="11dp"
                 android:textColor="#000000"
-                android:textSize="28px"
-                android:text="科技开架书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆一层东南侧"/>
+                android:textSize="14dp"
+                android:text="科技开架书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆一层东南侧"
+                android:paddingStart="29dp"
+                tools:ignore="RtlSymmetry" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="59px"
-                android:layout_marginTop="23px"
+                android:paddingLeft="29dp"
+                android:layout_marginTop="11dp"
                 android:textColor="#000000"
-                android:textSize="28px"
-                android:text="经济管理书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆三层北侧"/>
+                android:textSize="14dp"
+                android:text="经济管理书库&#160;&#160;--&#160;&#160;位于雁塔校区图书馆三层北侧"
+                android:paddingStart="29dp"
+                tools:ignore="RtlSymmetry" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="59px"
-                android:layout_marginTop="23px"
-                android:layout_marginBottom="120px"
+                android:paddingLeft="29dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="60dp"
                 android:textColor="#000000"
-                android:textSize="28px"
-                android:text="报刊阅览室&#160;&#160;&#160;&#160;&#160;&#160;&#160;--&#160;&#160;位于雁塔校区图书馆二层北侧"/>
+                android:textSize="14dp"
+                android:text="报刊阅览室&#160;&#160;&#160;&#160;&#160;&#160;&#160;--&#160;&#160;位于雁塔校区图书馆二层北侧"
+                android:paddingStart="29dp" />
 
         </LinearLayout>
 

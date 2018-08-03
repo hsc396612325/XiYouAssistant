@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -95,7 +96,7 @@ public class Utils {
             //像素值除以density
             String dp = (int) (px * 1.0f / density + 0.5) + "";
 
-            stringBuilder.append("<dimen name=\"").append(px + "").append("px\">").append(dp).append("dp</dimen>\n");
+            stringBuilder.append("<dimen name=\"m").append(px + "").append("px\">").append(dp).append("dp</dimen>\n");
         }
         stringBuilder.append("</resources>");
         System.out.println(stringBuilder.toString());

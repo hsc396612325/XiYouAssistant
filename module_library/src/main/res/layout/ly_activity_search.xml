@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,14 +23,15 @@
             android:text="书目检索"/>
 
     </android.support.v7.widget.Toolbar>
+
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_marginLeft="25px"
-        android:layout_marginRight="25px"
-        android:layout_height="700px"
-        app:cardElevation="20px"
-        app:cardCornerRadius="50px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="350dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="25dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
@@ -38,44 +40,49 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="68px"
-                android:layout_height="45px"
-                android:layout_marginTop="70px"
-                android:layout_marginLeft="66px"
-                android:src="@drawable/ly_icon_search_1"/>
+                android:layout_width="34dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="33dp"
+                android:src="@drawable/ly_icon_search_1"
+                android:layout_marginStart="33dp" />
 
             <ImageView
-                android:layout_width="68px"
-                android:layout_height="43px"
-                android:layout_marginTop="280px"
-                android:layout_marginLeft="66px"
-                android:src="@drawable/ly_icon_search_2"/>
+                android:layout_width="34dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="33dp"
+                android:src="@drawable/ly_icon_search_2"
+                android:layout_marginStart="33dp" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70px"
-                android:layout_marginLeft="165px"
-                android:textSize="36px"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="82dp"
+                android:textSize="18dp"
                 android:textColor="#000000"
-                android:text="类型" />
+                android:text="类型"
+                android:layout_marginStart="82dp" />
 
             <com.xiyoumoblie.lib.common.ui.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="280px"
-                android:layout_marginLeft="164px"
-                android:textSize="36px"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="82dp"
+                android:textSize="18dp"
                 android:textColor="#000000"
-                android:text="检索词"/>
+                android:text="检索词"
+                android:layout_marginStart="82dp" />
 
             <RadioGroup
                 android:id="@+id/lb_rg"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="142px"
-                android:orientation="horizontal">
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="71dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="33dp">
 
                 <RadioButton
                     android:id="@+id/lb_rb_name"
@@ -85,9 +92,10 @@
                     android:background="@drawable/ly_rd_tv_bg_select"
                     android:textColor="@drawable/ly_rd_tv_color_select"
                     android:gravity="center"
-                    android:layout_marginRight="40px"
-                    android:textSize="28px"
-                    android:text="书名" />
+                    android:layout_marginRight="4dp"
+                    android:textSize="14dp"
+                    android:text="书名"
+                    android:layout_marginEnd="4dp" />
 
                 <RadioButton
                     android:id="@+id/lb_rb_search_num"
@@ -97,9 +105,10 @@
                     android:background="@drawable/ly_rd_tv_bg_select"
                     android:textColor="@drawable/ly_rd_tv_color_select"
                     android:gravity="center"
-                    android:layout_marginRight="40px"
-                    android:textSize="28px"
-                    android:text="检索号" />
+                    android:layout_marginRight="4dp"
+                    android:textSize="14dp"
+                    android:text="检索号"
+                    android:layout_marginEnd="4dp" />
 
                 <RadioButton
                     android:id="@+id/lb_rb_standard_num"
@@ -109,9 +118,10 @@
                     android:background="@drawable/ly_rd_tv_bg_select"
                     android:textColor="@drawable/ly_rd_tv_color_select"
                     android:gravity="center"
-                    android:layout_marginRight="40px"
-                    android:textSize="28px"
-                    android:text="标准号" />
+                    android:layout_marginRight="4dp"
+                    android:textSize="14dp"
+                    android:text="标准号"
+                    android:layout_marginEnd="4dp" />
 
                 <RadioButton
                     android:id="@+id/lb_rb_author"
@@ -121,9 +131,10 @@
                     android:background="@drawable/ly_rd_tv_bg_select"
                     android:textColor="@drawable/ly_rd_tv_color_select"
                     android:gravity="center"
-                    android:layout_marginRight="40px"
-                    android:textSize="28px"
-                    android:text="作者" />
+                    android:layout_marginRight="4dp"
+                    android:textSize="14dp"
+                    android:text="作者"
+                    android:layout_marginEnd="4dp" />
 
                 <RadioButton
                     android:id="@+id/lb_rb_publish"
@@ -133,7 +144,7 @@
                     android:background="@drawable/ly_rd_tv_bg_select"
                     android:textColor="@drawable/ly_rd_tv_color_select"
                     android:gravity="center"
-                    android:textSize="28px"
+                    android:textSize="14dp"
                     android:text="出版社" />
 
 
@@ -142,25 +153,25 @@
             <EditText
                 android:id="@+id/et"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="70px"
-                android:layout_marginRight="70px"
-                android:paddingBottom="20px"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:paddingBottom="4dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ly_et_bg"
-                android:layout_marginTop="354px"
+                android:layout_marginTop="177dp"
                 android:layout_centerHorizontal="true"
                 android:hint="请输入检索关键词"
-                android:textSize="25px"/>
+                android:textSize="14dp"/>
 
             <Button
                 android:id="@+id/bt_search"
-                android:layout_width="500px"
-                android:layout_height="90px"
-                android:layout_marginBottom="104px"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="52dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/ly_bt_bg_yellow"
-                android:textSize="36px"
+                android:textSize="18dp"
                 android:text="开始检索"
                 android:textColor="@color/white"/>
 

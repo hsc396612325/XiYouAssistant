@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="25px"
-    android:layout_marginRight="25px"
-    android:layout_marginTop="45px"
-    android:layout_marginBottom="8px"
-    app:cardElevation="20px"
-    app:cardCornerRadius="30px">
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,24 +20,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:lineSpacingExtra="20px"
-            android:layout_marginTop="53px"
-            android:layout_marginLeft="66px"
-            android:layout_marginRight="66px"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
             android:text="《Android开发艺术探索》"
-            android:textSize="36px"/>
+            android:textSize="18dp"/>
 
 
         <ImageView
             android:id="@+id/im_status"
-            android:layout_width="40px"
-            android:layout_height="35px"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
             android:layout_alignBottom="@id/l_book_name"
             android:layout_marginBottom="-127px"
-            android:layout_marginRight="12px"
+            android:layout_marginRight="6dp"
             android:layout_toStartOf="@+id/tv_status"
             android:src="@drawable/ly_icon_history_1"
-            android:layout_toLeftOf="@+id/tv_status" />
+            android:layout_toLeftOf="@+id/tv_status"
+            android:layout_marginEnd="6dp" />
 
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -56,29 +57,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/tv_status"
-            android:layout_marginTop="69px"
+            android:layout_marginTop="34dp"
             android:layout_alignStart="@id/tv_status"
             android:text="还书日期：2018-9-10"
-            android:textSize="28px"
+            android:textSize="14dp"
             android:layout_alignLeft="@id/tv_status" />
 
 
         <ImageView
             android:id="@+id/im_data"
-            android:layout_width="38px"
-            android:layout_height="38px"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
             android:layout_toStartOf="@id/tv_data"
-            android:layout_marginRight="14px"
+            android:layout_marginRight="7dp"
             android:layout_alignBottom="@id/im_status"
             android:layout_marginBottom="-71px"
             android:src="@drawable/ly_icon_history_2"
-            android:layout_toLeftOf="@id/tv_data" />
+            android:layout_toLeftOf="@id/tv_data"
+            android:layout_marginEnd="7dp" />
 
         <View
-            android:layout_width="20px"
-            android:layout_height="70px"
+            android:layout_width="10dp"
+            android:layout_height="35dp"
             android:layout_alignTop="@id/im_data"
-            android:layout_marginTop="38px"/>
+            android:layout_marginTop="19dp"/>
 
     </RelativeLayout>
 

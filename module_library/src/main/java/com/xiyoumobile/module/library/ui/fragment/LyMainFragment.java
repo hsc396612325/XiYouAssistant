@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.bumptech.glide.util.Util;
 import com.xiyoumobile.module.library.ui.activity.LyAchieveActivity;
 import com.xiyoumobile.module.library.ui.activity.LyDistributionActivity;
 import com.xiyoumobile.module.library.ui.activity.LyListActivity;
@@ -21,7 +21,6 @@ import com.xiyoumobile.module.library.ui.custom.LyWaveView;
 import com.xiyoumobile.module.library.R;
 import com.xiyoumoblie.lib.common.base.BaseFragment;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
-import com.zhy.autolayout.AutoLinearLayout;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -34,17 +33,13 @@ public class LyMainFragment extends BaseFragment implements View.OnClickListener
     private MyTextView mTextView;
     private ViewFlipper mViewFlipper;
 
-    private AutoLinearLayout mLLHistory;
-    private AutoLinearLayout mLLOpenTime;
-    private AutoLinearLayout mLLDistribution;
+    private LinearLayout mLLHistory;
+    private LinearLayout mLLOpenTime;
+    private LinearLayout mLLDistribution;
 
-    private ImageView mSearchImg;
-    private ImageView mCenterImg;
-    private ImageView mRenewImg;
-
-    private TextView mSearchTv;
-    private TextView mCenterTv;
-    private TextView mRenewTv;
+    private LinearLayout mLlSearch;
+    private LinearLayout mLlBorrow;
+    private LinearLayout mLlRenew;
 
     private TextView mLogoutTv;
 
@@ -63,7 +58,7 @@ public class LyMainFragment extends BaseFragment implements View.OnClickListener
                 return s;
             }
         });
-        mLyWaveView.setProgressNum((float)0.5, 2000);
+        mLyWaveView.setProgressNum((float) 0.666, 2000);
 
         mViewFlipper = view.findViewById(R.id.l_view_flipper);
         List<String> list = new ArrayList<>();
@@ -83,22 +78,15 @@ public class LyMainFragment extends BaseFragment implements View.OnClickListener
         mLLOpenTime.setOnClickListener(this);
         mLLDistribution.setOnClickListener(this);
 
-        mSearchImg = view.findViewById(R.id.search_img);
-        mCenterImg = view.findViewById(R.id.l_center_img);
-        mRenewImg = view.findViewById(R.id.renew_img);
-        mSearchImg.setOnClickListener(this);
-        mCenterImg.setOnClickListener(this);
-        mRenewImg.setOnClickListener(this);
-
-        mSearchTv = view.findViewById(R.id.search_tv);
-        mCenterTv = view.findViewById(R.id.l_center_tv);
-        mRenewTv = view.findViewById(R.id.renew_tv);
-        mSearchTv.setOnClickListener(this);
-        mCenterTv.setOnClickListener(this);
-        mRenewTv.setOnClickListener(this);
-
         mLogoutTv = view.findViewById(R.id.l_tv_logout);
         mLogoutTv.setOnClickListener(this);
+
+        mLlSearch = view.findViewById(R.id.ll_search);
+        mLlBorrow = view.findViewById(R.id.ll_borrow);
+        mLlRenew = view.findViewById(R.id.ll_renew);
+        mLlSearch.setOnClickListener(this);
+        mLlBorrow.setOnClickListener(this);
+        mLlRenew.setOnClickListener(this);
 
         return view;
     }
@@ -117,15 +105,15 @@ public class LyMainFragment extends BaseFragment implements View.OnClickListener
         } else if (i == R.id.l_ll_distribution) {
             startActivity(new Intent(getContext(), LyDistributionActivity.class));
 
-        } else if (i == R.id.search_img || i == R.id.search_tv) {
+        } else if (i == R.id.ll_search) {
             startActivity(new Intent(getContext(), LySearchActivity.class));
 
-        } else if (i == R.id.l_center_img || i == R.id.l_center_tv) {
+        } else if (i == R.id.ll_borrow) {
             Intent intent = new Intent(getContext(), LyListActivity.class);
             intent.putExtra("type", 0);
             startActivity(intent);
 
-        } else if (i == R.id.renew_img || i == R.id.renew_tv) {
+        } else if (i == R.id.ll_renew) {
             Intent intent = new Intent(getContext(), LyListActivity.class);
             intent.putExtra("type", 1);
             startActivity(intent);
