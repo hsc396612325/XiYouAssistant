@@ -2,32 +2,55 @@ package com.xiyoumoblie.module.education.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.ComponentCallbacks;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
+import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
+import com.xiyoumoblie.lib.common.utils.Utils;
 import com.xiyoumoblie.module.education.R;
+import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
+import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
+import com.xiyoumoblie.module.education.bean.computersGrade.CgTimes;
+import com.xiyoumoblie.module.education.contract.ComputersGradeContract;
+import com.xiyoumoblie.module.education.presenter.ComputersGradePresenter;
+import com.xiyoumoblie.module.education.util.Injection;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
+
+import io.reactivex.Observable;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function3;
+import io.reactivex.functions.Function5;
 
 @Route(path = "/education/ComputersGrade")
-public class ComputersGradeActivity extends BaseActivity {
+public class ComputersGradeActivity extends BaseActivity implements ComputersGradeContract.View {
     private Toolbar mToolbar;
     private TextView mTvTitle;
-    private FrameLayout mFrameLayout;
+    private CardView mCardView;
 
     private Button mBtConfirm;
 
@@ -38,10 +61,16 @@ public class ComputersGradeActivity extends BaseActivity {
     private EditText mEtName;
     private EditText mEtNum;
     private EditText mEtCode;
-
+    private ImageView mIvCode;
     private MyTextView mTvType2;
     private MyTextView mTvGrade;
     private MyTextView mTvCredential;
+
+    private AnimatorSet mAnimatorSet;
+
+    private ComputersGradeContract.Presenter mPresenter;
+
+    private TreeMap<String, String> mDateSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +78,12 @@ public class ComputersGradeActivity extends BaseActivity {
         setContentView(R.layout.activity_computers_grade);
 
         initView();
-        initData();
+        clickJudge();
+
+        //创建一个P实例
+        //参数1 M的实例
+        //参数2 V的实例
+        new ComputersGradePresenter(Injection.provideTasksRepository(getApplicationContext()), this);
     }
 
     private void initView() {
@@ -58,25 +92,26 @@ public class ComputersGradeActivity extends BaseActivity {
         mTvTitle.setText("计算机等级成绩");
         setupToolBar(mToolbar, true);
 
-        mFrameLayout = (FrameLayout) findViewById(R.id.fl);
-        float curTranslationX = mFrameLayout.getTranslationX();
-        float curTranslationY = mFrameLayout.getTranslationY();
+        mCardView = (CardView) findViewById(R.id.cardView2);
+        float curTranslationX = mCardView.getTranslationX();
+        float curTranslationY = mCardView.getTranslationY();
 
-        AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(
-                ObjectAnimator.ofFloat(mFrameLayout, "translationX", curTranslationX, -1200),
-                ObjectAnimator.ofFloat(mFrameLayout, "translationY", curTranslationY, 1000),
-                ObjectAnimator.ofFloat(mFrameLayout, "alpha", 1f, 0.5f)
+        mAnimatorSet = new AnimatorSet();
+        mAnimatorSet.playTogether(
+                ObjectAnimator.ofFloat(mCardView, "translationX", curTranslationX, -1200),
+                ObjectAnimator.ofFloat(mCardView, "translationY", curTranslationY, 1000),
+                ObjectAnimator.ofFloat(mCardView, "alpha", 1f, 0.5f)
         );
 
-        animatorSet.setDuration(2000);
+        mAnimatorSet.setDuration(2000);
         mBtConfirm = (Button) findViewById(R.id.bt_confirm);
-        mBtConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mBtConfirm.setOnClickListener(view -> {
 
-                animatorSet.start();
-            }
+            CgDemandDate cgDemandDate = new CgDemandDate(mDateSet.get(mTvDate.getText().toString()).toString(), mTvType.getText().subSequence(0, 2).toString(),
+                    mEtName.getText().toString(), mEtNum.getText().toString(), mEtCode.getText().toString());
+
+            Log.d("V-->", "initView: " + cgDemandDate);
+            mPresenter.cgSetGrade(cgDemandDate);
         });
 
         mLlDate = (LinearLayout) findViewById(R.id.ll_data);
@@ -84,70 +119,69 @@ public class ComputersGradeActivity extends BaseActivity {
         mEtName = (EditText) findViewById(R.id.et_name);
         mEtNum = (EditText) findViewById(R.id.et_num);
         mEtCode = (EditText) findViewById(R.id.et_code);
+        mIvCode = (ImageView) findViewById(R.id.iv_code);
+
         mTvType = (MyTextView) findViewById(R.id.tv_type);
         mTvDate = (MyTextView) findViewById(R.id.tv_date);
 
 
         mTvType2 = (MyTextView) findViewById(R.id.tv_type2);
         mTvGrade = (MyTextView) findViewById(R.id.tv_grade);
-        mTvCredential = (MyTextView) findViewById(R.id.tv_grade);
-
-        OptionsPickerView lessonDatePickerView = getDateOptionPickerView(mLlType);
-        mLlDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                lessonDatePickerView.show();
-            }
-        });
-
+        mTvCredential = (MyTextView) findViewById(R.id.tv_credential);
 
         OptionsPickerView lessonTypePickerView = getTypeOptionPickerView(mLlType);  //获取OptionPickerView
-        mLlType.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                lessonTypePickerView.show();
-            }
-        });
-    }
-
-    private void initData() {
+        mLlType.setOnClickListener(view -> lessonTypePickerView.show());
+        mIvCode.setOnClickListener(view -> mPresenter.cgSetValidateCode());
 
     }
 
-    private OptionsPickerView getDateOptionPickerView(final View view) {
-        final ArrayList<String> lessons = getDateLessons();
-        OptionsPickerView tempPickView = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
-            @Override
-            public void onOptionsSelect(int options1, int options2, int options3, View v) {
-                String temp = lessons.get(options1);
-                mTvDate.setText(temp);
-            }
+    private void clickJudge() {
+        Observable<CharSequence> dateObservable = RxTextView.textChanges(mTvDate).skip(0);
+        Observable<CharSequence> typeObservable = RxTextView.textChanges(mTvType).skip(1);
+        Observable<CharSequence> nameObservable = RxTextView.textChanges(mEtName).skip(1);
+        Observable<CharSequence> numObservable = RxTextView.textChanges(mEtNum).skip(1);
+        Observable<CharSequence> codeObservable = RxTextView.textChanges(mEtCode).skip(1);
 
+        Observable.combineLatest(dateObservable, typeObservable,
+                nameObservable, numObservable, codeObservable,
+                new Function5<CharSequence, CharSequence, CharSequence, CharSequence, CharSequence, Boolean>() {
+
+                    public Boolean apply(CharSequence charSequence, CharSequence charSequence2,
+                                         CharSequence charSequence3, CharSequence charSequence4,
+                                         CharSequence charSequence5) throws Exception {
+
+
+                        boolean isUserDateValid = !TextUtils.isEmpty(mTvDate.getText());
+                        boolean isUserTypeValid = !TextUtils.isEmpty(mTvType.getText());
+                        boolean isUserNameValid = !TextUtils.isEmpty(mEtName.getText());
+                        boolean isUserNumValid = !TextUtils.isEmpty(mEtNum.getText());
+                        boolean isUserCodeValid = !TextUtils.isEmpty(mEtCode.getText());
+                        return isUserDateValid && isUserTypeValid && isUserNameValid && isUserNumValid && isUserCodeValid;
+
+                    }
+
+                }).subscribe(aBoolean -> mBtConfirm.setEnabled(aBoolean));
+    }
+
+    private OptionsPickerView getDateOptionPickerView(CgTimes cgTimes) {
+
+        final List<String> lessons = new ArrayList<>(cgTimes.data.keySet());
+        mTvDate.setText(lessons.get(lessons.size() - 1));
+        OptionsPickerView tempPickView = new OptionsPickerBuilder(this, (options1, options2, options3, v) -> {
+            String temp = lessons.get(options1);
+            mTvDate.setText(temp);
         }).setTitleText("时间选择").build();
+
         tempPickView.setPicker(lessons);
         return tempPickView;
     }
 
-    private ArrayList<String> getDateLessons() {
-        ArrayList<String> lessons = new ArrayList<>();
-
-        lessons.add("2018年06月");
-        lessons.add("2018年03月");
-        lessons.add("2018年12月");
-        lessons.add("2018年09月");
-        return lessons;
-    }
-
     private OptionsPickerView getTypeOptionPickerView(final View view) {
         final ArrayList<String> lessons = getTypeLessons();
-        OptionsPickerView tempPickView = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
-            @Override
-            public void onOptionsSelect(int options1, int options2, int options3, View v) {
-                String temp = lessons.get(options1);
-                mTvType.setText(temp);
-                mTvType2.setText(temp);
-            }
-
+        OptionsPickerView tempPickView = new OptionsPickerBuilder(this, (options1, options2, options3, v) -> {
+            String temp = lessons.get(options1);
+            mTvType.setText(temp);
+            mTvType2.setText(temp);
         })
                 .setTitleText("类型选择")
                 .build();
@@ -183,6 +217,59 @@ public class ComputersGradeActivity extends BaseActivity {
         lessons.add("45三级嵌入式系统开发工程师 ");
 
         return lessons;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mPresenter.subscribe();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mPresenter.unSubscribe();
+    }
+
+
+    @Override
+    public void setPresenter(@NonNull ComputersGradeContract.Presenter presenter) {
+        mPresenter = presenter;
+    }
+
+
+    @Override //展示时间
+    public void cgGetTimes(CgTimes cgTimes) {
+        mDateSet = cgTimes.data;
+        OptionsPickerView lessonDatePickerView = getDateOptionPickerView(cgTimes);
+        mLlDate.setOnClickListener(view -> lessonDatePickerView.show());
+    }
+
+
+    @Override //展示验证码
+    public void cgShowValidateCode(Bitmap bitmap) {
+        mIvCode.setImageBitmap(bitmap);
+    }
+
+
+    @Override
+    public void cgShowGrade(CgQuery cgQuery) {
+        if(cgQuery.status == 500){
+            Toast.makeText(Utils.getContext(), "信息有误", Toast.LENGTH_SHORT).show();
+        }else if(cgQuery.data == null){
+            Toast.makeText(Utils.getContext(), "验证码错误", Toast.LENGTH_SHORT).show();
+            mPresenter.cgSetValidateCode();
+        }else {
+            mAnimatorSet.start();
+            mTvGrade.setText(cgQuery.data.status);
+            mTvCredential.setText(cgQuery.data.zkzh);
+        }
+    }
+
+    @Override //请求失败
+    public void cgFailure(String str) {
+        Toast.makeText(Utils.getContext(), str, Toast.LENGTH_SHORT).show();
+
     }
 }
 

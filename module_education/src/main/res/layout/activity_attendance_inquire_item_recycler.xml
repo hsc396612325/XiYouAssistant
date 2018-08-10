@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
-    android:layout_marginTop="20px"
-    android:layout_marginBottom="20px"
+    android:layout_marginTop="@dimen/m20px"
+    android:layout_marginBottom="@dimen/m20px"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
@@ -12,56 +12,56 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="41px"
+        android:layout_marginLeft="@dimen/m38px"
         android:text="2018.06.06"
-        android:textSize="28px" />
+        android:textSize="@dimen/m28px" />
 
     <TextView
         android:id="@+id/item_weekday"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="36px"
+        android:layout_marginLeft="@dimen/m34px"
         android:text="星期三"
-        android:textSize="28px" />
+        android:textSize="@dimen/m28px" />
 
     <TextView
         android:id="@+id/item_lesson"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="36px"
+        android:layout_marginLeft="@dimen/m34px"
         android:text="1-2"
-        android:textSize="28px" />
+        android:textSize="@dimen/m28px" />
 
     <TextView
         android:id="@+id/item_classroom"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="28px"
+        android:layout_marginLeft="@dimen/m26px"
         android:text="FZ205"
-        android:textSize="28px" />
+        android:textSize="@dimen/m28px" />
 
     <TextView
         android:id="@+id/item_event"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="30px"
+        android:layout_marginLeft="@dimen/m28px"
         android:text="正常"
         android:textColor="@color/normal_color"
-        android:textSize="28px" />
+        android:textSize="@dimen/m28px" />
 
     <Button
         android:id="@+id/Button_report"
-        android:layout_width="80px"
-        android:layout_height="38px"
+        android:layout_width="@dimen/m80px"
+        android:layout_height="@dimen/m38px"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="20px"
+        android:layout_marginLeft="@dimen/m20px"
         android:background="@drawable/education_attendance_bt_bg_report"
         android:text="申诉"
         android:textColor="@color/button_report_text"
-        android:textSize="24px" />
+        android:textSize="@dimen/m24px" />
 
 </LinearLayout>

@@ -31,7 +31,10 @@
         <activity android:name=".activity.ComputersGradeActivity" />
         <activity android:name=".activity.TimetableActivity" />
         <activity android:name=".activity.TimetableCourseActivity" />
-        <activity android:name=".activity.TimetableAddActivity"></activity>
+        <activity android:name=".activity.TimetableAddActivity" />
+        <activity android:name=".activity.FinalGradeActivity" />
+        <activity android:name=".activity.ClassroomInquireActivity"/>
+        <activity android:name=".activity.EduBindActivity"/>
     </application>
 
 </manifest>

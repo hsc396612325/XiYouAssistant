@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context="com.xiyoumoblie.module.education.activity.TimetableAddActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/timetable_add_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="@dimen/m88px"
         android:background="?attr/colorPrimary">
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -25,252 +25,280 @@
 
     </android.support.v7.widget.Toolbar>
 
-
-    <android.support.v7.widget.CardView
-        android:layout_width="700px"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:layout_marginTop="67px"
-        app:cardCornerRadius="15dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            >
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="46px"
-                android:text="课名"
-                android:textColor="@color/colorPrimary"
-                android:textSize="36px"
-
-                />
-
-            <EditText
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="94px"
-                android:layout_marginRight="20px"
-                android:background="@null"
-                android:hint="请输入课名" />
+                android:layout_height="@dimen/m100px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/m30px"
+                android:layout_marginRight="@dimen/m30px"
+                android:layout_marginTop="@dimen/m67px"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/m46px"
+                        android:text="课名"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/m36px" />
+
+                    <EditText
+                        android:id="@+id/et_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/m94px"
+                        android:layout_marginRight="@dimen/m20px"
+                        android:background="@null"
+                        android:hint="请输入课名" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m600px"
+                android:layout_marginLeft="@dimen/m30px"
+                android:layout_marginRight="@dimen/m30px"
+                android:layout_marginTop="@dimen/m67px"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m90px"
+                        android:layout_marginTop="@dimen/m80px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/m40px"
+                            android:layout_height="@dimen/m40px"
+                            android:layout_gravity="bottom"
+
+                            android:layout_marginLeft="@dimen/m69px"
+                            android:src="@drawable/ic_education_timetable_course_classroom" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m43px"
+                            android:text="地点"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/m36px" />
+
+                        <EditText
+                            android:id="@+id/et_site"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m41px"
+                            android:layout_marginRight="@dimen/m120px"
+                            android:background="@null"
+                            android:hint="请输入地点"
+                            android:textSize="@dimen/m36px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/m450px"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/m136px"
+                        android:layout_marginTop="@dimen/m10px"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m90px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/m40px"
+                            android:layout_height="@dimen/m40px"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/m10px"
+                            android:layout_marginLeft="@dimen/m69px"
+                            android:src="@drawable/ic_education_timetable_course_week" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m43px"
+                            android:text="周数"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/m36px" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:id="@+id/tv_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m41px"
+                            android:layout_marginRight="@dimen/m120px"
+                            android:text="1-25周"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m36px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/m450px"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/m136px"
+                        android:layout_marginTop="@dimen/m10px"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_lesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m90px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/m40px"
+                            android:layout_height="@dimen/m40px"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/m10px"
+                            android:layout_marginLeft="@dimen/m69px"
+                            android:src="@drawable/ic_education_timetable_course_date" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m43px"
+                            android:text="节数"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/m36px" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:id="@+id/tv_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m41px"
+                            android:layout_marginRight="@dimen/m120px"
+                            android:text="周四 3-4节"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m36px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/m450px"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/m136px"
+                        android:layout_marginTop="@dimen/m10px"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m90px"
+
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/m40px"
+                            android:layout_height="@dimen/m40px"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/m10px"
+                            android:layout_marginLeft="@dimen/m69px"
+                            android:src="@drawable/ic_education_timetable_course_teacher" />
+
+                        <com.xiyoumoblie.lib.common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m43px"
+                            android:text="老师"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/m36px" />
+
+                        <EditText
+                            android:id="@+id/et_teacher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/m41px"
+                            android:layout_marginRight="@dimen/m120px"
+                            android:background="@null"
+                            android:hint="未填写"
+                            android:textSize="@dimen/m36px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/m450px"
+                        android:layout_height="1px"
+
+                        android:layout_marginLeft="@dimen/m136px"
+                        android:layout_marginTop="@dimen/m10px"
+                        android:background="@color/colorLine" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/m30px"
+                android:layout_marginRight="@dimen/m30px"
+                android:layout_marginTop="@dimen/m84px"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/touch_raise"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/m240px"
+                        android:text="保"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m38px" />
+
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/m123px"
+                        android:text="存"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m38px" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="700px"
-        android:layout_height="600px"
-        android:layout_gravity="center"
-        android:layout_marginTop="67px"
-        app:cardCornerRadius="15dp">
-
-        <LinearLayout
+        <View
+            android:id="@+id/alpha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="120px"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="32px"
-                    android:layout_height="32px"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="69px"
-                    android:src="@drawable/ic_education_timetable_course_classroom" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="43px"
-                    android:text="地点"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="36px" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="41px"
-                    android:layout_marginRight="120px"
-                    android:background="@null"
-                    android:hint="请输入地点" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="450px"
-                android:layout_height="1px"
-                android:layout_marginLeft="136px"
-                android:background="@color/colorLine" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90px"
-
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="32px"
-                    android:layout_height="32px"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="10px"
-                    android:layout_marginLeft="69px"
-                    android:src="@drawable/ic_education_timetable_course_week" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="43px"
-                    android:text="周数"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="36px" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="41px"
-                    android:layout_marginRight="120px"
-                    android:text="1-25周"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="450px"
-                android:layout_height="1px"
-                android:layout_marginLeft="136px"
-                android:layout_marginTop="10px"
-                android:background="@color/colorLine" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90px"
-
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="32px"
-                    android:layout_height="32px"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="10px"
-                    android:layout_marginLeft="69px"
-                    android:src="@drawable/ic_education_timetable_course_date" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="43px"
-                    android:text="节数"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="36px" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="41px"
-                    android:layout_marginRight="120px"
-                    android:text="周四 3-4节"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="450px"
-                android:layout_height="1px"
-                android:layout_marginLeft="136px"
-                android:layout_marginTop="10px"
-                android:background="@color/colorLine" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="90px"
-
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="32px"
-                    android:layout_height="32px"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="10px"
-                    android:layout_marginLeft="69px"
-                    android:src="@drawable/ic_education_timetable_course_teacher" />
-
-                <com.xiyoumoblie.lib.common.ui.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="43px"
-                    android:text="老师"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="36px" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="41px"
-                    android:layout_marginRight="120px"
-                    android:background="@null"
-                    android:hint="未填写" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="450px"
-                android:layout_height="1px"
-
-                android:layout_marginLeft="136px"
-                android:layout_marginTop="10px"
-                android:background="@color/colorLine" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="700px"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:layout_marginTop="84px"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        android:stateListAnimator="@anim/touch_raise"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="5dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="240px"
-                android:text="保"
-                android:textColor="@color/white"
-                android:textSize="38px" />
-
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="123px"
-                android:text="存"
-                android:textColor="@color/white"
-                android:textSize="38px" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
+            android:background="@color/black_alpha32"
+            android:visibility="gone" />
+    </FrameLayout>
 </LinearLayout>

@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/attendance_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="@dimen/m88px"
         android:background="?attr/colorPrimary">
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
@@ -24,117 +25,123 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85px"
-        android:layout_marginTop="30px"
+        android:layout_height="@dimen/m85px"
+        android:layout_marginTop="@dimen/m30px"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="36px"
-            android:layout_height="36px"
+            android:layout_width="@dimen/m36px"
+            android:layout_height="@dimen/m36px"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="30px"
+            android:layout_marginLeft="@dimen/m30px"
             android:background="@drawable/ic_education_attendance_clock" />
 
 
-        <android.support.v7.widget.CardView
-            android:layout_width="250px"
-            android:layout_height="80px"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="57px"
-            app:cardCornerRadius="17.5dp"
-            app:cardElevation="10px">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/bt_from_time"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/education_attendance_bt_bg"
-                android:textColor="@color/button_text_color" />
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
 
-        </android.support.v7.widget.CardView>
+                <Button
+                    android:id="@+id/bt_from_time"
+                    android:layout_width="@dimen/m250px"
+                    android:layout_height="@dimen/m80px"
+                    android:layout_gravity="center_vertical"
 
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="35px"
-            android:text="至"
-            android:textSize="30px" />
+                    android:background="@drawable/education_attendance_bt_bg"
+                    android:elevation="@dimen/m4px"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/button_text_color" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="250px"
-            android:layout_height="80px"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="35px"
-            app:cardCornerRadius="17.5dp"
-            app:cardElevation="10px">
 
-            <Button
-                android:id="@+id/bt_to_time"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/education_attendance_bt_bg"
-                android:textColor="@color/button_text_color" />
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/m35px"
+                    android:text="至"
+                    android:textSize="@dimen/m30px" />
 
-        </android.support.v7.widget.CardView>
 
+                <Button
+                    android:id="@+id/bt_to_time"
+                    android:layout_width="@dimen/m250px"
+                    android:layout_height="@dimen/m80px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/m35px"
+                    android:background="@drawable/education_attendance_bt_bg"
+                    android:elevation="@dimen/m4px"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/button_text_color" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85px"
-        android:layout_marginTop="35px"
+        android:layout_height="@dimen/m85px"
+        android:layout_marginTop="@dimen/m35px"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="42px"
-            android:layout_height="44px"
+            android:layout_width="@dimen/m42px"
+            android:layout_height="@dimen/m44px"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="28px"
+            android:layout_marginLeft="@dimen/m28px"
             android:background="@drawable/ic_education_attendance_list" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="600px"
-            android:layout_height="80px"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="54px"
-            android:background="@drawable/education_attendance_bt_bg"
-            app:cardCornerRadius="17.5dp"
-            app:cardElevation="10px"
-            app:cardPreventCornerOverlap="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/bt_course"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/education_attendance_bt_bg"
-                android:textColor="@color/button_text_color"
-                android:textSize="60px" />
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
 
-        </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/bt_course"
+                    android:layout_width="@dimen/m600px"
+                    android:layout_height="@dimen/m80px"
+                    android:layout_gravity="center_vertical"
+
+                    android:background="@drawable/education_attendance_bt_bg"
+                    android:elevation="@dimen/m2px"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/button_text_color" />
+
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/chart_pie"
-        android:layout_width="422px"
-        android:layout_height="422px"
+        android:layout_width="@dimen/m422px"
+        android:layout_height="@dimen/m422px"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30px" />
+        android:layout_marginTop="@dimen/m30px" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="28px"
-        android:layout_marginRight="28px"
-        android:layout_marginTop="30px"
-        android:layout_marginBottom="60px"
-        android:elevation="15px"
-        app:cardCornerRadius="30px">
+        android:layout_marginBottom="@dimen/m60px"
+        android:layout_marginLeft="@dimen/m28px"
+        android:layout_marginRight="@dimen/m28px"
+        android:layout_marginTop="@dimen/m30px"
+        android:elevation="@dimen/m5px"
+        app:cardCornerRadius="@dimen/m30px">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_lesson"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </android.support.v7.widget.CardView>
 
 

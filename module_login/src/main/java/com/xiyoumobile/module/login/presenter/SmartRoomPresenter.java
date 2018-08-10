@@ -46,6 +46,7 @@ public class SmartRoomPresenter extends BasePresenter<SmartRoomView> {
         String json =  new Gson().toJson(new LoginInfoBean(acc, pwd, code));
         Log.d(TAG, "login: " + json);
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
+
         return RetrofitFactory.INSTANCE.create(SmartRoomApi.class).login(requestBody)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

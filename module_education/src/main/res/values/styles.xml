@@ -1,19 +1,18 @@
 <resources>
 
     <style name="TimetableClassTextStyle">
-        <item name="android:layout_marginTop">62.5px</item>
-        <item name="android:layout_marginBottom">62.5px</item>
+        <item name="android:layout_marginTop">29dp</item>
+        <item name="android:layout_marginBottom">29dp</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:textSize">28px</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:lineSpacingMultiplier">1.4</item>
     </style>
 
     <style name="TimetableDateTextStyle">
-        <item name="android:layout_marginLeft">35px</item>
-        <item name="android:layout_marginRight">35px</item>
+        <item name="android:layout_marginRight">2dp</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:textSize">28px</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:lineSpacingMultiplier">1.5</item>
     </style>

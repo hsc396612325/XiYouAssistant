@@ -2,374 +2,386 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/colorBackground"
     android:orientation="vertical">
 
 
-    <com.zhy.autolayout.AutoRelativeLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="390px">
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
 
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="660px"
-            android:layout_height="320px"
-           android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/education_fragment_today_rl_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
 
-            <View
-                android:id="@+id/center_view"
-                android:layout_width="@dimen/size_1dp"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true" />
-
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25px"
-                android:text="今日课表"
-                android:textColor="@color/white"
-                android:textSize="48px" />
-
-            <View
-                android:id="@+id/view"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_marginLeft="70px"
-                android:layout_marginRight="70px"
-                android:layout_marginTop="90px"
-                android:background="@color/white" />
+                android:layout_height="@dimen/m390px">
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_12_classroom_tv"
-                android:layout_width="130px"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/view"
-                android:layout_toLeftOf="@+id/center_view"
-                android:layout_marginTop="23px"
-                android:layout_marginRight="6px"
-                android:text="1-2 FZ203"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                <RelativeLayout
+                    android:layout_width="@dimen/m660px"
+                    android:layout_height="@dimen/m340px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/education_fragment_today_rl_bg">
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_34_classroom_tv"
-                android:layout_width="130px"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/class_schedule_12_classroom_tv"
-                android:layout_toLeftOf="@+id/center_view"
-                android:layout_marginTop="23px"
-                android:layout_marginRight="6px"
-                android:text="3-4 FZ203"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <View
+                        android:id="@+id/center_view"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_56_classroom_tv"
-                android:layout_width="130px"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="23px"
-                android:layout_toLeftOf="@+id/center_view"
-                android:layout_marginRight="6px"
-                android:text="5-6 FZ203"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/m25px"
+                        android:text="今日课表"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m48px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_78_classroom_tv"
-                android:layout_width="130px"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/class_schedule_56_classroom_tv"
-                android:layout_toLeftOf="@+id/class_schedule_78_curriculum_tv"
-                android:layout_marginTop="23px"
-                android:layout_marginRight="6px"
-                android:text="7-8  无"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m2px"
+                        android:layout_marginLeft="@dimen/m70px"
+                        android:layout_marginRight="@dimen/m70px"
+                        android:layout_marginTop="@dimen/m90px"
+                        android:background="@color/white" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_12_curriculum_tv"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/view"
-                android:layout_marginTop="23px"
-                android:layout_marginLeft="6px"
-                android:layout_toRightOf="@+id/center_view"
-                android:text="C语言程序设计"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_12_classroom_tv"
+                        android:layout_width="@dimen/m130px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_marginRight="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toLeftOf="@+id/center_view"
+                        android:text="1-2 FZ203"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_34_curriculum_tv"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/class_schedule_12_classroom_tv"
-                android:layout_marginTop="23px"
-                android:layout_marginLeft="6px"
-                android:layout_toRightOf="@+id/center_view"
-                android:text="操作系统"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_34_classroom_tv"
+                        android:layout_width="@dimen/m130px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/class_schedule_12_classroom_tv"
+                        android:layout_marginRight="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toLeftOf="@+id/center_view"
+                        android:text="3-4 FZ203"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_56_curriculum_tv"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="23px"
-                android:layout_marginLeft="6px"
-                android:layout_toRightOf="@+id/center_view"
-                android:text="高等数学"
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_56_classroom_tv"
+                        android:layout_width="@dimen/m130px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/class_schedule_34_classroom_tv"
+                        android:layout_marginRight="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toLeftOf="@+id/center_view"
+                        android:text="5-6 FZ203"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:id="@+id/class_schedule_78_curriculum_tv"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/class_schedule_78_classroom_tv"
-                android:layout_marginTop="23px"
-                android:layout_marginLeft="6px"
-                android:layout_toRightOf="@+id/center_view"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_78_classroom_tv"
+                        android:layout_width="@dimen/m130px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/class_schedule_56_classroom_tv"
+                        android:layout_marginRight="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toLeftOf="@+id/class_schedule_78_curriculum_tv"
+                        android:text="7-8  无"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="100px"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/view"
-                android:layout_toLeftOf="@+id/class_schedule_12_classroom_tv"
-                android:layout_marginTop="23px"
-                android:text="上午："
-                android:textColor="@color/white"
-                android:textSize="28px" />
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_12_curriculum_tv"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_marginLeft="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toRightOf="@+id/center_view"
+                        android:text="C语言程序设计"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-            <com.xiyoumoblie.lib.common.ui.MyTextView
-                android:layout_width="100px"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/class_schedule_34_classroom_tv"
-                android:layout_marginTop="23px"
-                android:layout_toLeftOf="@+id/class_schedule_56_classroom_tv"
-                android:text="下午:"
-                android:textColor="@color/white"
-                android:textSize="28px" />
-        </com.zhy.autolayout.AutoRelativeLayout>
-    </com.zhy.autolayout.AutoRelativeLayout>
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_34_curriculum_tv"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/class_schedule_12_classroom_tv"
+                        android:layout_marginLeft="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toRightOf="@+id/center_view"
+                        android:text="操作系统"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/colorLine"
-        android:layout_alignParentTop="true"
-        />
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_checking_in_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_56_curriculum_tv"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/class_schedule_34_classroom_tv"
+                        android:layout_marginLeft="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toRightOf="@+id/center_view"
+                        android:text="高等数学"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="考勤查询"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentBottom="true"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:id="@+id/class_schedule_78_curriculum_tv"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/class_schedule_78_classroom_tv"
+                        android:layout_marginLeft="@dimen/m6px"
+                        android:layout_marginTop="@dimen/m23px"
+                        android:layout_toRightOf="@+id/center_view"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_CET_grade_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:layout_marginTop="40px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentTop="true"
-            />
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="四/六级成绩查询"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="@dimen/m100px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_marginTop="23px"
+                        android:layout_toLeftOf="@+id/class_schedule_12_classroom_tv"
+                        android:text="上午："
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_final_grade_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentTop="true"
-            />
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="期末考试成绩/绩点"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+                    <com.xiyoumoblie.lib.common.ui.MyTextView
+                        android:layout_width="@dimen/m100px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/class_schedule_34_classroom_tv"
+                        android:layout_marginTop="23px"
+                        android:layout_toLeftOf="@+id/class_schedule_56_classroom_tv"
+                        android:text="下午:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m28px" />
+                </RelativeLayout>
+            </RelativeLayout>
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_computers_grade_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentTop="true"
-            />
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="计算机等级考试成绩查询"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentBottom="true"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorLine" />
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_timetable_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:layout_marginTop="40px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentTop="true"
-            />
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="课表查询"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_checking_in_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
 
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:id="@+id/rl_class_inquire"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@drawable/education_fragment_column"
-        android:clickable="true"
-        android:focusable="true">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentTop="true"
-            />
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="53px"
-            android:text="无课教室查询"
-            android:textSize="30px"
-            android:textColor="@color/black"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@color/colorLine"
-            android:layout_alignParentBottom="true"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="22px"
-            android:src="@drawable/ic_arrows"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="45px"
-            />
-    </com.zhy.autolayout.AutoRelativeLayout>
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="考勤查询"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_CET_grade_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:layout_marginTop="@dimen/m40px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLine" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="四/六级成绩查询"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_final_grade_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLine" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="期末考试成绩/绩点"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_computers_grade_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLine" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="计算机等级考试成绩查询"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_timetable_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:layout_marginTop="@dimen/m40px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLine" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="课表查询"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_classroom_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px"
+                android:background="@drawable/education_fragment_column"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLine" />
+
+                <com.xiyoumoblie.lib.common.ui.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m53px"
+                    android:text="无课教室查询"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m22px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/m45px"
+                    android:src="@drawable/ic_arrows" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

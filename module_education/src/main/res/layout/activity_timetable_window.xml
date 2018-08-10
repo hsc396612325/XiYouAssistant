@@ -1,100 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/white"
-    >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="98px"
-        >
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="当前学期"
-            android:textSize="36px"
-            android:textColor="@color/black"
-            android:layout_marginLeft="70px"
-            />
-
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="390px"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="大一第1学期"
-            android:textSize="30px"
-            android:textColor="#808080"
-            android:layout_marginRight="32px"
-            />
-        <ImageView
-            android:layout_width="40px"
-            android:layout_height="40px"
-            android:layout_gravity="bottom"
-            android:src="@drawable/ic_education_timetable_course_choose"
-            />
-
-
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_marginTop="16px"
-        android:background="@color/colorLine"
-        android:layout_marginLeft="70px"
-        />
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64px"
-        >
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="当前周数"
-            android:textSize="36px"
-            android:textColor="@color/black"
-            android:layout_marginLeft="70px"
-            />
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <com.xiyoumoblie.lib.common.ui.MyTextView
-            android:layout_width="390px"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="第1周"
-            android:textSize="30px"
-            android:textColor="#808080"
-            android:layout_marginRight="32px"
-            />
 
-        <ImageView
-            android:layout_width="40px"
-            android:layout_height="40px"
-            android:layout_gravity="bottom"
-            android:src="@drawable/ic_education_timetable_course_choose"
-            />
+        <RelativeLayout
+            android:id="@+id/rl_semester"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m50px"
+            android:layout_marginTop="@dimen/m98px">
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/m70px"
+                android:text="当前学期"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m36px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_semester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/m120px"
+                android:text="大一第1学期"
+                android:textColor="#808080"
+                android:textSize="@dimen/m30px"
+
+                />
+
+            <ImageView
+                android:layout_width="@dimen/m40px"
+                android:layout_height="@dimen/m40px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/m57px"
+                android:src="@drawable/ic_education_timetable_course_choose" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/m70px"
+            android:layout_marginTop="@dimen/m16px"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:id="@+id/rl_week"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m50px"
+            android:layout_marginTop="@dimen/m60px">
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/m70px"
+                android:text="当前周数"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m36px" />
+
+            <com.xiyoumoblie.lib.common.ui.MyTextView
+                android:id="@+id/tv_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/m120px"
+                android:text="第1周"
+
+                android:textColor="#808080"
+                android:textSize="@dimen/m30px" />
+
+            <ImageView
+                android:layout_width="@dimen/m40px"
+                android:layout_height="@dimen/m40px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/m57px"
+                android:src="@drawable/ic_education_timetable_course_choose" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/m70px"
+            android:layout_marginTop="@dimen/m16px"
+            android:background="@color/colorLine" />
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="@dimen/m400px"
+            android:layout_height="@dimen/m80px"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/m70px"
+            android:layout_marginTop="@dimen/m80px"
+            android:background="@drawable/education_cet_grade_bt_bg"
+            android:text="手动添加课程"
+            android:textColor="@color/white"
+            android:textSize="@dimen/m36px" />
+
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/colorLine"
-        android:layout_marginLeft="70px"
-        android:layout_marginTop="16px"
-        />
 
-    <Button
-        android:id="@+id/bt_add"
-        android:layout_width="400px"
-        android:layout_height="80px"
-        android:layout_gravity="center"
-        android:layout_marginTop="80px"
-        android:layout_marginBottom="70px"
-        android:background="@drawable/education_cet_grade_bt_bg"
-        android:text="手动添加课程"
-        android:textSize="36px"
-        android:textColor="@color/white"
-        />
-</LinearLayout>
+    <View
+        android:id="@+id/alpha2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_alpha32"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/m610px"
+        android:layout_height="@dimen/m500px"
+        android:background="@drawable/education_timetable_rl_bg"
+        android:orientation="vertical">
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m45px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/m25px"
+            android:layout_marginTop="@dimen/m28px"
+            android:text="周数选择"
+            android:textSize="@dimen/m28px"
+            android:textColor="@color/black"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m222px"
+            android:background="@drawable/education_timetable_add_line"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:overScrollMode="never"
+            android:layout_marginTop="@dimen/m10px"
+            android:layout_marginLeft="@dimen/m24px"
+            android:layout_marginRight="@dimen/m24px"
+            android:padding="1px"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_week1"
+            android:layout_width="@dimen/m187px"
+            android:layout_height="@dimen/m70px"
+            android:layout_below="@+id/recycler_view"
+            android:background="@drawable/education_timetable_add_line"
+            android:layout_marginTop="@dimen/m15px"
+            android:layout_marginLeft="@dimen/m24px"
+            android:text="单周"
+            android:padding="1px"
+            android:gravity="center"
+            />
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_week2"
+            android:layout_width="@dimen/m187px"
+            android:layout_height="@dimen/m70px"
+            android:layout_toRightOf="@+id/tv_week1"
+            android:layout_below="@+id/recycler_view"
+            android:background="@drawable/education_timetable_add_line"
+            android:layout_marginTop="@dimen/m15px"
+            android:padding="1px"
+            android:text="双周"
+            android:gravity="center"
+            />
+
+        />
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_week3"
+            android:layout_width="@dimen/m187px"
+            android:layout_height="@dimen/m70px"
+            android:layout_toRightOf="@+id/tv_week2"
+            android:layout_below="@+id/recycler_view"
+            android:background="@drawable/education_timetable_add_line"
+            android:layout_marginTop="@dimen/m15px"
+            android:text="全部"
+            android:padding="1px"
+            android:gravity="center"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/tv_confirm"
+            android:background="#CCCCCC" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="@dimen/m88px"
+           android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#CCCCCC" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/m305px"
+            android:layout_height="@dimen/m88px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#6cb5e5"
+            android:textSize="@dimen/m28px" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/m305px"
+            android:layout_height="@dimen/m88px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#6cb5e5"
+            android:textSize="@dimen/m28px" />
+
+
+    </RelativeLayout>
+</LinearLayout>

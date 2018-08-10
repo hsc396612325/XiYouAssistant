@@ -23,7 +23,7 @@ import java.util.List;
  * Created by heshu on 2018/7/30.
  */
 
-public class TimetableAdapter extends RecyclerView.Adapter <RecyclerView.ViewHolder> {
+public class TimetableAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context mContext;
     private List<TimetableBean> mTimetableBeans;
 
@@ -36,6 +36,7 @@ public class TimetableAdapter extends RecyclerView.Adapter <RecyclerView.ViewHol
         MyTextView tvCourse;
         MyTextView tvClassroom;
         LinearLayout ll;
+
         public TimetableHolder(View mView) {
             super(mView);
 
@@ -53,12 +54,13 @@ public class TimetableAdapter extends RecyclerView.Adapter <RecyclerView.ViewHol
         }
 
     }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if(viewType == 1) {
+        if (viewType == 1) {
             View view = LayoutInflater.from(mContext).inflate(R.layout.activity_timetable_item, parent, false);
             return new TimetableHolder(view);
-        }else {
+        } else {
             View view = LayoutInflater.from(mContext).inflate(R.layout.activity_timetable_item2, parent, false);
             return new TimetableNullHolder(view);
         }
@@ -68,26 +70,34 @@ public class TimetableAdapter extends RecyclerView.Adapter <RecyclerView.ViewHol
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         TimetableBean timetableBean = mTimetableBeans.get(position);
-        if(holder instanceof TimetableHolder) {
-            final TimetableHolder timetableHolder = (TimetableHolder)holder;
-            if(timetableBean.getColour() ==1){
+        if (holder instanceof TimetableHolder) {
+            final TimetableHolder timetableHolder = (TimetableHolder) holder;
+            if (timetableBean.getColour() == 1) {
                 Log.d("1111", "onBindViewHolder: 1111");
                 timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_1));
-            }else if(timetableBean.getColour() ==2){
+            } else if (timetableBean.getColour() == 2) {
                 timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_2));
-            }else if(timetableBean.getColour() ==3){
+            } else if (timetableBean.getColour() == 3) {
                 timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_3));
-            }else {
+            } else if (timetableBean.getColour() == 4) {
                 timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_4));
+            } else if (timetableBean.getColour() == 5) {
+                timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_5));
+            } else if (timetableBean.getColour() == 6) {
+                timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_6));
+            } else if (timetableBean.getColour() == 7) {
+                timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_7));
+            } else if (timetableBean.getColour() == 8) {
+                timetableHolder.ll.setBackgroundColor(mContext.getResources().getColor(R.color.timetable_8));
             }
-            timetableHolder .tvCourse.setText(timetableBean.getCourse());
-            timetableHolder .tvClassroom.setText(timetableBean.getClassroom());
+            timetableHolder.tvCourse.setText(timetableBean.getCourse());
+            timetableHolder.tvClassroom.setText(timetableBean.getClassroom());
 
             timetableHolder.ll.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(mContext, TimetableCourseActivity.class);
-                    ((Activity)mContext).startActivity(intent);
+                    ((Activity) mContext).startActivity(intent);
                 }
             });
         }
@@ -100,9 +110,9 @@ public class TimetableAdapter extends RecyclerView.Adapter <RecyclerView.ViewHol
 
     @Override
     public int getItemViewType(int position) {
-        if(mTimetableBeans.get(position).isExist()){
+        if (mTimetableBeans.get(position).isExist()) {
             return 1;
-        }else {
+        } else {
             return 2;
         }
     }

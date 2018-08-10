@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:orientation="vertical"
+    >
+
+    <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m66px"
+        android:text="大一第一学期"
+        android:textColor="#212121"
+        android:textSize="@dimen/m28px"
+        android:gravity="center"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/m610px"
+        android:layout_height="@dimen/m487px"
+        android:background="@drawable/education_timetable_rl_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m66px"
+            android:layout_marginTop="@dimen/m197px"
+            android:background="#c2e0f4" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m45px"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="选择上课节数"
+            android:textSize="@dimen/m28px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/m10px"
+            android:layout_marginTop="@dimen/m10px"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_week"
+                android:layout_width="@dimen/m210px"
+                android:layout_height="@dimen/m320px" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_marginTop="@dimen/m25px"
+                android:layout_marginBottom="@dimen/m25px"
+                android:layout_height="match_parent"
+                android:background="@drawable/education_timetable_add_gradinet_line" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m320px"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/tv_confirm"
+            android:background="#CCCCCC" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="@dimen/m88px"
+            android:layout_below="@+id/view_line"
+            android:layout_centerHorizontal="true"
+            android:background="#CCCCCC" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/m305px"
+            android:layout_height="@dimen/m88px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#6cb5e5"
+            android:textSize="@dimen/m28px" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/m305px"
+            android:layout_height="@dimen/m88px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#6cb5e5"
+            android:textSize="@dimen/m28px" />
+
+
+    </RelativeLayout>
+</LinearLayout>

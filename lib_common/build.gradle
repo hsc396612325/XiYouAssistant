@@ -55,7 +55,7 @@ dependencies {
     api deps.retrofit.gson
     api deps.retrofit.rxjava2
     api deps.persistent_cookie
-
+    api deps.rx_bingding
     // other
     api deps.kotlin.stdlib
     api deps.event_bus

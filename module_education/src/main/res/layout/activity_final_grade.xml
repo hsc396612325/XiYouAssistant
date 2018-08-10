@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/final_grade_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m88px"
+        android:background="?attr/colorPrimary">
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="标题"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            >
+        <Button
+            android:id="@+id/bt_"
+            android:layout_width="@dimen/m400px"
+            android:layout_height="@dimen/m60px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m20px"
+            android:background="@drawable/education_attendance_bt_bg"
+            android:gravity="center"
+            android:text="2017-2018 第一学期"
+            android:textColor="#3498db"
+            android:textSize="@dimen/m32px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px"
+            android:layout_marginLeft="@dimen/m30px"
+            android:layout_marginRight="@dimen/m30px"
+            android:layout_marginTop="@dimen/m35px"
+            android:background="#ffffff"
+            android:elevation="3dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/gpa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/average_gpa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m83px"
+                    android:gravity="center"
+                    android:text="平均绩点:5.0"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/m28px" />
+
+                <TextView
+                    android:id="@+id/sum_gpa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginRight="@dimen/m125px"
+                    android:gravity="center"
+                    android:text="总绩点:30.0"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/m27px" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m360px"
+            android:layout_marginBottom="@dimen/m76px"
+            android:layout_marginLeft="@dimen/m25px"
+            android:layout_marginRight="@dimen/m25px"
+            android:layout_marginTop="@dimen/m28px">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/required"
+                android:layout_width="@dimen/m340px"
+                android:layout_height="@dimen/m340px"
+                android:layout_gravity="center_vertical"
+                android:background="#ffffff"
+                android:elevation="4dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:text="必修"
+                        android:textColor="#3498DB"
+                        android:textSize="@dimen/m36px" />
+
+                    <TextView
+                        android:id="@+id/b_credit_need"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m36px"
+                        android:text="学分共需:  89"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/m28px" />
+
+                    <TextView
+                        android:id="@+id/b_credit_gain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:text="所获学分:  20"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/m28px" />
+
+                    <LinearLayout
+                        android:id="@+id/b_notpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="未通过学分:  "
+                            android:textColor="#ff000000"
+                            android:textSize="@dimen/m28px" />
+
+                        <TextView
+                            android:id="@+id/b_credit_notpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#ff0000"
+                            android:textSize="@dimen/m28px" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/option"
+                android:layout_width="@dimen/m340px"
+                android:layout_height="@dimen/m340px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/m30px"
+                android:background="#ffffff"
+                android:elevation="4dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:text="选修"
+                        android:textColor="#3498DB"
+                        android:textSize="@dimen/m36px" />
+
+                    <TextView
+                        android:id="@+id/x_credit_need"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m36px"
+                        android:text="学分共需:  8"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/m28px" />
+
+                    <TextView
+                        android:id="@+id/x_credit_gain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:text="所获学分:  2"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/m28px" />
+
+                    <LinearLayout
+                        android:id="@+id/x_notpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/m31px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="未通过学分:  "
+                            android:textColor="#ff000000"
+                            android:textSize="@dimen/m28px" />
+
+                        <TextView
+                            android:id="@+id/x_credit_notpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#ff0000"
+                            android:textSize="@dimen/m28px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

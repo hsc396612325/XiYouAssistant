@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -25,12 +26,12 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
     }
 
     private void initView(View view) {
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_checking_in_inquire)).setOnClickListener(this);
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_CET_grade_inquire)).setOnClickListener(this);
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_final_grade_inquire)).setOnClickListener(this);
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_computers_grade_inquire)).setOnClickListener(this);
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_timetable_inquire)).setOnClickListener(this);
-        ((AutoRelativeLayout) view.findViewById(R.id.rl_class_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_checking_in_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_CET_grade_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_final_grade_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_computers_grade_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_timetable_inquire)).setOnClickListener(this);
+        ((RelativeLayout) view.findViewById(R.id.rl_classroom_inquire)).setOnClickListener(this);
 
     }
 
@@ -42,14 +43,15 @@ public class EducationFragment extends BaseFragment implements View.OnClickListe
         } else if (id == R.id.rl_CET_grade_inquire) {
             ARouter.getInstance().build("/education/CETGrade").navigation();
         } else if (id == R.id.rl_final_grade_inquire) {
-            Toast.makeText(getActivity(), "查询期末成绩", Toast.LENGTH_SHORT).show();
+            ARouter.getInstance().build("/education/EduBind").navigation();
+           // ARouter.getInstance().build("/education/FinalGrade").navigation();
         } else if (id == R.id.rl_computers_grade_inquire) {
             ARouter.getInstance().build("/education/ComputersGrade").navigation();
         } else if (id == R.id.rl_timetable_inquire) {
             ARouter.getInstance().build("/education/timetable").navigation();
-        } else if (id == R.id.rl_timetable_inquire) {
-            Toast.makeText(getActivity(), "查询无课教室", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.rl_classroom_inquire) {
+            ARouter.getInstance().build( "/education/ClassroomInquire").navigation();
         }
-        
+
     }
 }

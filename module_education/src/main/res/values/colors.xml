@@ -12,4 +12,10 @@
     <color name="timetable_2">#ffdaf4</color>
     <color name="timetable_3">#faaa20</color>
     <color name="timetable_4">#85e9be</color>
+
+    <color name="timetable_5">#3bcbff</color>
+    <color name="timetable_6">#e5c3db</color>
+    <color name="timetable_7">#ffae21</color>
+    <color name="timetable_8">#3edebb</color>
+
 </resources>

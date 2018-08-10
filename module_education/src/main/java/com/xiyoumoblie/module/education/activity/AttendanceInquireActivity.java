@@ -43,6 +43,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/***
+ * 考察查询界面
+ */
 @Route(path = "/education/attendance")
 public class AttendanceInquireActivity extends BaseActivity {
     private Button mBtCourse;
@@ -72,7 +75,7 @@ public class AttendanceInquireActivity extends BaseActivity {
 
     private void initView() {
         mToolbar = findViewById(R.id.attendance_tool_bar);
-        mTvTitle = (MyTextView)findViewById(R.id.tool_bar_title);
+        mTvTitle = (MyTextView) findViewById(R.id.tool_bar_title);
         mTvTitle.setText("考勤查询");
         setupToolBar(mToolbar, true);
 
@@ -116,30 +119,15 @@ public class AttendanceInquireActivity extends BaseActivity {
         pieChart.invalidate();  //刷新
 
         mFromDialog = getTimeDialog(mBtFromTime);  //获取PickTimeView并生产Dialog
-        mToDialog = getTimeDialog( mBtToTime);
+        mToDialog = getTimeDialog(mBtToTime);
 
 
-        mBtFromTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mFromDialog.show();
-            }
-        });
+        mBtFromTime.setOnClickListener(v -> mFromDialog.show());
 
-        mBtToTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mToDialog.show();
-            }
-        });
+        mBtToTime.setOnClickListener(v -> mToDialog.show());
 
         mLessonPickerView = getOptionPickerVier(mBtCourse);  //获取OptionPickerView
-        mBtCourse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mLessonPickerView.show();
-            }
-        });
+        mBtCourse.setOnClickListener(v -> mLessonPickerView.show());
     }
 
     private OptionsPickerView getOptionPickerVier(final Button button_temp) {
@@ -208,13 +196,13 @@ public class AttendanceInquireActivity extends BaseActivity {
     private ArrayList<LessonInfoBean> getLessonInfos() {
         ArrayList<LessonInfoBean> lessonInfos = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            LessonInfoBean lessonInfo2 = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "正常","c语言程序设计"+i);
+            LessonInfoBean lessonInfo2 = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "正常", "c语言程序设计" + i);
             lessonInfos.add(lessonInfo2);
             if (i % 3 == 0) {
-                LessonInfoBean lessonInfo = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "迟到","c语言程序设计"+i);
-                lessonInfo2 = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "请假","c语言程序设计"+i);
+                LessonInfoBean lessonInfo = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "迟到", "c语言程序设计" + i);
+                lessonInfo2 = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "请假", "c语言程序设计" + i);
                 lessonInfos.add(lessonInfo);
-                lessonInfo =  new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "缺席","c语言程序设计"+i);
+                lessonInfo = new LessonInfoBean("2018.06.06", "星期三", "1-2", "FZ205", "缺席", "c语言程序设计" + i);
                 lessonInfos.add(lessonInfo);
                 lessonInfos.add(lessonInfo2);
 
@@ -271,11 +259,11 @@ public class AttendanceInquireActivity extends BaseActivity {
     private void updateRecyclerView(String str) {
         mLessonInfos.clear();
         for (LessonInfoBean lessonInfoBean : mLessonList) {
-            if(str.equals("全部")){
+            if (str.equals("全部")) {
                 mLessonInfos.add(lessonInfoBean);
             }
 
-            if(lessonInfoBean.getEvent().equals(str)){
+            if (lessonInfoBean.getEvent().equals(str)) {
                 mLessonInfos.add(lessonInfoBean);
             }
         }

@@ -15,7 +15,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-
+/**
+ * 考勤申诉界面
+ */
 public class AppealActivity extends BaseActivity {
 
     private Toolbar mToolbar;
@@ -53,17 +55,14 @@ public class AppealActivity extends BaseActivity {
         mEtAppeal = (EditText) findViewById(R.id.et_appeal);
         mCardViewButton = (CardView) findViewById(R.id.cardView2);
 
-        mCardViewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mCardViewButton.setOnClickListener(view -> {
 
-                if(mEtAppeal.getText().length()<7){
-                    Toast.makeText(AppealActivity.this,"字数不足",Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(AppealActivity.this,"正在申诉....",Toast.LENGTH_SHORT).show();
-                }
-                Log.d(TAG, "onClick: ");
+            if(mEtAppeal.getText().length()<7){
+                Toast.makeText(AppealActivity.this,"字数不足",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(AppealActivity.this,"正在申诉....",Toast.LENGTH_SHORT).show();
             }
+            Log.d(TAG, "onClick: ");
         });
     }
 

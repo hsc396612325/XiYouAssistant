@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.xiyoumoblie.lib.common.R;
@@ -13,7 +14,7 @@ import com.zhy.autolayout.AutoLayoutActivity;
 /**
  * Activity基类
  */
-public class BaseActivity extends AutoLayoutActivity {
+public class BaseActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
