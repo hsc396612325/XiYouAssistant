@@ -17,5 +17,5 @@ public interface SmartRoomApi {
 
     @POST(Urls.SMART_ROOM_LOGIN)
     @Headers({"Host: jwkq.xupt.edu.cn:8080", "Referer: http://jwkq.xupt.edu.cn:8080/Account/Login"})
-    Observable<ResponseBody> login(@Body RequestBody s/*@Field("UserName") String acc, @Field("UserPassword") String pwd, @Field("ValiCode") String code*/);
+    Observable<ResponseBody> login(@Body RequestBody s);
 }

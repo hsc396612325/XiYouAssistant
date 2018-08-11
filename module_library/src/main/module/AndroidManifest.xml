@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".ui.activity.LyOpenTimeActivity">
         </activity>
+        <activity android:name=".ui.activity.LibraryLoginActivity">
+        </activity>
     </application>
 
 </manifest>

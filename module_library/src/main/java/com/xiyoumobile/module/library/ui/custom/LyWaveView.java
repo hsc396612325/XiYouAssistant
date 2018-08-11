@@ -108,37 +108,40 @@ public class LyWaveView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int height = measureSize(mDefaultSize, heightMeasureSpec);
-        int width = measureSize(mDefaultSize, widthMeasureSpec);
-        int min = Math.min(width, height);//正方形
-        setMeasuredDimension(min, min);
-        mMeasureSize = min;
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+
+        if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) {
+            mMeasureSize = mDefaultSize;
+        } else if (widthMode == MeasureSpec.AT_MOST) {
+            mMeasureSize = heightSize;
+        } else if (heightMode == MeasureSpec.AT_MOST) {
+            mMeasureSize = widthSize;
+        }
+
+        setMeasuredDimension(mMeasureSize, mMeasureSize);
         mWaveCount = (int) Math.ceil(Double.parseDouble(String.valueOf(mMeasureSize / mWaveWidth / 2)));
+
+
     }
 
     private static final String TAG = "LyWaveView";
 
     private int measureSize(int defaultSize, int measureSpec) {
-        int result = defaultSize;
+        int result;
         int specMode = View.MeasureSpec.getMode(measureSpec);
         int specSize = View.MeasureSpec.getSize(measureSpec);
-        if (specMode != MeasureSpec.AT_MOST) {
-            result = specSize;
-        }
 
         if (specMode == MeasureSpec.AT_MOST) {
-            Log.d(TAG, "measureSize: " + "at_most");
-        } else if (specMode == MeasureSpec.EXACTLY) {
-            Log.d(TAG, "measureSize: " + "exactly");
-        } else if (specMode == MeasureSpec.UNSPECIFIED) {
-            Log.d(TAG, "measureSize: " + "unspecified");
+            result = defaultSize;
+        } else {
+            result = specSize;
         }
-
-        // 诡异
-        Log.d(TAG, "measureSize: " + result + "   " + specMode + "  " + defaultSize + "  " + specSize);
-//        return result;
-        return specSize;
+        return result;
     }
 
     @Override

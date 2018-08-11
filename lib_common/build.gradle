@@ -56,6 +56,10 @@ dependencies {
     api deps.retrofit.rxjava2
     api deps.persistent_cookie
     api deps.rx_bingding
+
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
     // other
     api deps.kotlin.stdlib
     api deps.event_bus
