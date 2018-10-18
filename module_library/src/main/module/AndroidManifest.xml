@@ -9,6 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name="debug.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +18,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".l_common.ui.LyLoginActivity"/>
+        <activity android:name=".l_common.ui.LyDetailActivity" />
+
+        <activity android:name=".l_achieve.ui.LyAchieveActivity"/>
+        <activity android:name=".l_search.ui.LySearchActivity" />
+
+        <activity android:name=".l_distribution.ui.LyDistributionActivity" />
+        <activity android:name=".l_schedule.ui.LyOpenTimeActivity"/>
+
+        <activity android:name=".l_history.ui.LyHistoryActivity"/>
+        <activity android:name=".l_renew.ui.LyRenewListActivity"/>
+        <activity android:name=".l_search.ui.LySearchListActivity"/>
+        <activity android:name=".l_borrow.ui.LyBorrowListActivity"/>
+
         <meta-data
             android:name="design_width"
             android:value="720" />
@@ -24,20 +39,6 @@
             android:name="design_height"
             android:value="1280" />
 
-        <activity android:name=".ui.activity.LySearchActivity" >
-        </activity>
-        <activity android:name=".ui.activity.LyAchieveActivity">
-        </activity>
-        <activity android:name=".ui.activity.LyListActivity" >
-        </activity>
-        <activity android:name=".ui.activity.LyDistributionActivity" >
-        </activity>
-        <activity android:name=".ui.activity.LyDetailActivity" >
-        </activity>
-        <activity android:name=".ui.activity.LyOpenTimeActivity">
-        </activity>
-        <activity android:name=".ui.activity.LibraryLoginActivity">
-        </activity>
     </application>
 
 </manifest>

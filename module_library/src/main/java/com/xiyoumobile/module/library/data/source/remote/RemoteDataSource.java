@@ -1,13 +1,27 @@
 package com.xiyoumobile.module.library.data.source.remote;
 
+import android.util.Log;
+
+import com.xiyoumobile.module.library.data.BookDetail;
+import com.xiyoumobile.module.library.data.BorrowedData;
+import com.xiyoumobile.module.library.data.CommonBean;
+import com.xiyoumobile.module.library.data.HistoryData;
 import com.xiyoumobile.module.library.data.MainInfo;
+import com.xiyoumobile.module.library.data.SearchData;
 import com.xiyoumobile.module.library.data.source.DataSource;
 import com.xiyoumobile.module.library.data.source.remote.net.LibraryApi;
 import com.xiyoumobile.module.library.data.source.remote.net.RetrofitFactory;
 
+import java.io.IOException;
+
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RemoteDataSource implements DataSource {
 
@@ -78,12 +92,73 @@ public class RemoteDataSource implements DataSource {
 
 
     @Override
-    public void getBorrowed(String id) {
+    public Observable<BorrowedData> getBorrowed(String id) {
+        return RetrofitFactory.INSTANCE.create(LibraryApi.class).getBorrowed(id)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io());
 
     }
 
     @Override
-    public void getHistory(String id) {
+    public Observable<HistoryData> getHistory(String id) {
+        return RetrofitFactory.INSTANCE.create(LibraryApi.class).getHistory(id)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io());
+    }
 
+    @Override
+    public Observable<SearchData> getSearchList(String suchenType, String suchenWord, int curPage) {
+        return RetrofitFactory.INSTANCE.create(LibraryApi.class).getBookList(suchenType, suchenWord, curPage + "")
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .map(searchDataCommonBean -> {
+                    if (searchDataCommonBean.status == 1) {
+                        return searchDataCommonBean.data;
+                    } else {
+                        SearchData s = new SearchData();
+                        s.totalPage = 0;
+                        return s;
+                    }
+                });
+    }
+
+    public void logout(String id) {
+        RetrofitFactory.INSTANCE.create(LibraryApi.class).logout(id).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                try {
+                    Log.d(TAG, "onResponse: " + response.body().string());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+            }
+        });
+//        return RetrofitFactory.INSTANCE.create(LibraryApi.class).logout(id)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribeOn(Schedulers.io());
+    }
+
+    @Override
+    public Observable<BookDetail> getBookDetail(String url) {
+        return RetrofitFactory.INSTANCE.create(LibraryApi.class).getBookDetail(url)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .map(new Function<CommonBean<BookDetail>, BookDetail>() {
+                    @Override
+                    public BookDetail apply(CommonBean<BookDetail> bookDetailCommonBean) throws Exception {
+                        return bookDetailCommonBean.data;
+                    }
+                });
+    }
+
+    public Observable<CommonBean> renew(String id, String bookCode) {
+        return RetrofitFactory.INSTANCE.create(LibraryApi.class).renewBook(id, bookCode)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io());
     }
 }

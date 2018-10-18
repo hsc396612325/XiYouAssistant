@@ -3,12 +3,12 @@
 
     <application android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.activity.LySearchActivity" />
-        <activity android:name=".ui.activity.LyAchieveActivity"/>
+        <activity android:name=".l_search.ui.LySearchActivity" />
+        <activity android:name=".l_achieve.ui.LyAchieveActivity"/>
         <activity android:name=".ui.activity.LyListActivity" />
-        <activity android:name=".ui.activity.LyDistributionActivity" />
-        <activity android:name=".ui.activity.LyDetailActivity" />
-        <activity android:name=".ui.activity.LyOpenTimeActivity"/>
+        <activity android:name=".l_distribution.ui.LyDistributionActivity" />
+        <activity android:name=".l_common.ui.LyDetailActivity" />
+        <activity android:name=".l_schedule.ui.LyOpenTimeActivity"/>
 
     </application>
 

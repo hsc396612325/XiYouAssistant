@@ -83,4 +83,13 @@ public class RxBus {
         mSubscriptionMap.remove(key);
     }
 
+//    void mainFrag () {
+//        Disposable register = RxBus.getInstance().register(Boolean.class, bool -> {
+//            Toast.makeText(Utils.getContext(), "RxBus收到了" + bool, Toast.LENGTH_SHORT).show();
+//            Log.d(TAG, "onCreateView: " + "RxBus收到了" + bool);
+//
+//        });
+//        RxBus.getInstance().addSubscription(this,register);
+//    }
+
 }

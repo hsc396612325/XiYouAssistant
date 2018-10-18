@@ -3,7 +3,12 @@ package com.xiyoumobile.module.library.data.source.local;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.xiyoumobile.module.library.data.BookDetail;
+import com.xiyoumobile.module.library.data.BorrowedData;
+import com.xiyoumobile.module.library.data.CommonBean;
+import com.xiyoumobile.module.library.data.HistoryData;
 import com.xiyoumobile.module.library.data.MainInfo;
+import com.xiyoumobile.module.library.data.SearchData;
 import com.xiyoumobile.module.library.data.source.DataSource;
 
 import io.reactivex.Observable;
@@ -62,13 +67,36 @@ public class LocalDataSource implements DataSource {
     }
 
     @Override
-    public void getBorrowed(String id) {
-
+    public Observable<BorrowedData> getBorrowed(String id) {
+        return null;
     }
 
     @Override
-    public void getHistory(String id) {
-
+    public Observable<HistoryData> getHistory(String id) {
+        return null;
     }
+
+    @Override
+    public Observable<SearchData> getSearchList(String suchenType, String suchenWord, int curPage) {
+        return null;
+    }
+
+    @Override
+    public void logout(String id) {
+        mPreferences.edit().clear().apply();
+//        return null;
+    }
+
+    @Override
+    public Observable<BookDetail> getBookDetail(String url) {
+
+        return null;
+    }
+
+    @Override
+    public Observable<CommonBean> renew(String id, String bookCode) {
+        return null;
+    }
+
 
 }

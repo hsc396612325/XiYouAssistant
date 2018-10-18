@@ -13,11 +13,13 @@
         android:layout_marginTop="21dp">
 
         <ImageView
+            android:id="@+id/book_img"
             android:layout_width="100dp"
             android:layout_height="140dp"
             android:background="@color/colorPrimary"/>
 
         <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/book_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -38,6 +40,7 @@
         android:text="基本资料"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/index_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
@@ -45,6 +48,7 @@
         android:text="索书号：465"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/class_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -52,6 +56,7 @@
         android:text="标准号：4454651"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/publish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -67,6 +72,7 @@
         android:text="本书简介"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
+        android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

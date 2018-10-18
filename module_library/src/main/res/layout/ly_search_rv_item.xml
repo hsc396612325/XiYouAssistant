@@ -26,7 +26,7 @@
 
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
-        android:id="@+id/l_renew_status"
+        android:id="@+id/l_renew_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/l_book_name"
@@ -36,30 +36,30 @@
         android:text="任玉刚   著"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
-        android:id="@+id/l_renew_data"
+        android:id="@+id/l_renew_publishing_house"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/l_renew_status"
+        android:layout_alignTop="@id/l_renew_author"
         android:layout_marginTop="22dp"
         android:textSize="12dp"
         android:layout_centerHorizontal="true"
         android:text="人民邮电出版社"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
-        android:id="@+id/l_renew_aa"
+        android:id="@+id/l_renew_index_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/l_renew_data"
+        android:layout_alignTop="@id/l_renew_publishing_house"
         android:layout_marginTop="21dp"
         android:textSize="12dp"
         android:layout_centerHorizontal="true"
         android:text="索引号：978-456-56"/>
 
     <com.xiyoumoblie.lib.common.ui.MyTextView
-        android:id="@+id/l_renew_sss"
+        android:id="@+id/l_renew_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/l_renew_aa"
+        android:layout_alignTop="@id/l_renew_index_number"
         android:layout_marginTop="20dp"
         android:textSize="10dp"
         android:layout_alignParentEnd="true"

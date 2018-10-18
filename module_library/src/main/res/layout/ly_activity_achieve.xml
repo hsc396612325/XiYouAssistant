@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.LyAchieveActivity">
+    tools:context=".l_achieve.ui.LyAchieveActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/home_tool_bar"
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp">
                 
-                <com.xiyoumobile.module.library.ui.custom.LyProcessView
+                <com.xiyoumobile.module.library.l_common.ui.custom.LyProcessView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:frame_color="#dfdfdf"

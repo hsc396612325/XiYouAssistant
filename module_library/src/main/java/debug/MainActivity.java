@@ -3,7 +3,7 @@ package debug;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
-import com.xiyoumobile.module.library.ui.fragment.LyMainFragment;
+import com.xiyoumobile.module.library.l_common.ui.LyMainFragment;
 import com.xiyoumobile.module.library.R;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 

@@ -67,7 +67,7 @@
         android:layout_toStartOf="@id/tv_data"
         android:layout_marginRight="9dp"
         android:layout_alignBottom="@id/im_status"
-        android:layout_marginBottom="-50px"
+        android:layout_marginBottom="-70px"
         android:src="@drawable/ly_icon_borrow_2"
         android:layout_marginEnd="9dp"
         android:layout_toLeftOf="@id/tv_data" />
@@ -77,6 +77,5 @@
         android:layout_height="25dp"
         android:layout_alignTop="@id/im_data"
         android:layout_marginTop="17dp"/>
-
 
 </RelativeLayout>

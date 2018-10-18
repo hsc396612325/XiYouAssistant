@@ -2,7 +2,7 @@ package com.xiyoumobile.module.library.data.source.remote.net;
 
 public class LibraryUrls {
 
-    static final String BASE_URL = "http://111.230.134.198:8080/xiyou_helper/";
+    static final String BASE_URL = "http://model.xiyoumobile.com/xiyou_helper/";
 
     static final String LOGIN = "books/login";
     static final String GET_MY_INFO = "books/main";
@@ -15,4 +15,6 @@ public class LibraryUrls {
 
     static final String RENEW = "books/renew";
 
+    static final String GET_SEARCH_LIST = "books/search";
+    public static final String LOGOUT = "books/logout";
 }
