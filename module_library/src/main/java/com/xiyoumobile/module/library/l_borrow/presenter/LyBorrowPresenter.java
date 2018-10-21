@@ -31,6 +31,8 @@ public class LyBorrowPresenter implements LyBorrowContract.Presenter {
                 public void accept(BorrowedData borrowedData) throws Exception {
                     if (borrowedData.status == 1) {
                         mView.refreshListData(borrowedData.data);
+                    } else {
+                        mView.refreshListData(null);
                     }
                 }
             });

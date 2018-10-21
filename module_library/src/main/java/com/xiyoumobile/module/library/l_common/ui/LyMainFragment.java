@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +64,11 @@ public class LyMainFragment extends Fragment implements View.OnClickListener, Ma
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        RxBus.getInstance().register(Boolean.class, aBoolean -> {
+            if (aBoolean) {
+                mPresenter.getMainInfo();
+            }
+        });
         View view = inflater.inflate(R.layout.ly_fragment_main, container, false);
         initViews(view);
 
@@ -84,13 +89,14 @@ public class LyMainFragment extends Fragment implements View.OnClickListener, Ma
 
         Calendar cal = Calendar.getInstance();
         String[] weekDays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
-        int m = cal.get(Calendar.MONTH);
+        int m = cal.get(Calendar.MONTH) + 1;
         int d = cal.get(Calendar.DATE);
         int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
         if (w < 0) {
             w = 0;
         }
         mDataTv.setText(m + "月" + d + "日 " + weekDays[w]);
+        Log.d(TAG, "initViews: " + m + "月" + d + "日 " + weekDays[w]);
 
         mTextView = view.findViewById(R.id.l_tv_brought);
         mLyWaveView = view.findViewById(R.id.wave_progress);
@@ -120,6 +126,8 @@ public class LyMainFragment extends Fragment implements View.OnClickListener, Ma
         mLlRenew.setOnClickListener(this);
 
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -178,6 +186,15 @@ public class LyMainFragment extends Fragment implements View.OnClickListener, Ma
     @Override
     public void refreshMainInfo(List<MainInfo.MainInfoItem> mainInfo) {
         mLogoutTv.setText("注销");
+        if (mainInfo.size() == 0) {
+            View notice = LayoutInflater.from(getContext()).inflate(R.layout.ly_main_flipper_item, null);
+            TextView tv = notice.findViewById(R.id.tv);
+            String name = "";
+            tv.setText("暂无需还记录");
+            mViewFlipper.addView(notice);
+            mViewFlipper.stopFlipping();
+            return;
+        }
 
         for (MainInfo.MainInfoItem infoItem : mainInfo) {
             View notice = LayoutInflater.from(getContext()).inflate(R.layout.ly_main_flipper_item, null);
@@ -209,5 +226,9 @@ public class LyMainFragment extends Fragment implements View.OnClickListener, Ma
         }
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        RxBus.getInstance().unSubscribe(this);
+    }
 }

@@ -33,6 +33,7 @@ public class LyRenewListActivity extends BaseActivity implements LyRenewContract
     private LyRvAdapter<BorrowedData.Data> mAdapter;
     private List<BorrowedData.Data> mData;
 
+    private TextView mNoneTv;
     private Context mContext;
     private LyRenewContract.Presenter mPresenter;
     private Intent mIntent;
@@ -50,11 +51,11 @@ public class LyRenewListActivity extends BaseActivity implements LyRenewContract
         mPresenter = new LyRenewPresenter(Injection.provideRepository(), this);
         mContext = this;
 
+        mIntent = getIntent();
+        mToolbarTitle = mIntent.getStringExtra("title");
         initData();
         initView();
 
-        mIntent = getIntent();
-        mToolbarTitle = mIntent.getStringExtra("title");
 
         mPresenter.getRenewList();
 
@@ -88,7 +89,6 @@ public class LyRenewListActivity extends BaseActivity implements LyRenewContract
                 });
             }
         };
-
         mToolbar = findViewById(R.id.home_tool_bar);
         setupToolBar(mToolbar, true);
         mTvTitle = findViewById(R.id.tool_bar_title);
@@ -97,6 +97,8 @@ public class LyRenewListActivity extends BaseActivity implements LyRenewContract
         mRecyclerView = findViewById(R.id.library_rv);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(mAdapter);
+
+        mNoneTv = findViewById(R.id.none_text);
     }
 
     private void initData() {
@@ -118,7 +120,16 @@ public class LyRenewListActivity extends BaseActivity implements LyRenewContract
 
     @Override
     public void refreshListData(List<BorrowedData.Data> data) {
-        mAdapter.refresh(data);
+
+        if (data == null) {
+            mNoneTv.setVisibility(View.VISIBLE);
+            mRecyclerView.setVisibility(View.GONE);
+        } else {
+            mData = data;
+            mRecyclerView.setVisibility(View.VISIBLE);
+            mNoneTv.setVisibility(View.GONE);
+            mAdapter.refresh(data);
+        }
     }
 
     @Override

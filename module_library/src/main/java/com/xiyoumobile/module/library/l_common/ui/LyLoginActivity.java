@@ -28,7 +28,7 @@ public class LyLoginActivity extends BaseActivity implements LoginContract.View 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_binding);
+        setContentView(R.layout.ly_binding);
 
         mPresenter = new LoginPresenter(Injection.provideRepository(), this);
         initView();

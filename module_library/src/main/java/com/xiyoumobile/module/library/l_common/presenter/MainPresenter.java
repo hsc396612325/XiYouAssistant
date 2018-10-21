@@ -2,8 +2,12 @@ package com.xiyoumobile.module.library.l_common.presenter;
 
 import android.annotation.SuppressLint;
 
+import com.xiyoumobile.module.library.data.MainInfo;
 import com.xiyoumobile.module.library.data.source.Repository;
 import com.xiyoumobile.module.library.l_common.presenter.contract.MainContract;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("CheckResult")
 public class MainPresenter implements MainContract.Presenter {
@@ -66,9 +70,15 @@ public class MainPresenter implements MainContract.Presenter {
         mView.setLoadingIndicator(true);
         mRepository.getMainInfo(id).subscribe(bookMainInfo -> {
             if (bookMainInfo != null){
-                mView.refreshMainInfo(bookMainInfo.mainInfos);
+                if (bookMainInfo.count > 0) {
+                    mView.refreshMainInfo(bookMainInfo.mainInfos);
+                } else {
+                    List<MainInfo.MainInfoItem> list = new ArrayList<>();
+                    mView.refreshMainInfo(list);
+                }
+            } else {
+                mView.getMainInfoFail();
             }
-            mView.getMainInfoFail();
         });
         mView.setLoadingIndicator(false);
     }

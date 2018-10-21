@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activity.LyListActivity">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/home_tool_bar"
@@ -30,12 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+
     <TextView
+        android:id="@+id/none_text"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="18dp"
-        android:text="您目前还没有借书记录"/>
+        android:text="您目前还没有相关记录"/>
 
 </LinearLayout>

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,7 @@ public class LyHistoryActivity extends BaseActivity implements LyHistoryContract
     private LyRvAdapter<HistoryData.Data> mAdapter;
     private List<HistoryData.Data> mData;
 
+    private TextView mNoneTv;
     private Context mContext;
     private LyHistoryContract.Presenter mPresenter;
     private LyRvAdapter.OnRvItemClickListener mListener;
@@ -78,7 +81,26 @@ public class LyHistoryActivity extends BaseActivity implements LyHistoryContract
 
         // rv
         mRecyclerView = findViewById(R.id.library_rv);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        LinearLayoutManager lm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+//            给加载准备的
+//            mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                int lastPosition = -1;
+//                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+//
+//                    lastPosition = lm.findLastVisibleItemPosition();
+//                    if (lastPosition == recyclerView.getLayoutManager().getItemCount() - 1) {
+//                        mPresenter.getHistory();
+//                    }
+//                }
+//            }
+//            @Override
+//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//            }
+//        });
+        mRecyclerView.setLayoutManager(lm);
         mAdapter = new LyRvAdapter<HistoryData.Data>(this, mData, R.layout.ly_history_rv_item, null) {
             @Override
             public void onBindData(LyRvHolder holder, HistoryData.Data data, int position) {
@@ -92,6 +114,7 @@ public class LyHistoryActivity extends BaseActivity implements LyHistoryContract
         };
         mRecyclerView.setAdapter(mAdapter);
 
+        mNoneTv = findViewById(R.id.none_text);
     }
 
 
@@ -104,7 +127,8 @@ public class LyHistoryActivity extends BaseActivity implements LyHistoryContract
 
     @Override
     public void getListDataFail() {
-        Toast.makeText(mContext, "获取借阅历史失败！", Toast.LENGTH_SHORT).show();
+        mNoneTv.setVisibility(View.VISIBLE);
+        mRecyclerView.setVisibility(View.GONE);
     }
 
     /**
@@ -114,7 +138,10 @@ public class LyHistoryActivity extends BaseActivity implements LyHistoryContract
     @Override
     public void refreshListData(List<HistoryData.Data> data) {
         mData = data;
+        mRecyclerView.setVisibility(View.VISIBLE);
+        mNoneTv.setVisibility(View.GONE);
         mAdapter.refresh(data);
+
     }
 
     @Override

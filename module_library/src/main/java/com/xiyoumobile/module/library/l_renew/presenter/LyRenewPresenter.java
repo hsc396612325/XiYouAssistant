@@ -27,6 +27,8 @@ public class LyRenewPresenter implements LyRenewContract.Presenter {
             mRepository.getBorrowed(id).subscribe(borrowedData -> {
                 if (borrowedData.status == 1) {
                     mView.refreshListData(borrowedData.data);
+                } else {
+                    mView.refreshListData(null);
                 }
             });
         } else {

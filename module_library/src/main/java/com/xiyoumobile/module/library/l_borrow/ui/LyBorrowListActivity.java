@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.xiyoumobile.module.library.R;
@@ -31,6 +32,7 @@ public class LyBorrowListActivity extends BaseActivity implements LyBorrowContra
     private RecyclerView mRecyclerView;
     private LyRvAdapter<BorrowedData.Data> mAdapter;
     private List<BorrowedData.Data> mData;
+    private TextView mNoneTv;
 
     private Context mContext;
     private LyBorrowContract.Presenter mPresenter;
@@ -87,6 +89,7 @@ public class LyBorrowListActivity extends BaseActivity implements LyBorrowContra
             }
         };
         mRecyclerView.setAdapter(mAdapter);
+        mNoneTv = findViewById(R.id.none_text);
     }
 
     private void initData() {
@@ -108,8 +111,15 @@ public class LyBorrowListActivity extends BaseActivity implements LyBorrowContra
 
     @Override
     public void refreshListData(List<BorrowedData.Data> data) {
-        mData = data;
-        mAdapter.refresh(data);
+        if (data == null) {
+            mNoneTv.setVisibility(View.VISIBLE);
+            mRecyclerView.setVisibility(View.GONE);
+        } else {
+            mData = data;
+            mRecyclerView.setVisibility(View.VISIBLE);
+            mNoneTv.setVisibility(View.GONE);
+            mAdapter.refresh(data);
+        }
     }
 
     @Override

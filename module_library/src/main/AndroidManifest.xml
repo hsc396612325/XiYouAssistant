@@ -5,11 +5,15 @@
 
         <activity android:name=".l_search.ui.LySearchActivity" />
         <activity android:name=".l_achieve.ui.LyAchieveActivity"/>
-        <activity android:name=".ui.activity.LyListActivity" />
+        <activity android:name=".l_common.ui.LyLoginActivity" />
         <activity android:name=".l_distribution.ui.LyDistributionActivity" />
         <activity android:name=".l_common.ui.LyDetailActivity" />
         <activity android:name=".l_schedule.ui.LyOpenTimeActivity"/>
 
+        <activity android:name=".l_history.ui.LyHistoryActivity"/>
+        <activity android:name=".l_renew.ui.LyRenewListActivity"/>
+        <activity android:name=".l_search.ui.LySearchListActivity"/>
+        <activity android:name=".l_borrow.ui.LyBorrowListActivity"/>
     </application>
 
 </manifest>
