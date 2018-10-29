@@ -1,4 +1,4 @@
-package com.xiyoumoblie.module.education.bean;
+package com.xiyoumoblie.module.education.bean.finalGrade;
 
 public class FinalGradeBean {
     private String name;

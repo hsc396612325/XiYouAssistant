@@ -1,12 +1,8 @@
-package com.xiyoumoblie.module.education.contract;
-
-import android.graphics.Bitmap;
+package com.xiyoumoblie.module.education.mvp.contract;
 
 import com.xiyoumoblie.module.education.bean.CETGrade.CETGradeBean;
-import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
-import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
-import com.xiyoumoblie.module.education.util.BasePresenter;
-import com.xiyoumoblie.module.education.util.BaseView;
+import com.xiyoumoblie.module.education.mvp.base.BasePresenter;
+import com.xiyoumoblie.module.education.mvp.base.BaseView;
 
 /**
  * Created by heshu on 2018/8/10.

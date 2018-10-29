@@ -2,19 +2,15 @@ package com.xiyoumoblie.module.education.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.content.ComponentCallbacks;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,7 +18,6 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
-import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
@@ -32,9 +27,9 @@ import com.xiyoumoblie.module.education.R;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgTimes;
-import com.xiyoumoblie.module.education.contract.ComputersGradeContract;
-import com.xiyoumoblie.module.education.presenter.ComputersGradePresenter;
-import com.xiyoumoblie.module.education.util.Injection;
+import com.xiyoumoblie.module.education.mvp.contract.ComputersGradeContract;
+import com.xiyoumoblie.module.education.mvp.presenter.ComputersGradePresenter;
+import com.xiyoumoblie.module.education.mvp.source.ComputersGradeModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +37,6 @@ import java.util.TreeMap;
 
 import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function3;
 import io.reactivex.functions.Function5;
 
 @Route(path = "/education/ComputersGrade")
@@ -83,7 +76,7 @@ public class ComputersGradeActivity extends BaseActivity implements ComputersGra
         //创建一个P实例
         //参数1 M的实例
         //参数2 V的实例
-        new ComputersGradePresenter(Injection.provideTasksRepository(getApplicationContext()), this);
+        new ComputersGradePresenter(new ComputersGradeModel(), this);
     }
 
     private void initView() {

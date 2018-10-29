@@ -8,6 +8,7 @@
         <activity android:name=".activity.ComputersGradeActivity" />
         <activity android:name=".activity.TimetableActivity"/>
         <activity android:name=".activity.EduBindActivity"/>
+        <activity android:name=".activity.ClassroomInquireActivity"/>
     </application>
 
 </manifest>

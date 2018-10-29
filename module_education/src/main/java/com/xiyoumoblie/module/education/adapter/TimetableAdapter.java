@@ -3,7 +3,6 @@ package com.xiyoumoblie.module.education.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,9 +12,8 @@ import android.widget.LinearLayout;
 
 import com.xiyoumoblie.lib.common.ui.MyTextView;
 import com.xiyoumoblie.module.education.R;
-import com.xiyoumoblie.module.education.activity.AppealActivity;
 import com.xiyoumoblie.module.education.activity.TimetableCourseActivity;
-import com.xiyoumoblie.module.education.bean.TimetableBean;
+import com.xiyoumoblie.module.education.bean.timetable.TimetableBean;
 
 import java.util.List;
 

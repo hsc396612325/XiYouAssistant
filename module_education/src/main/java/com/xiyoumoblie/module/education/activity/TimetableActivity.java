@@ -29,8 +29,8 @@ import com.xiyoumoblie.module.education.adapter.TimetableAdapter;
 
 import com.xiyoumoblie.module.education.adapter.TimetableDateAdapter;
 import com.xiyoumoblie.module.education.adapter.TimetableStringAdapter;
-import com.xiyoumoblie.module.education.bean.DateBean;
-import com.xiyoumoblie.module.education.bean.TimetableBean;
+import com.xiyoumoblie.module.education.bean.timetable.DateBean;
+import com.xiyoumoblie.module.education.bean.timetable.TimetableBean;
 
 import java.util.ArrayList;
 import java.util.Collections;

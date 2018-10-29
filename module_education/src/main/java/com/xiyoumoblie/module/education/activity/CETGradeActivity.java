@@ -2,7 +2,6 @@ package com.xiyoumoblie.module.education.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
@@ -24,10 +23,9 @@ import com.xiyoumoblie.lib.common.ui.MyTextView;
 import com.xiyoumoblie.lib.common.utils.Utils;
 import com.xiyoumoblie.module.education.R;
 import com.xiyoumoblie.module.education.bean.CETGrade.CETGradeBean;
-import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
-import com.xiyoumoblie.module.education.contract.CETGradeContract;
-import com.xiyoumoblie.module.education.presenter.CETGradePresenter;
-import com.xiyoumoblie.module.education.util.Injection;
+import com.xiyoumoblie.module.education.mvp.contract.CETGradeContract;
+import com.xiyoumoblie.module.education.mvp.presenter.CETGradePresenter;
+import com.xiyoumoblie.module.education.mvp.source.CETGradeModel;
 
 import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
@@ -54,7 +52,7 @@ public class CETGradeActivity extends BaseActivity implements CETGradeContract.V
     private MyTextView mTvComposition;
     private MyTextView mTvTotal;
     private MyTextView mTvTongue;
-
+    private MyTextView mTvType;
     private CETGradeContract.Presenter mPresenter;
 
     private AnimatorSet mAnimatorSet;
@@ -71,7 +69,7 @@ public class CETGradeActivity extends BaseActivity implements CETGradeContract.V
         //创建一个P实例
         //参数1 M的实例
         //参数2 V的实例
-        new CETGradePresenter(Injection.provideTasksRepository(getApplicationContext()), this);
+        new CETGradePresenter(new CETGradeModel(), this);
 
     }
 
@@ -109,6 +107,8 @@ public class CETGradeActivity extends BaseActivity implements CETGradeContract.V
         mTvComposition = (MyTextView) findViewById(R.id.tv_composition);
         mTvTotal = (MyTextView) findViewById(R.id.tv_total);
         mTvTongue = (MyTextView) findViewById(R.id.tv_tongue);
+
+        mTvType = (MyTextView)findViewById(R.id.tv_type);
     }
 
     private void initData() {
@@ -161,6 +161,14 @@ public class CETGradeActivity extends BaseActivity implements CETGradeContract.V
 
     @Override
     public void cetShowGrade(CETGradeBean cetGradeBean) {
+        if (mEtNum.getText().toString().charAt(9)  == '1'){
+            Log.d("22222", "cetShowGrade:" +mEtNum.getText().toString());
+            Log.d("qqqq", "cetShowGrade: "+mEtNum.getText().toString().charAt(8));
+            mTvType.setText("国家CET-4考试成绩");
+        }else {
+            mTvType.setText("国家CET-6考试成绩");
+        }
+
         if (cetGradeBean.code == 0) {
             mAnimatorSet.start();
             mTvAudition.setText(cetGradeBean.result.hearing);

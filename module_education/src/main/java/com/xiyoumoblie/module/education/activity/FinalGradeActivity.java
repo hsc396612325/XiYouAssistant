@@ -1,18 +1,16 @@
 package com.xiyoumoblie.module.education.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.module.education.R;
 import com.xiyoumoblie.module.education.adapter.FinalGradeAdapter;
-import com.xiyoumoblie.module.education.bean.FinalGradeBean;
+import com.xiyoumoblie.module.education.bean.finalGrade.FinalGradeBean;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 import com.xiyoumoblie.lib.common.ui.MyTextView;
 import com.xiyoumoblie.module.education.R;
-import com.xiyoumoblie.module.education.bean.DateBean;
+import com.xiyoumoblie.module.education.bean.timetable.DateBean;
 
 import java.util.List;
 

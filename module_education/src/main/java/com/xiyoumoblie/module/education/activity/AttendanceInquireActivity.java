@@ -33,7 +33,7 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
 import com.xiyoumoblie.module.education.adapter.LessonAdapter;
-import com.xiyoumoblie.module.education.bean.LessonInfoBean;
+import com.xiyoumoblie.module.education.bean.appeal.LessonInfoBean;
 import com.xiyoumoblie.module.education.R;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 

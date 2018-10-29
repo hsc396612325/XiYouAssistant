@@ -1,4 +1,4 @@
-package com.xiyoumoblie.module.education.bean;
+package com.xiyoumoblie.module.education.bean.timetable;
 
 /**
  * Created by heshu on 2018/8/7.

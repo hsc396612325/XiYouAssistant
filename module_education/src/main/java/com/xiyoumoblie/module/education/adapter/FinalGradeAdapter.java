@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.xiyoumoblie.module.education.R;
-import com.xiyoumoblie.module.education.bean.FinalGradeBean;
+import com.xiyoumoblie.module.education.bean.finalGrade.FinalGradeBean;
 
 import java.util.ArrayList;
 import java.util.List;

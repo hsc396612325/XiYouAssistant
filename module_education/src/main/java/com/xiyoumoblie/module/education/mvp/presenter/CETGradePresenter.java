@@ -1,11 +1,9 @@
-package com.xiyoumoblie.module.education.presenter;
+package com.xiyoumoblie.module.education.mvp.presenter;
 
 import android.util.Log;
 
-import com.xiyoumoblie.module.education.bean.CETGrade.CETGradeBean;
-import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
-import com.xiyoumoblie.module.education.contract.CETGradeContract;
-import com.xiyoumoblie.module.education.source.EducationRepository;
+import com.xiyoumoblie.module.education.mvp.contract.CETGradeContract;
+import com.xiyoumoblie.module.education.mvp.source.CETGradeModel;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
@@ -22,16 +20,16 @@ public class CETGradePresenter implements CETGradeContract.Presenter {
     @NonNull
     private final CETGradeContract.View mView;  //V的实例
     @NonNull
-    private final EducationRepository mEducationRepository; //M的实例
+    private final CETGradeModel mModel ; //M的实例
 
     @NonNull
     private CompositeDisposable mCompositeDisposable;
 
-    public CETGradePresenter(@Nullable EducationRepository educationRepository, @NonNull CETGradeContract.View view) {
+    public CETGradePresenter(@Nullable CETGradeModel model, @NonNull CETGradeContract.View view) {
         //p和V绑定
         mView = view;
         //p和M绑定
-        mEducationRepository = educationRepository;
+        mModel  = model;
 
         //M和V绑定
         mView.setPresenter(this);
@@ -51,8 +49,8 @@ public class CETGradePresenter implements CETGradeContract.Presenter {
 
     @Override //请求成绩
     public void cetSetGrade(String name, String num, String code) {
-        mCompositeDisposable.add(mEducationRepository
-                .CETGrade(name, num, code)
+        mCompositeDisposable.add(mModel
+                .cetGrade(name, num, code)
                 .subscribeOn(Schedulers.io()) //提供Scheduler用于Rxjava线程调度
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -70,8 +68,8 @@ public class CETGradePresenter implements CETGradeContract.Presenter {
 
     @Override
     public void cetSetValidateCode(String num) {
-        mCompositeDisposable.add(mEducationRepository
-                .CETValidateCode(num)
+        mCompositeDisposable.add(mModel
+                .cetValidateCode(num)
                 .subscribeOn(Schedulers.io()) //提供Scheduler用于Rxjava线程调度
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(

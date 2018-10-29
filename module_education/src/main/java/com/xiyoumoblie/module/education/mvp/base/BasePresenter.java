@@ -1,6 +1,6 @@
 
 
-package com.xiyoumoblie.module.education.util;
+package com.xiyoumoblie.module.education.mvp.base;
 
 public interface BasePresenter {
 

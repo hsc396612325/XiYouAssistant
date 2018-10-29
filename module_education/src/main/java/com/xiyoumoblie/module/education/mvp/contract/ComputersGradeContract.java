@@ -1,12 +1,12 @@
-package com.xiyoumoblie.module.education.contract;
+package com.xiyoumoblie.module.education.mvp.contract;
 
 import android.graphics.Bitmap;
 
 import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgTimes;
-import com.xiyoumoblie.module.education.util.BasePresenter;
-import com.xiyoumoblie.module.education.util.BaseView;
+import com.xiyoumoblie.module.education.mvp.base.BasePresenter;
+import com.xiyoumoblie.module.education.mvp.base.BaseView;
 
 /**
  * Created by heshu on 2018/8/8.

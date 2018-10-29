@@ -200,16 +200,17 @@
                 android:layout_alignStart="@id/im_check_code" />
 
             <Button
+                android:id="@+id/bt_confirm"
                 android:layout_width="150dp"
                 android:layout_height="35dp"
                 android:background="@drawable/education_bind_bt_bg"
                 android:text="授权登录"
                 android:textSize="15dp"
+                android:enabled="false"
                 android:layout_centerHorizontal="true"
                 android:layout_alignTop="@id/im_code"
                 android:layout_marginTop="61dp"
-                android:textColor="#FFFFFF"
-                android:onClick="onClickLogin"/>
+                android:textColor="#FFFFFF" />
 
         </RelativeLayout>
 

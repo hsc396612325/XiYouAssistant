@@ -1,8 +1,8 @@
-package com.xiyoumoblie.module.education.presenter;
+package com.xiyoumoblie.module.education.mvp.presenter;
 
 import com.xiyoumoblie.module.education.bean.computersGrade.CgDemandDate;
-import com.xiyoumoblie.module.education.contract.ComputersGradeContract;
-import com.xiyoumoblie.module.education.source.EducationRepository;
+import com.xiyoumoblie.module.education.mvp.contract.ComputersGradeContract;
+import com.xiyoumoblie.module.education.mvp.source.ComputersGradeModel;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
@@ -19,19 +19,19 @@ public class ComputersGradePresenter implements ComputersGradeContract.Presenter
     @NonNull
     private final ComputersGradeContract.View mView;  //V的实例
     @NonNull
-    private final EducationRepository mEducationRepository; //M的实例
+    private final ComputersGradeModel mModel; //M的实例
 
     @NonNull
     private CompositeDisposable mCompositeDisposable;
 
     private static final String TAG = "ComputersGradePresenter";
-    public ComputersGradePresenter(@Nullable EducationRepository educationRepository,
+    public ComputersGradePresenter(@Nullable ComputersGradeModel model,
                                    @NonNull ComputersGradeContract.View view) {
 
         //p和V绑定
         mView = view;
         //p和V绑定
-        mEducationRepository = educationRepository;
+        mModel = model;
         //M和V绑定
         mView.setPresenter(this);
 
@@ -54,7 +54,7 @@ public class ComputersGradePresenter implements ComputersGradeContract.Presenter
 
 
     public void cgSetTimes() {
-        mCompositeDisposable.add(mEducationRepository
+        mCompositeDisposable.add(mModel
                 .cgTimes()
                 .subscribeOn(Schedulers.io()) //提供Scheduler用于Rxjava线程调度
                 .observeOn(AndroidSchedulers.mainThread())
@@ -74,7 +74,7 @@ public class ComputersGradePresenter implements ComputersGradeContract.Presenter
     @Override
     public void cgSetValidateCode() {
 
-        mCompositeDisposable.add(mEducationRepository
+        mCompositeDisposable.add(mModel
                 .cgValidateCode()
                 .subscribeOn(Schedulers.io()) //提供Scheduler用于Rxjava线程调度
                 .observeOn(AndroidSchedulers.mainThread())
@@ -94,7 +94,7 @@ public class ComputersGradePresenter implements ComputersGradeContract.Presenter
     @Override
     public void cgSetGrade(CgDemandDate cgDemandDate) {
 
-        mCompositeDisposable.add(mEducationRepository
+        mCompositeDisposable.add(mModel
                 .cgGrade(cgDemandDate)
                 .subscribeOn(Schedulers.io()) //提供Scheduler用于Rxjava线程调度
                 .observeOn(AndroidSchedulers.mainThread())

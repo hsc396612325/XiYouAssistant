@@ -4,13 +4,12 @@ import android.os.Bundle;
 
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.lib.common.ui.MyTextView;
-import com.xiyoumoblie.module.education.bean.LessonInfoBean;
+import com.xiyoumoblie.module.education.bean.appeal.LessonInfoBean;
 import com.xiyoumoblie.module.education.R;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 

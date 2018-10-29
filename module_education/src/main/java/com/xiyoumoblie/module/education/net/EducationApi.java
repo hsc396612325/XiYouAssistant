@@ -1,16 +1,24 @@
-package com.xiyoumoblie.module.education.source.remote;
+package com.xiyoumoblie.module.education.net;
 
-import com.xiyoumoblie.module.education.adapter.TimetableAddWeekAdapter;
+import android.widget.EditText;
+
 import com.xiyoumoblie.module.education.bean.CETGrade.CETGradeBean;
+import com.xiyoumoblie.module.education.bean.EduBind.EduPublicKey;
+import com.xiyoumoblie.module.education.bean.EduBind.LoginBean;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgQuery;
 import com.xiyoumoblie.module.education.bean.computersGrade.CgTimes;
 
+import java.security.PublicKey;
+
 import io.reactivex.Observable;
+import okhttp3.Response;
 import okhttp3.ResponseBody;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 /**
@@ -35,5 +43,12 @@ public interface EducationApi {
 
     @GET
     Observable<CETGradeBean> CETGetCode(@Url String url);
+
+    @GET(EducationUrls.EDU_GET_CODE)
+    Observable<ResponseBody> EduGetPublicKey();
+
+    @POST(EducationUrls.EDU_LOGIN)
+    @FormUrlEncoded
+    Observable<ResponseBody> EduLogin(@Field("csrftoken")String csrftoken,@Field("yhm")String studentNu ,@Field("yhm")String password);
 
 }
