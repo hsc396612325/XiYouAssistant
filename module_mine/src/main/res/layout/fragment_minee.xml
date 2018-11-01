@@ -1,14 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="#F5F5F5"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvv"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="我的"/>
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="@dimen/m142px"
+            android:layout_height="@dimen/m142px"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/m30px"
+            android:layout_marginLeft="@dimen/m40px"
+            android:layout_marginTop="@dimen/m28px"
+            android:background="@drawable/round" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/yonghu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m56px"
+            android:layout_marginTop="@dimen/m46px"
+            android:layout_toRightOf="@id/button1"
+            android:text="用户15109239071"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m36px"/>
+
+        <Button
+            android:layout_width="@dimen/m30px"
+            android:layout_height="@dimen/m30px"
+            android:layout_marginLeft="@dimen/m25px"
+            android:layout_marginRight="@dimen/m172px"
+            android:layout_marginTop="@dimen/m60px"
+            android:layout_toRightOf="@id/yonghu"
+            android:background="@drawable/my_button_eidt_default" />
+
+        <ImageView
+            android:id="@+id/porfile"
+            android:layout_width="@dimen/m41px"
+            android:layout_height="@dimen/m32px"
+            android:layout_below="@id/yonghu"
+            android:layout_marginLeft="@dimen/m56px"
+            android:layout_marginTop="@dimen/m39px"
+            android:layout_toRightOf="@id/button1"
+            android:src="@drawable/my_icon_porfile_def" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/grxx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yonghu"
+            android:layout_marginLeft="@dimen/m14px"
+            android:layout_marginTop="@dimen/m34px"
+            android:layout_toRightOf="@id/porfile"
+            android:text="个人信息"
+            android:textColor="#CCCCCC"
+            android:textSize="@dimen/m30px"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m100px"
+        android:layout_marginTop="@dimen/m40px"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="@dimen/m37px"
+            android:layout_height="@dimen/m38px"
+            android:layout_marginLeft="@dimen/m51px"
+            android:layout_marginTop="@dimen/m31px"
+            android:background="@drawable/my_icon_plan_def" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:id="@+id/pyjh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/m42px"
+            android:text="培养计划"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m100px"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="@dimen/m41px"
+            android:layout_height="@dimen/m37px"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="@dimen/m51px"
+            android:layout_marginTop="@dimen/m33px"
+            android:background="@drawable/my_icon_com_def" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/m38px"
+            android:text="学分情况"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m100px"
+        android:layout_marginTop="@dimen/m38px"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="@dimen/m43px"
+            android:layout_height="@dimen/m43px"
+            android:layout_marginBottom="@dimen/m27px"
+            android:layout_marginLeft="@dimen/m52px"
+            android:layout_marginTop="@dimen/m30px"
+            android:background="@drawable/my_icon_msg_default" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/m35px"
+            android:text="使用反馈"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m100px"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="@dimen/m42px"
+            android:layout_height="@dimen/m38px"
+            android:layout_marginLeft="@dimen/m54px"
+            android:layout_marginTop="@dimen/m34px"
+            android:background="@drawable/my_icon_usermsg_default" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/m34px"
+            android:text="关于我们"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m100px"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="@dimen/m38px"
+            android:layout_height="@dimen/m38px"
+            android:layout_marginLeft="@dimen/m56px"
+            android:layout_marginTop="@dimen/m33px"
+            android:background="@drawable/my_icon_user_default" />
+
+        <com.xiyoumoblie.lib.common.ui.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/m36px"
+            android:text="切换用户"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px"/>
+    </LinearLayout>
+
+</LinearLayout>

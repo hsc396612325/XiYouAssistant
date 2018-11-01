@@ -5,6 +5,7 @@
         <activity android:name="debug.MainActivity">
 
         </activity>
+        <activity android:name=".TrainingProgramActivity"/>
     </application>
 
 </manifest>

@@ -1,12 +1,14 @@
 package debug;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
 import com.xiyoumoblie.lib.common.base.BaseActivity;
 import com.xiyoumoblie.module.mine.MineFragment;
 import com.xiyoumoblie.module.mine.R;
+import com.xiyoumoblie.module.mine.TrainingProgramActivity;
 
 
 /**
@@ -25,7 +27,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.search_edit_frame, new MineFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.mine, new MineFragment()).commit();
     }
 
 }

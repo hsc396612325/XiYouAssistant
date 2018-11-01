@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -94,6 +95,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
         FragmentTransaction mTransaction = mManager.beginTransaction();
         mFgEducation = (Fragment) ARouter.getInstance().build("/education/main").navigation();
+        Log.e("111111", "initViews: "+mFgEducation );
         mTransaction.add(R.id.home_container, mFgEducation);
         mTransaction.commit();
         changeColor(0);
